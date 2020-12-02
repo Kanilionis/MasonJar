@@ -5,7 +5,18 @@ var cors = require('cors');
 const creds = require('./config');
 const PORT = process.env.PORT || 3001;
 const path = require ("path")
+const mongoose = require("mongoose");
 
+//Mongoose Connection
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/shakeIt',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+  )
 
 var transport = {
     host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
