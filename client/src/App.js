@@ -12,14 +12,14 @@ function App() {
     <Router>
       <div>
         <Nav />
-        {/* <Switch>
+        <Switch>
           <Route exact path="/shakers">
             <Shaker />
           </Route>
           <Route exact path="/contact">
             <Contact />
           </Route>
-        </Switch> */}
+        </Switch>
       </div>
       </Router>
     </>
