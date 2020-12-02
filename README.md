@@ -15,23 +15,23 @@ Group Project 3
 -button to choose for you
 
 ### Suggest an Idea
--suggest an activity to us to add (nodemailer)
--form
-  -choose theme (dropdown?)
-  -type activity here
-  -submit
--FUTURE- view all activites by theme before suggesting  
+- suggest an activity to us to add (nodemailer)
+- form
+  - choose theme (dropdown?)
+  - type activity here
+  - submit
+- FUTURE- view all activites by theme before suggesting  
 
 ### Not Required
--authentication
+- authentication
 
 ## Future Developments
 ### Profile
--specific to where you live and weather conditions
--link to facebook/login with facebook
--saved activities
--suggest an activity to us to add
--save to profile
+- specific to where you live and weather conditions
+- link to facebook/login with facebook
+- saved activities
+- suggest an activity to us to add
+- save to profile
 
 
 - Katie: create repo, mern file, Math.Random functionality, shaker animation and onClick for modal, theme components (one for each jar)
