@@ -35,11 +35,12 @@ class Contact extends React.Component {
   render() {
     return(
       <>
-      <h1>Make A Suggestion</h1>
-      <p>Didn't something what you like? Make a suggestion to the Shaker Team! </p>
+      
       <div className ="row">
 
     <div className="container col-4 home-container">
+    <h1>Make A Suggestion</h1>
+      <p>Didn't see something you like? Make a suggestion to the Shaker Team! </p>
       <br></br>
 
       
