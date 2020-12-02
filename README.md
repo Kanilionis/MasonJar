@@ -34,9 +34,10 @@ Group Project 3
 -save to profile
 
 
-Katie: create repo, mern file, Math.Random functionality, shaker animation and onClick for modal, theme components (one for each jar)
-Dana: Header/Nav/html routes/enter site page "enter" button
-Tessa: databases/api routes
-Nora/Claire: front-end, modal for each theme, "choose again" button
+- Katie: create repo, mern file, Math.Random functionality, shaker animation and onClick for modal, theme components (one for each jar)
+- Dana: Header/Nav/html routes/enter site page "enter" button
+- Tessa: databases/api routes
+- Claire: front-end
+- Nora: modal for each theme, "choose again" button, contact page (nodemailer)
 
 
