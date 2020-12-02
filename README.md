@@ -27,13 +27,14 @@ Group Project 3
 
 ## Future Developments
 ### Profile
-- specific to where you live and weather conditions
 - link to facebook/login with facebook
 - saved activities
 - suggest an activity to us to add
 - save to profile
+### GeoLocation
+- specific to where you live and weather conditions
 
-
+## Breakdown of Tasks
 - Katie: create repo, mern file, Math.Random functionality, shaker animation and onClick for modal, theme components (one for each jar)
 - Dana: Header/Nav/html routes/enter site page "enter" button
 - Tessa: databases/api routes
