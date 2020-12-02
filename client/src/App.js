@@ -1,8 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
+import Shaker from "./pages/shaker";
+import Contact from "./pages/contact";
 import Nav from "./components/Nav";
 
 function App() {
@@ -10,17 +9,14 @@ function App() {
     <Router>
       <div>
         <Nav />
-        <Switch>
-          <Route exact path={["/", "/books"]}>
-            <Books />
+        {/* <Switch>
+          <Route exact path="/shaker">
+            <Shaker />
           </Route>
-          <Route exact path="/books/:id">
-            <Detail />
+          <Route exact path="/contact">
+            <Contact />
           </Route>
-          <Route>
-            <NoMatch />
-          </Route>
-        </Switch>
+        </Switch> */}
       </div>
     </Router>
   );
