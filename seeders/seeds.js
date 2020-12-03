@@ -143,7 +143,7 @@ let shakeItSeed = [
         submittedBy: "Admin"
       },
       {
-        name: "Have a Fireplace? Roast Some 'Mallows! (Or use the microwave)",
+        name: "Have a Fireplace? Roast Some 'Mallows!",
         submittedBy: "Admin"
       },
       {
@@ -176,6 +176,261 @@ let shakeItSeed = [
       },
       {
         name: "Play Old Video Games",
+        submittedBy: "Admin"
+      }
+    ]
+  },
+  {
+    theme: "Weekend Warriors",
+    activities: [
+      {
+        name: "Road trip! Make a playlist, hop in the car, and drive.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Hotel room in the city! Get dressed up and spend the weekend on the town.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Remote Airbnb getaway. Looking for some R&R? Find yourself a superhost in the countryside. ",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Spa weekend",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Go camping!",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Ski weekend. Book a cozy chalet and hit the slopes.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Indoor waterpark. You're never too old for a waterslide.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Feeling Lucky! Hit the casinos this weekend.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Backyard camping. Bring the great outdoors to your backyard.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Pick a park! Find a national/state park near you and explore.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Bust out the bikes. See your hometown or a new city from a new perspective.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Take a tour!",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Cooking classes. Italian, French, Chilean! You can expeirence the world without stepping on a plane.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Book a flight. The Friday to Sunday itenerary leaves plenty of time to experience a new place.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Go rafting. There's no problem a weekend on the water can't fix.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Hit the beach! Find you closest body of water and soak up the sun.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Bed and Breakfast",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Visit family!",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Visit a vineyard!",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Find an orchard!",
+        submittedBy: "Admin"
+      }
+    ]
+  },
+  {
+    theme: "Outdoor Adventures",
+    activities: [
+      {
+        name: "Go for a bike ride around the neighborhood",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Take a hike at your nearest trail",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Spend a few hours at the park",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Spend a day at your nearest lake",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Watch the sunset with your loved ones",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Play mini golf with your friends",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Take an hour long walk",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Relax and sit on the patio of your favorite restaurant",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Go for a bike ride around the neighborhood",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Take a trip to the pool",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Spend a day at the zoo",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Star gaze",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Take your dog on a hike.",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Make a campfire!",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Play tennis or pickleball at your local courts",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Take a day fishing trip",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Set up a picnic at your favorite outdoor spot",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Take a day trip to the mountains",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Go snowboarding or skiing!",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Build a garden",
+        submittedBy: "Admin"
+      }
+    ]
+  },
+  {
+    theme: "Night on the town",
+    activities: [
+      {
+        name: "Karaoke",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Dancing",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Local Concert",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Trivia Night",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Museum",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Zoo",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Shopping",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Canvas and Cocktails",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Murder Mystery Party",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Escape Room",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Bowling",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Top Golf",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Beer Pedal Bar",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Mini Golf",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Go Karts",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Arcade",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Comedy Club",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Rock Climbing",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Casino",
+        submittedBy: "Admin"
+      },
+      {
+        name: "Axe Throwing",
         submittedBy: "Admin"
       }
     ]
