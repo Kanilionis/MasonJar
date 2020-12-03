@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Nav from "../components/Nav";
 
 class Contact extends React.Component {
   
@@ -35,7 +36,7 @@ class Contact extends React.Component {
   render() {
     return(
       <>
-      
+      <Nav />
       <div className ="row">
 
     <div className="container col-4 home-container">

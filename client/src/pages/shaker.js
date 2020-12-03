@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react"
-import API from "../utils/API"
-import DateNightIn from "../components/DateNightIn"
-import DateNightOut from "../components/DateNightOut"
-import NetflixandChill from "../components/NetflixandChill"
-import Outdoor from "../components/Outdoor"
-import Weekend from "../components/Weekend"
-import shaker from "./30644-200.png"
+import React, { useState, useEffect } from "react";
+import API from "../utils/API";
+import DateNightIn from "../components/DateNightIn";
+import DateNightOut from "../components/DateNightOut";
+import NetflixandChill from "../components/NetflixandChill";
+import Outdoor from "../components/Outdoor";
+import Weekend from "../components/Weekend";
+import shaker from "./30644-200.png";
+import Nav from "../components/Nav";
 // import { Link } from "react-router-dom"
 
 
@@ -30,6 +31,7 @@ e.preventDefault();
 
 return(
   <>
+  <Nav />
   <div className="container-fluid">
     <div className="row">
     <div className="col-2">
