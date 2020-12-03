@@ -72,84 +72,32 @@ return(
     </div>
   </div> */}
 
-
-  <Carousel>
-  <Carousel.Item >
-    <img
-      onClick = {chooseTheme}
-      className="d-block w-100"
-      src={ShakerImg}
-      alt="First slide"
-    />
+<center>
+  <Carousel controls={true} slide={true} indicators={false} >
+    
+    <Carousel.Item >
+      <ShakerAnim chooseTheme={chooseTheme}/>Date Night In
+      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
+    </Carousel.Item>
+    <Carousel.Item>
+      <ShakerAnim chooseTheme={chooseTheme}/>Date Night Out
+      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
+    </Carousel.Item>
+    <Carousel.Item>
+      <ShakerAnim chooseTheme={chooseTheme}/>Netflix and Chill
+      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
+    </Carousel.Item>
+    <Carousel.Item>
+      <ShakerAnim chooseTheme={chooseTheme}/>Get Outside
+      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
+    </Carousel.Item>
+    <Carousel.Item>
+      <ShakerAnim chooseTheme={chooseTheme}/>Weekend Getaway
+      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
+    </Carousel.Item>
    
-    
-    {shakers.activity.map(activity => (
-      <span key={activity} >
-      <ShakerAnim chooseTheme={chooseTheme}/>
-      </span>
-
-    ))}
-    
-    <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
-    
-    <Carousel.Caption>
-      {/* <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      onClick = {chooseTheme}
-      className="d-block w-100"
-      src={ShakerImg}
-      alt="Third slide"
-    />
-    
-    
-    {shakers.activity.map(activity => (
-      <span key={activity} >
-      <ShakerAnim chooseTheme={chooseTheme}/>
-      </span>
-
-    ))}
-
-
-    
-    <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
-  
-
-    <Carousel.Caption>
-      {/* <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      onClick = {chooseTheme}
-      className="d-block w-100"
-      src={ShakerImg}
-      alt="Third slide"
-    />
-    
-    
-    {shakers.activity.map(activity => (
-      <span key={activity} >
-      <ShakerAnim chooseTheme={chooseTheme}/>
-      </span>
-
-    ))}
-
-
-  
-    <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
-   
-
-    <Carousel.Caption>
-      {/* <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
+  </Carousel>
+  </center>
   </>
 )
 }

@@ -21,6 +21,9 @@
   }
 }
 
+body{
+  background-color: lightblue;
+}
 /* .modal{
   transition-delay: .5s
 } */
@@ -54,9 +57,9 @@
   );
 }
 
-.home-container{
+/* .home-container{
   
-}
+} */
 
 .signup{
   height: 100%;

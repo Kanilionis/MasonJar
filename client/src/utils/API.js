@@ -1,28 +1,12 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
-  getShakers: function() {
-    return axios.get("/api/shakers");
+  // Gets all themes
+  getThemes: function() {
+    return axios.get("/api/shakeit/themes");
   },
-  getChosenShaker: function(theme, id){
-    return axios.get("/api/shakers/"+ theme + "/" + id)
+  // gets all activities by a given theme
+  getActivitiesByTheme: function(theme) {
+    return axios.get("/api/shakeit/" + theme);
   }
-  // Gets the shaker with the given id
-  // getDateNightInShaker: function(id) {
-  //   return axios.get("/api/shakers/" + id);
-  // },
-  // getDateNightOutShaker: function(id) {
-  //   return axios.get("/api/shakers/" + id)
-  // },
-  // getNetflixandChillShaker: function(id) {
-  //   return axios.get("/api/shakers/" + id)
-  // },
-  // getWeekendShaker: function(id) {
-  //   return axios.get("/api/shakers/" + id)
-  // },
-  // getOutdoorShaker: function(id) {
-  //   return axios.get("/api/shakers/" + id)
-  // }
-
 };
