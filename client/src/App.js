@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Shaker from "./pages/shaker";
 import Contact from "./pages/contact";
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
 import Enter from "./pages/enter";
 
 function App() {

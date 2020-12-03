@@ -1,42 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Modal, Button} from 'react-bootstrap'
 
 
-function ModalShow() {
-  const [show, setShow] = useState(false);
-
-  setTimeout(() => {
+function ModalShow(props) {
   
-  },4000);
-
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => {
-    setShow(true)
-    setTimeout(true);
-  }
-
-   
-   
-  
-
   return (
     <>
-      <button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+      <Modal className="modal" show={props.isOpen} >
+        <Modal.Header closeButton onClick={props.closeModal}>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button variant="secondary" >
+            Eh...Try Again
           </Button>
         </Modal.Footer>
       </Modal>
