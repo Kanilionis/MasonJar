@@ -1,27 +1,28 @@
 import React from "react";
-
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Shaker from "./pages/shaker";
 import Contact from "./pages/contact";
 import Nav from "./components/Nav";
-
+import Enter from "./pages/enter";
 
 function App() {
   return (
     <>
     <Router>
       <div>
-        <Nav />
         <Switch>
-          <Route exact path="/shakers">
+        <Route exact path="/">
+            <Enter />
+          </Route>
+          <Route exact path="/shaker">
             <Shaker />
           </Route>
           <Route exact path="/contact">
-            <Contact />
+            <Contact/>
           </Route>
         </Switch>
       </div>
-      </Router>
+    </Router>
     </>
   );
 }
