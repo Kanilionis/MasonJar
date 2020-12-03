@@ -21,10 +21,9 @@
   }
 }
 
-.modal{
-  
-  transition-timing-function: ease;
-}
+/* .modal{
+  transition-delay: .5s
+} */
 
 
 /* .shaking {

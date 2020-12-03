@@ -20,7 +20,7 @@ const ShakerAnim = (props) => {
       onAnimationEnd={() => setWobble(0)}
       wobble={wobble}
     />
-    <ModalShow/>
+    <ModalShow className="modal"/>
     </>
   )
 }

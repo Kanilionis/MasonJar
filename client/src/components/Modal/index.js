@@ -6,7 +6,7 @@ function ModalShow(props) {
   
   return (
     <>
-      <Modal className="modal" show={props.isOpen} >
+      <Modal show={props.isOpen} >
         <Modal.Header closeButton onClick={props.closeModal}>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
