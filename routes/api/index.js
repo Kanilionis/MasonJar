@@ -2,6 +2,6 @@ const router = require("express").Router();
 const shakeItRoutes = require("./shakeIt");
 
 // Book routes
-router.use("/shakeIt", shakeItRoutes);
+router.use("/shakeit", shakeItRoutes);
 
 module.exports = router;
