@@ -15,6 +15,7 @@ import { Carousel } from "react-bootstrap";
 import ShakerImg from "./30644-200.png";
 
 
+
 const Shaker = () => {
 
 const [shakers, setShakers] = useState({  
