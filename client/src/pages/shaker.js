@@ -7,6 +7,7 @@ import Outdoor from "../components/Outdoor";
 import Weekend from "../components/Weekend";
 import shaker from "./30644-200.png";
 import Nav from "../components/Nav";
+import Modal from "../components/Modal"
 // import { Link } from "react-router-dom"
 
 
@@ -36,6 +37,7 @@ return(
     <div className="row">
     <div className="col-2">
     <span><img src={shaker} onClick={chooseShaker}/>
+    <Modal/>
      <DateNightIn/>
     </span>
     </div>
