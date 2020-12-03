@@ -32,13 +32,21 @@ useEffect(() => {
 
 
 function chooseTheme(){
-  console.log("chosen shaker")
-  setModalOpen({isOpen: true})
+  let timer1 = setTimeout(() => setModalOpen({isOpen: true}), 1000)
+  return () => {
+    clearTimeout(timer1)
+  }
+  // console.log("chosen shaker")
+  // setModalOpen({isOpen: true})
 }
 
 function closeModal(){
   setModalOpen({isOpen: false})
 }
+
+
+  
+
 
 return(
   <>
