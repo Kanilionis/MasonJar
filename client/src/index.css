@@ -1,8 +1,8 @@
-.image {
+.shake {
   display: block;
   margin: 0 auto;
 }
-.image[wobble='1'] {
+.shake[wobble='1'] {
   animation: wobble 1s 1;
 }
 
@@ -19,6 +19,11 @@
   100% {
     transform: rotate(0deg);
   }
+}
+
+.modal{
+  
+  transition-timing-function: ease;
 }
 
 

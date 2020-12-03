@@ -1,68 +1,61 @@
 import React, { useState, useEffect } from "react"
-import API from "../utils/API"
+// import API from "../utils/API"
 // import DateNightIn from "../components/DateNightIn"
 // import DateNightOut from "../components/DateNightOut"
 // import NetflixandChill from "../components/NetflixandChill"
 // import Outdoor from "../components/Outdoor"
 // import Weekend from "../components/Weekend"
-
 import "../index.css"
 import ShakerAnim from "../components/ShakerAnim"
+import Nav from "../components/Nav";
+import ModalShow from "../components/Modal";
+// import Modal from "../components/Modal"
 // import { Link } from "react-router-dom"
 
 
-function Shaker(){
+const Shaker = () => {
 
-const [shakers, setShakers] = useState([])
+const [shakers, setShakers] = useState({  
+  theme: "date night in",
+  activity: ["strip poker", "movie night", "dance party"]
+})
+
+const [modalOpen, setModalOpen] = useState({
+  isOpen: false,
+  setTheme: "date night in"
+})
 
 useEffect(() => {
-  loadShakers()
+  console.log(shakers.activity)
+
 }, [])
 
-function loadShakers(){
-  console.log("loading shaker")
-  API.getShakers().then(res => setShakers(res.data)).catch(err => console.log(err))
+
+function chooseTheme(){
+  console.log("chosen shaker")
+  setModalOpen({isOpen: true})
 }
 
-// function chooseShaker(e){
-//   console.log("chosen shaker")
-// e.preventDefault();
-
-// }
+function closeModal(){
+  setModalOpen({isOpen: false})
+}
 
 return(
   <>
+  <Nav />
   <div className="container-fluid">
     <div className="row">
     <div className="col-2">
-    {shakers.map(shaker => (
-      <span key={shaker.id}> 
-      <ShakerAnim/>
+
+    {shakers.activity.map(activity => (
+      <span key={activity} >
+      <ShakerAnim chooseTheme={chooseTheme}/>
       </span>
+
     ))}
-  
- 
+
     </div>
-    {/* <div className="col-2">
-    <span><img className="shake" alt={shakers.theme} src={shaker} onClick={chooseShaker}/>
-    <DateNightOut/>
-    </span>
-    </div>
-    <div className="col-2">
-    <span><img className="shake" alt={shakers.theme} src={shaker} onClick={chooseShaker}/>
-    <NetflixandChill/>
-    </span>
-    </div>
-    <div className="col-2">
-    <span><img className="shake" alt={shakers.theme} src={shaker} onClick={chooseShaker}/>
-    <Outdoor/>
-    </span>
-    </div>
-    <div className="col-2">
-    <span><img className="shake" alt={shakers.theme} src={shaker} onClick={chooseShaker}/>
-    <Weekend/>
-    </span>
-    </div> */}
+    <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
     </div>
   </div>
   </>

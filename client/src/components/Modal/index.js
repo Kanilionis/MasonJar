@@ -1,41 +1,25 @@
-import React, { Component } from 'react';
-import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
+import React from 'react';
+import {Modal, Button} from 'react-bootstrap'
 
-class Modal extends Component {
-state = {
-  modal: false
-}
 
-toggle = () => {
-  this.setState({
-    modal: !this.state.modal
-  });
-}
-
-render() {
+function ModalShow(props) {
+  
   return (
-    <MDBContainer>
-      <MDBBtn onClick={this.toggle}>Modal</MDBBtn>
-      {/* Hide modal button after click event */}
-      
-      <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
-        <MDBModalHeader toggle={this.toggle}>Activity</MDBModalHeader>
-        
-        
-        <MDBModalBody>
-          This will populate description from DB
-        </MDBModalBody>
-        
-        <MDBModalFooter>
-          <MDBBtn color="secondary" onClick={this.toggle}>X</MDBBtn>
-          <MDBBtn color="primary">Skip</MDBBtn>
-          {/* Skip Function to generate new array and replace modal data */}
-        </MDBModalFooter>
-      </MDBModal>
-
-    </MDBContainer>
-    );
-  }
+    <>
+      <Modal className="modal" show={props.isOpen} >
+        <Modal.Header closeButton onClick={props.closeModal}>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" >
+            Eh...Try Again
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
 }
 
-export default Modal;
+
+export default ModalShow; 
