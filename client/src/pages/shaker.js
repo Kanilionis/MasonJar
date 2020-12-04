@@ -13,28 +13,33 @@ import ModalShow from "../components/Modal";
 // import { Link } from "react-router-dom"
 import { Carousel } from "react-bootstrap";
 import ShakerImg from "./30644-200.png";
-
-
+import API from "../utils/API";
 
 const Shaker = () => {
 
 const [shakers, setShakers] = useState({  
-  theme: "date night in",
-  activity: ["strip poker", "movie night", "dance party"]
+  theme: "",
+  activities: [],
+  currentActivity: ""
 })
 
 const [modalOpen, setModalOpen] = useState({
-  isOpen: false,
-  setTheme: "date night in"
+  isOpen: false
 })
 
 useEffect(() => {
-  console.log(shakers.activity)
-
+  loadThemes()
 }, [])
+
+const loadThemes = () => {
+  API.getThemes().then(res => {
+    console.log(res)
+  }).catch(err => console.log(err))
+}
 
 
 function chooseTheme(){
+  
   let timer1 = setTimeout(() => setModalOpen({isOpen: true}), 1000)
   return () => {
     clearTimeout(timer1)
@@ -46,10 +51,6 @@ function chooseTheme(){
 function closeModal(){
   setModalOpen({isOpen: false})
 }
-
-
-  
-
 
 return(
   <>
@@ -77,23 +78,23 @@ return(
     
     <Carousel.Item >
       <ShakerAnim chooseTheme={chooseTheme}/>Date Night In
-      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
+      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal} data={shakers}/>
     </Carousel.Item>
     <Carousel.Item>
       <ShakerAnim chooseTheme={chooseTheme}/>Date Night Out
-      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
+      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal} data={shakers}/>
     </Carousel.Item>
     <Carousel.Item>
       <ShakerAnim chooseTheme={chooseTheme}/>Netflix and Chill
-      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
+      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal} data={shakers}/>
     </Carousel.Item>
     <Carousel.Item>
       <ShakerAnim chooseTheme={chooseTheme}/>Get Outside
-      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
+      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal} data={shakers}/>
     </Carousel.Item>
     <Carousel.Item>
       <ShakerAnim chooseTheme={chooseTheme}/>Weekend Getaway
-      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal}/>
+      <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal} data={shakers}/>
     </Carousel.Item>
    
   </Carousel>
