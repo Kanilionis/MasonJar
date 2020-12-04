@@ -2,6 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import Nav from "../components/Nav";
 import "../index.css"
+import Footer from '../components/Footer'
+
+
+
 
 class Contact extends React.Component {
   
@@ -40,9 +44,11 @@ class Contact extends React.Component {
       
       <div class="contact-container">
       <Nav />
+      
         <div className ="row suggestion-row">
         <div className="container col-4 home-container"></div>
-        
+          
+                  
           <div className="container col-4 home-container signup">
             <div className="form-container-backdrop">
               <h1 className = "h1-contact">Make A Suggestion</h1>
@@ -69,7 +75,9 @@ class Contact extends React.Component {
               </div>
             </div>
           </div>
+          
          </div>
+         
       </div>
       </>
     );

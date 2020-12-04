@@ -21,9 +21,7 @@
   }
 }
 
-body{
-  background-color: lightblue;
-}
+
 /* .modal{
   transition-delay: .5s
 } */
@@ -52,8 +50,8 @@ body{
   overflow: hidden;
   background: linear-gradient(
     108deg,
-    rgb(128, 99, 120) 0%,
-    rgb(212, 212, 212) 100%
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
   );
 }
 
@@ -109,3 +107,55 @@ body{
   background: #2f0909;
 }
 
+
+/* Styling for landing/home page */
+
+.enter-container{
+
+}
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-right:20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  );
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: rgb(241, 240, 240);
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered-img {
+  width: 150px;
+  border-radius: 50%;
+}

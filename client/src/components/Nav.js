@@ -7,7 +7,7 @@ import shaker from "./30644-200.png"
 function Nav() {
   return (
 
-    <RBS.Navbar bg="light" expand="lg">
+    <RBS.Navbar bg="transparent" expand="lg">
 
       <img  src={shaker} alt="Shaker Mason Jar"height="auto" width="5%"/>
 
