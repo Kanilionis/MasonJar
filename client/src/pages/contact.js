@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Nav from "../components/Nav";
 import "../index.css"
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 
 
 
@@ -42,7 +42,7 @@ class Contact extends React.Component {
     return(
       <>
       
-      <div class="contact-container">
+      <div className="contact-container">
       <Nav />
       
         <div className ="row suggestion-row">
