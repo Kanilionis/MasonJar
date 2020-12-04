@@ -7,6 +7,7 @@ import ModalShow from "../components/Modal";
 import { Carousel } from "react-bootstrap";
 
 
+
 const Shaker = () => {
 
 
@@ -62,7 +63,7 @@ function closeModal(){
 return(
   <>
   <Nav />
-<center>
+<center> 
   {shakers.length ? (
      <Carousel controls={true} slide={true} indicators={false} >
      {shakers.map(shaker => (
