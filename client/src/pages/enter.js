@@ -5,7 +5,8 @@ import shaker from "./30644-200.png";
 import "../index.css"
 import Nav from '../components/Nav.js'
 import Typical from 'react-typical';
-import LoginButton from '../components/Login'
+import LoginButton from '../components/LoginButton'
+import LogoutButton from '../components/LogoutButton'
 
 
 
@@ -43,7 +44,8 @@ class Enter extends Component {
                       <p>Some text.</p>
                       <div>
                     {this.renderRedirect()}
-                      <LoginButton></LoginButton>
+                      <LoginButton />
+                      <LogoutButton />
                       
                   </div>
                 </div>
