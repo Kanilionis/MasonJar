@@ -10,7 +10,7 @@ module.exports = {
   },  
   findByTheme: function(req, res) {
     db.Themes
-      .findById(req.params)
+      .find({theme: req.params.theme})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

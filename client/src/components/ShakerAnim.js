@@ -1,6 +1,5 @@
 import React from 'react'
 import shaker from "../images/New_Jar.svg"
-import ModalShow from "../components/Modal/index"
 import "../index.css"
 
 
@@ -8,7 +7,7 @@ const ShakerAnim = (props) => {
   const [wobble, setWobble] = React.useState(0)
   function handleClick(){
     setWobble(1);
-    props.chooseTheme()
+    props.chooseTheme(props.theme)
   }
   return (
     <>
@@ -21,7 +20,7 @@ const ShakerAnim = (props) => {
       onAnimationEnd={() => setWobble(0)}
       wobble={wobble}
     />
-    <ModalShow className="modal"/>
+    <h3>{props.theme}</h3>
     </>
   )
 }

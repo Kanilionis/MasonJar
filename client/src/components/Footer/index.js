@@ -12,7 +12,7 @@ import {
     WebsiteRights,
     SocialIcons,
     SocialIconLink,
-    NavLogoImg
+    // NavLogoImg
 } from "./FooterElements"
 
 import {

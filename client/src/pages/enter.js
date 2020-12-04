@@ -32,9 +32,9 @@ class Enter extends Component {
         
         <div className ="enter-container">
          
-          <div class="split left">
+          <div className="split left">
           <Nav/>
-              <div class="centered">
+              <div className="centered">
                 <img src={shaker} alt="shaker" className="centered-img"/>
                    <h1>Welcome to Shake It</h1>
                     <h2>Jane Flex</h2>
@@ -48,8 +48,8 @@ class Enter extends Component {
                 </div>
           </div>
 
-          <div class="split right">
-              <div class="centered">
+          <div className="split right">
+              <div className="centered">
                   
                     <h2>SHAKE IT</h2>
                       <p>Some text here too.</p>
