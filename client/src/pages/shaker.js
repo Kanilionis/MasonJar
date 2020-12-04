@@ -6,6 +6,7 @@ import Nav from "../components/Nav";
 import ModalShow from "../components/Modal";
 import { Carousel } from "react-bootstrap";
 
+
 const Shaker = () => {
 
 
@@ -58,13 +59,6 @@ function closeModal(){
   setModalOpen({isOpen: false})
 }
 
-function randomPick(){
-  
-  const randomAct = Math.floor(Math.random() * shakers.activities.length)
-  console.log(randomAct)
-  // setShaker(currentActivity: "whatever random activity is chosen")
-}
-
 return(
   <>
   <Nav />
@@ -73,10 +67,8 @@ return(
      <Carousel controls={true} slide={true} indicators={false} >
      {shakers.map(shaker => (
        <Carousel.Item >
-
-       <ShakerAnim theme={shaker.theme} randomPick={randomPick} chooseTheme={chooseTheme}/>{shaker.theme}
-       <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal} data={shaker}/>
-
+       <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
+       <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
      </Carousel.Item>
      ))}
       </Carousel>
