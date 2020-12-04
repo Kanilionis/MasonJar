@@ -1,5 +1,5 @@
 import React from 'react'
-import shaker from "../pages/30644-200.png"
+import shaker from "../images/Whole_Mason2.svg"
 import ModalShow from "../components/Modal/index"
 import "../index.css"
 
@@ -13,6 +13,7 @@ const ShakerAnim = (props) => {
   return (
     <>
     <img
+      height="300px"
       className="shake"
       src={shaker}
       alt="jar"
