@@ -52,7 +52,10 @@ const loadThemes = () => {
 //This sets the state for the current shaker to populate the modal
 function chooseTheme(theme){
   API.getActivitiesByTheme(theme).then(res => { 
-    setCurrentShaker({theme: [theme], activities: res.data[0].activities, currentActivity: res.data[0].activities[0].name})
+    console.log(res.data)
+    var randomPick = Math.floor(Math.random() * res.data[0].activities.length)
+    console.log(randomPick)
+    setCurrentShaker({theme: [theme], activities: res.data[0].activities, currentActivity: res.data[0].activities[randomPick].name})
   }).catch(err => console.log(err))
 }
 
