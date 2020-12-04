@@ -1,21 +1,16 @@
 const router = require("express").Router();
-const db = require("../models")
+const shakeItController = require("../../controllers/shakeItController");
 
-// Matches with "/api/themes"
-router
-  .route("/themes")
-  .get(async function(req,res){
-    const data = await db.themes.find()
-    res.json(data)
-  })
+//Matches with "/api/shakeit"
+router.route("/")
+.get(shakeItController.findAll)
+.post(shakeItController.create);
 
-// Matches with "/api/:theme"
+//Matches with "/api/shakeit/:theme"
 router
-  .route("/:theme")
-  .get(async function(req,res){
-    const theme = req.data.params
-    const data = await db.themes.find({theme: [theme]})
-    res.json(data)
-  })
+.route("/:theme")
+.get(shakeItController.findByTheme)
+.put(shakeItController.update)
+.delete(shakeItController.remove);
 
 module.exports = router;
