@@ -5,7 +5,7 @@ import React from "react";
 function Weekend(props) {
   return (
     <>
-    <h1>Weekend Getaway</h1>
+    <h1>Weekend Warriors</h1>
     </>
   );
 }
