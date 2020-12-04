@@ -1,5 +1,5 @@
 import React from 'react'
-import shaker from "../images/Whole_Mason2.svg"
+import shaker from "../images/New_Jar.svg"
 import ModalShow from "../components/Modal/index"
 import "../index.css"
 
