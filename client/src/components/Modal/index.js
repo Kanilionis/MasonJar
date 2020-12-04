@@ -10,7 +10,7 @@ function ModalShow(props) {
         <Modal.Header closeButton onClick={props.closeModal}>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>random activity here</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" >
             Eh...Try Again

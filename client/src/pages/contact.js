@@ -42,7 +42,7 @@ class Contact extends React.Component {
     return(
       <>
       
-      <div class="contact-container">
+      <div className="contact-container">
       <Nav />
       
         <div className ="row suggestion-row">
