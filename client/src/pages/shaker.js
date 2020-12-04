@@ -8,12 +8,21 @@ import { Carousel } from "react-bootstrap";
 
 const Shaker = () => {
 
-const [shakers, setShakers] = useState({  
+
+//Loads a single theme and its activities based on a click
+const [currentShaker, setCurrentShaker] = useState({
   theme: "",
   activities: [],
   currentActivity: ""
 })
 
+//Loads all themes and activities for shaker page
+const [shakers, setShakers] = useState({
+  theme: "",
+  activities: []
+})
+
+//Determines if the modal is showing
 const [modalOpen, setModalOpen] = useState({
   isOpen: false
 })
@@ -22,20 +31,27 @@ useEffect(() => {
   loadThemes()
 }, [])
 
+useEffect(() => {
+
+  if (currentShaker.theme){
+    let timer1 = setTimeout(() => setModalOpen({isOpen: true}), 1000)
+    return () => {
+      clearTimeout(timer1)
+    }
+  }
+}, [currentShaker.theme])
+
 const loadThemes = () => {
   API.getThemes().then(res => {
     setShakers(res.data)
-    console.log(res)
   }).catch(err => console.log(err))
 }
 
-
-function chooseTheme(){
-  
-  let timer1 = setTimeout(() => setModalOpen({isOpen: true}), 1000)
-  return () => {
-    clearTimeout(timer1)
-  }
+//This sets the state for the current shaker to populate the modal
+function chooseTheme(theme){
+  API.getActivitiesByTheme(theme).then(res => { 
+    setCurrentShaker({theme: [theme], activities: res.data[0].activities, currentActivity: res.data[0].activities[0].name})
+  }).catch(err => console.log(err))
 }
 
 function closeModal(){
@@ -57,8 +73,10 @@ return(
      <Carousel controls={true} slide={true} indicators={false} >
      {shakers.map(shaker => (
        <Carousel.Item >
+
        <ShakerAnim theme={shaker.theme} randomPick={randomPick} chooseTheme={chooseTheme}/>{shaker.theme}
        <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal} data={shaker}/>
+
      </Carousel.Item>
      ))}
       </Carousel>

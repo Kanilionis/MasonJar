@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Nav from "../components/Nav";
 import "../index.css"
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 
 
 

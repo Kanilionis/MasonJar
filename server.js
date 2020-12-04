@@ -13,7 +13,7 @@ mongoose.connect(
     useCreateIndex: true,
     useFindAndModify: false
   }
-  )
+)
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
