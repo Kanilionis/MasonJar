@@ -4,7 +4,9 @@ import * as ReactBootStrap from "react-bootstrap";
 import shaker from "./30644-200.png";
 import "../index.css"
 import Nav from '../components/Nav.js'
-import Typical from 'react-typical'
+import Typical from 'react-typical';
+import LoginButton from '../components/Login'
+
 
 
 
@@ -41,9 +43,8 @@ class Enter extends Component {
                       <p>Some text.</p>
                       <div>
                     {this.renderRedirect()}
-                      <ReactBootStrap.Button onClick={this.setRedirect} variant="primary" size="lg">
-                          Your Next Adventure Awaits...
-                      </ReactBootStrap.Button>
+                      <LoginButton></LoginButton>
+                      
                   </div>
                 </div>
           </div>
