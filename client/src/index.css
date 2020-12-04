@@ -228,3 +228,7 @@
   display: block;
 }
 
+/* Log in / Log Out Buttons */
+.enterBtn{
+  margin: 0 10px
+}
