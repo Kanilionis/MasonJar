@@ -21,7 +21,14 @@
   }
 }
 
+#jar-text{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 17px;
+}
 
+.cls-1{
+  fill: #fff
+}
 /* .modal{
   transition-delay: .5s
 } */
