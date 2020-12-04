@@ -11,7 +11,9 @@ const ModalShow = (props) => {
         <Modal.Header closeButton onClick={props.closeModal}>
           <Modal.Title>{props.currentShaker.theme}</Modal.Title>
         </Modal.Header>
+
         <Modal.Body>{props.currentShaker.currentActivity}</Modal.Body>
+
         <Modal.Footer>
           <Button variant="secondary" >
             Eh...Try Again
