@@ -2,15 +2,16 @@ import React from 'react';
 import {Modal, Button} from 'react-bootstrap'
 
 
-function ModalShow(props) {
-  
+const ModalShow = (props) => {
+
+
   return (
     <>
       <Modal show={props.isOpen} >
         <Modal.Header closeButton onClick={props.closeModal}>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>{props.currentShaker.theme}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>{props.currentShaker.currentActivity}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" >
             Eh...Try Again
