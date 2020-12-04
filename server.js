@@ -7,12 +7,12 @@ const PORT = process.env.PORT || 3001;
 //Mongoose Connection
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/shakeIt',
-  // {
-  //   useNewUrlParser: true,
-  //   useUnifiedTopology: true,
-  //   useCreateIndex: true,
-  //   useFindAndModify: false
-  // }
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
   )
 
 // Define middleware here
@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 app.use(routes);
-
+ 
 
 // Start the API server
 app.listen(PORT, function() {
@@ -37,7 +37,7 @@ app.listen(PORT, function() {
 // const creds = require('./config');
 // const path = require ("path")
 // app.use(cors())
-// app.use('/send', router)
+// app.use('/', router)
 
 //This other stuff
 // var transport = {
@@ -84,10 +84,3 @@ app.listen(PORT, function() {
 //     }
 //   })
 // })
-
-
-// app.get("*", function(req, res) {
-    
-//     res.sendFile(path.join(__dirname, "/client/build/index.html"));
-//   });
-
