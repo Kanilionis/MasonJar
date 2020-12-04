@@ -12,11 +12,19 @@ const TabsPage = () => {
   //Setting comps initail state
   const [themes, setThemes] = useState ([])
   const [formObject, setFormObject] = useState({})
+  const [currentShaker, setCurrentShaker] = useState({
+    theme: "",
+    activities: [],
+    currentActivity: ""
+  })
+  
 
   //loading all themes and storing them within setThemes
   useEffect(() => {
     loadThemes()
   }, [])
+
+  //Loads a single theme and its activities based on a click
 
 
 
@@ -28,6 +36,12 @@ const TabsPage = () => {
       )
       .catch(err => console.log(err));
   };
+
+  function chooseTheme(theme){
+    API.getActivitiesByTheme(theme).then(res => { 
+      setCurrentShaker({theme: [theme], activities: res.data[0].activities, currentActivity: res.data[0].activities[0].name})
+    }).catch(err => console.log(err))
+  }
 
   // Handles updating component state when the user types into the input field
 
@@ -123,7 +137,7 @@ const TabsPage = () => {
                       <ListItem key={theme._id}>
                         <Link to={"/themes/" + theme._id}>
                           <strong>
-                             by {theme.activity.name}
+                             {theme.title} {theme.activity}
                           </strong>
                         </Link>
                         

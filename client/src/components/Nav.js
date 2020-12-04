@@ -18,7 +18,8 @@ function Nav() {
       <RBS.Navbar.Collapse id="basic-navbar-nav">
         <RBS.Nav className="mr-auto">
           <RBS.Nav>
-            <RBS.Nav.Link as={Link} to="/contact">Contact</RBS.Nav.Link>       
+            <RBS.Nav.Link as={Link} to="/contact">Contact</RBS.Nav.Link>
+            <RBS.Nav.Link as={Link} to="/viewthemes">Themes</RBS.Nav.Link>         
           </RBS.Nav>
         </RBS.Nav>
       </RBS.Navbar.Collapse>
