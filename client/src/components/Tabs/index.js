@@ -1,25 +1,187 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Input, FormBtn } from '../Form';
+import { List, ListItem } from '../List';
+import { Link } from "react-router-dom";
+
+import "../../../src/index.css"
+
+import API from '../../utils/API'
 
 const TabsPage = () => {
+  //Setting comps initail state
+  const [themes, setThemes] = useState ([])
+  const [formObject, setFormObject] = useState({})
+
+  //loading all themes and storing them within setThemes
+  useEffect(() => {
+    loadThemes()
+  }, [])
+
+
+
+ //loading all themes and sets them to themes 
+  function loadThemes (){
+    API.getThemes()
+     .then(res =>
+      setThemes(res.data)
+      )
+      .catch(err => console.log(err));
+  };
+
+  // Handles updating component state when the user types into the input field
+
+  function handleInputChange(event){
+    const { name, value } = event.target;
+    setFormObject({...formObject, [name]: value})
+  };
+
+  function handleFormSubmit(event){
+    event.preventDefault();
+    if (formObject.theme && formObject.activity){
+      API.saveTheme({
+        theme: formObject.theme,
+        activity: formObject.activity
+
+      })
+      .then(res => loadThemes())
+      .catch (err => console.log(err));
+    }
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
-        <div>
-            <Tabs>
+    <div>
+      <div className="container-fluid">
+        <div className="row input-container">
+          <div className="col-md-6">
+          <form>
+              <Input
+                onChange={handleInputChange}
+                name="theme"
+                placeholder="Name of Theme!!(required)"
+              />
+
+              <Input
+                onChange={handleInputChange}
+                name="activity"
+                placeholder="Activity (required)"
+              />
+              
+              <FormBtn
+                disabled={!(formObject.activity && formObject.theme)}
+                onClick={handleFormSubmit}
+              >
+                Submit 
+              </FormBtn>
+            </form>
+
+          </div>
+
+        </div>
+
+              <Tabs>
                 <TabList>
-                    <Tab>Theme 1</Tab>
-                    <Tab>Theme 2</Tab>
+                  <Tab>Date Night In</Tab>
+                  <Tab>Date Night Out</Tab>
+                  <Tab>Netflix and Chill</Tab>
+                  <Tab>Outdoor Avtivites</Tab>
+                  <Tab>Weekend Trip</Tab>
                 </TabList>
 
                 <TabPanel>
-                    <h2>Any content 1</h2>
+                {themes.length ? (
+                  <List>
+                    {themes.map(theme => (
+                      <ListItem key={theme._id}>
+                        <Link to={"/themes/" + theme._id}>
+                          <strong>
+                             by {theme.activity.name}
+                          </strong>
+                        </Link>
+                        
+                      </ListItem>
+                    ))}
+                  </List>
+                ) : (
+                  <h3>No Results to Display</h3>
+                )}
+                    
+                 
                 </TabPanel>
-
                 <TabPanel>
-                    <h2>Any content 2</h2>
+                  <p>
+                    <b>Date Night Out</b> 
+                    <ul>
+                        <li>To</li>
+                    </ul>
+                  </p>
+                  <p>
+                    
+                  </p>
                 </TabPanel>
-                </Tabs>
-
-            
+                <TabPanel>
+                  <p>
+                    <b>Netflix and Chill</b> 
+                    <ul>
+                        <li>Shake</li>
+                    </ul>
+                  </p>
+                  <p>
+                    
+                  </p>
+                </TabPanel>
+                <TabPanel>
+                  <p>
+                    <b>Outdoor Avtivites</b> 
+                    <ul>
+                        <li>it</li>
+                    </ul>
+                  </p>
+                  <p>
+                    
+                  </p>
+                </TabPanel>
+                <TabPanel>
+                  <p>
+                    <b>Weekend Trip</b> 
+                    <ul>
+                        <li>Hello</li>
+                    </ul>
+                  </p>
+                  <p>
+                    
+                  </p>
+                </TabPanel>
+              </Tabs>
+          </div>   
         </div>
     )
 }
