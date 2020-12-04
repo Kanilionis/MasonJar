@@ -4,6 +4,7 @@ import Shaker from "./pages/shaker";
 import Contact from "./pages/contact";
 // import Nav from "./components/Nav";
 import Enter from "./pages/enter";
+import View from './pages/viewthemes';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route exact path="/contact">
             <Contact/>
+          </Route>
+          <Route exact path="/viewthemes">
+           <View/>
           </Route>
         </Switch>
       </div>

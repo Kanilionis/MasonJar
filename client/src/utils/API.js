@@ -8,5 +8,11 @@ export default {
   // gets all activities by a given theme
   getActivitiesByTheme: function(theme) {
     return axios.get("/api/shakeit/" + theme);
+  },
+
+  // Saves a theme to the database
+  saveTheme: function(themeData) {
+    return axios.post("/api/shakeit", themeData);
   }
 };
+   
