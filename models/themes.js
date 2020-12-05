@@ -7,12 +7,10 @@ const ThemesSchema = new Schema(
   activities: [
     {
       name: {
-        type: String,
-        require: "Please enter a name"
+        type: String
       },
       submittedBy: {
-        type: String,
-        require: "Please enter a name"
+        type: String
       }
     }
   ]
