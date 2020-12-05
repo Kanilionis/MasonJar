@@ -3,11 +3,6 @@ import React, { Component, useState, useEffect } from "react";
 // import * as ReactBootStrap from "react-bootstrap";
 import logo from "../images/logo.svg";
 import "../index.css";
-import Nav from '../components/Nav.js';
-
-import { Redirect } from 'react-router-dom';
-// import * as ReactBootStrap from "react-bootstrap";
-import shaker from "./30644-200.png";
 
 import Typical from 'react-typical';
 import LoginButton from '../components/LoginButton';
@@ -23,7 +18,7 @@ const Enter = () => {
     <>
       <div className="enter-container">
         <div className="split left">
-         
+          {/* <Nav /> */}
           <div className="centered">
             <img src={logo} alt="shaker" height="300px" onMouseOver={animation} wobble={wobble} className="shake" onAnimationEnd={() => setWobble(0)} />
             <h1>Welcome to Shake It</h1>

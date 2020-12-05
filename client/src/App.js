@@ -8,45 +8,41 @@ import Loading from "./components/Loading";
 import Footer from "./components/Footer/index";
 import { useAuth0 } from "./react-auth0-spa";
 
-const App = () => {
+
+function App() {
 
   const { isAuthenticated } = useAuth0();
 
   return (
     <div className="container">
-      {isAuthenticated ? (
-         <Router>
-         <div id="app" className="d-flex flex-column h-100">
-          <div className="container flex-grow-1">
-            <Switch>
-              <Route exact path="/">
-                <Enter/>
-              </Route>
-              <Route exact path="/shaker" >
-                <Shaker/>
-              </Route>
-              <Route exact path="/contact">
-                <Contact/>
-              </Route>
-              <Route exact path="/viewthemes">
-                <View/>
-              </Route>
-            </Switch>
-          </div>
-          </div>
-        </Router>
-
-      ): (
-        <Enter/>
-      )}
       
+      
+        <div>
+        {isAuthenticated === true ? (
+          <Router>
+          <div id="app" className="d-flex flex-column h-100">
+            <div className="container flex-grow-1">
+              <Switch>
+                <Route exact path={["/shaker", "/"]} component={Shaker} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/viewthemes" component={View} />
+              </Switch>
+            </div>
+          </div>
+          </Router>
 
+        ): (
+          <Enter />
+        )
+        }
+        </div>
     </div>
- 
-
-
   );
-}
+  }
+  
+  
+
+
 
 export default App;
 
