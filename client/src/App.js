@@ -48,13 +48,13 @@ function App() {
   return (
     <div className="container">
       
+      
         <div>
         {isAuthenticated === true ? (
           <Router>
           <div id="app" className="d-flex flex-column h-100">
             <div className="container flex-grow-1">
               <Switch>
-                {/* <Route exact path="/" exact component={Enter} /> */}
                 <Route exact path={["/shaker", "/"]} component={Shaker} />
                 <Route path="/contact" component={Contact} />
                 <Route path="/viewthemes" component={View} />
