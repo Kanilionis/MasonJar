@@ -3,21 +3,25 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Input, FormBtn } from '../Form';
 import { List, ListItem } from '../List';
 import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button"
 
 import "../../../src/index.css"
 
 import API from '../../utils/API'
 
-const TabsPage = () => {
+const TabsPage = (props) => {
   //Setting comps initail state
-  const [themes, setThemes] = useState ([])
-  const [formObject, setFormObject] = useState({})
+  const [themes, setThemes] = useState([])
+  const [formObject, setFormObject] = useState({
+    theme: "",
+    activity: ""
+  })
   const [currentShaker, setCurrentShaker] = useState({
     theme: "",
     activities: [],
     currentActivity: ""
   })
-  
+  const [currentTab, setCurrentTab] = useState({})
 
   //loading all themes and storing them within setThemes
   useEffect(() => {
@@ -28,176 +32,102 @@ const TabsPage = () => {
 
 
 
- //loading all themes and sets them to themes 
-  function loadThemes (){
+  //loading all themes and sets them to themes 
+  function loadThemes() {
     API.getThemes()
-     .then(res =>
-      setThemes(res.data)
+      .then(res =>
+        setThemes(res.data)
       )
       .catch(err => console.log(err));
   };
 
-  function chooseTheme(theme){
-    API.getActivitiesByTheme(theme).then(res => { 
-      setCurrentShaker({theme: [theme], activities: res.data[0].activities, currentActivity: res.data[0].activities[0].name})
+  function chooseTheme(theme) {
+    API.getActivitiesByTheme(theme).then(res => {
+      setCurrentShaker({ theme: [theme], activities: res.data[0].activities, currentActivity: res.data[0].activities[0].name })
     }).catch(err => console.log(err))
   }
 
   // Handles updating component state when the user types into the input field
 
-  function handleInputChange(event){
+  function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
+    setFormObject({ ...formObject, [name]: value })
   };
 
-  function handleFormSubmit(event){
+  function handleNewShaker(event) {
     event.preventDefault();
-    if (formObject.theme && formObject.activity){
-      API.saveTheme({
-        theme: formObject.theme,
-        activity: formObject.activity
-
-      })
-      .then(res => loadThemes())
-      .catch (err => console.log(err));
+    if (formObject.theme) {
+      API.saveTheme(formObject.theme)
+        .then(res => loadThemes())
+        .catch(err => console.log(err));
     }
   };
 
+  function handleNewActivity() {
+    API.saveActivity(currentTab.theme, formObject.activity)
+      .then(res => loadThemes())
+      .catch(err => console.log(err));
+  }
 
+  function handleTabChange(theme){
+    setCurrentTab({theme: [theme]})
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    return (
-    <div>
+  return (
+    <>
       <div className="container-fluid">
         <div className="row input-container">
           <div className="col-md-6">
-          <form>
+            <form>
+              <h3>Create A New Shaker</h3>
               <Input
                 onChange={handleInputChange}
                 name="theme"
-                placeholder="Name of Theme!!(required)"
+                placeholder='What to make for dinner'
+                value={formObject.name}
               />
-
-              <Input
-                onChange={handleInputChange}
-                name="activity"
-                placeholder="Activity (required)"
-              />
-              
-              <FormBtn
-                disabled={!(formObject.activity && formObject.theme)}
-                onClick={handleFormSubmit}
+              <Button variant="outline-secondary"
+                disabled={!(formObject.theme)}
+                onClick={handleNewShaker}
               >
-                Submit 
-              </FormBtn>
+                Submit
+              </Button>
             </form>
-
           </div>
-
         </div>
+        <div className="tableResults">
+          <Tabs>
+            <TabList>
+              {themes.map(theme => (
+                <Tab onClick={ () => handleTabChange(theme.theme)}>
+                  {theme.theme}
+                </Tab>
+              ))}
+            </TabList>
 
-              <Tabs>
-                <TabList>
-                  <Tab>Date Night In</Tab>
-                  <Tab>Date Night Out</Tab>
-                  <Tab>Netflix and Chill</Tab>
-                  <Tab>Outdoor Avtivites</Tab>
-                  <Tab>Weekend Trip</Tab>
-                </TabList>
-
-                <TabPanel>
-                {themes.length ? (
-                  <List>
-                    {themes.map(theme => (
-                      <ListItem key={theme._id}>
-                        <Link to={"/themes/" + theme._id}>
-                          <strong>
-                             {theme.title} {theme.activity}
-                          </strong>
-                        </Link>
-                        
-                      </ListItem>
-                    ))}
-                  </List>
-                ) : (
-                  <h3>No Results to Display</h3>
-                )}
-                    
-                 
-                </TabPanel>
-                <TabPanel>
-                  <p>
-                    <b>Date Night Out</b> 
-                    <ul>
-                        <li>To</li>
-                    </ul>
-                  </p>
-                  <p>
-                    
-                  </p>
-                </TabPanel>
-                <TabPanel>
-                  <p>
-                    <b>Netflix and Chill</b> 
-                    <ul>
-                        <li>Shake</li>
-                    </ul>
-                  </p>
-                  <p>
-                    
-                  </p>
-                </TabPanel>
-                <TabPanel>
-                  <p>
-                    <b>Outdoor Avtivites</b> 
-                    <ul>
-                        <li>it</li>
-                    </ul>
-                  </p>
-                  <p>
-                    
-                  </p>
-                </TabPanel>
-                <TabPanel>
-                  <p>
-                    <b>Weekend Trip</b> 
-                    <ul>
-                        <li>Hello</li>
-                    </ul>
-                  </p>
-                  <p>
-                    
-                  </p>
-                </TabPanel>
-              </Tabs>
-          </div>   
+            {themes.map(theme => (
+              <TabPanel>
+                {theme.activities.map(activity => (
+                  <p>{activity.name}</p>
+                ))}
+                <Input
+                  placeholder="activity name"
+                  value={formObject.name}
+                  name="activity"
+                  onChange={handleInputChange}>
+                </Input>
+                <Button variant="outline-secondary"
+                  disabled={!(formObject.activity)}
+                  onClick={handleNewActivity}>Add A New Activity</Button>
+              </TabPanel>
+            ))}
+          </Tabs>
         </div>
-    )
+      </div>
+    </>
+  )
 }
 
 export default TabsPage
+
+
