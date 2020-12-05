@@ -8,7 +8,7 @@ import "../../../src/index.css"
 
 import API from '../../utils/API'
 
-const TabsPage = () => {
+const TabsPage = (props) => {
   //Setting comps initail state
   const [themes, setThemes] = useState ([])
   const [formObject, setFormObject] = useState({})
@@ -121,23 +121,50 @@ const TabsPage = () => {
 
         </div>
 
+        {/* Tabs is an imported libary  */}
+
               <Tabs>
                 <TabList>
-                  <Tab>Date Night In</Tab>
-                  <Tab>Date Night Out</Tab>
+
+                {themes.length ? (
+                  <Tab>
+                    {themes.map(theme => (
+                      <Tab chooseTheme={chooseTheme} theme={theme.theme}>
+                        <Tab to={"/themes/" + theme._id}>
+                          <strong>
+                             {theme.theme} 
+                             {/* I thought I was able to display each theme on their own tab but after looking it displays all themes on just one tab */}
+                          </strong>
+                        </Tab>
+                        
+                      </Tab>
+                    ))}
+                  </Tab>
+                ) : (
+                  <h3>No Results to Display</h3>
+                )}
+
+
+
+                  {/* This is to show you what the other tabs would look like if they could be mapped  */}
+                  
                   <Tab>Netflix and Chill</Tab>
                   <Tab>Outdoor Avtivites</Tab>
                   <Tab>Weekend Trip</Tab>
                 </TabList>
 
+
+
+              {/* This is the panel that shows the list of activites for each theme but right now I can only get a list of themes to appear and not their activites */}
                 <TabPanel>
                 {themes.length ? (
                   <List>
                     {themes.map(theme => (
-                      <ListItem key={theme._id}>
+                      <ListItem chooseTheme={chooseTheme} theme={theme.theme}>
                         <Link to={"/themes/" + theme._id}>
                           <strong>
-                             {theme.theme} {theme.activity}
+                             {theme.theme} 
+                             {/* This is where im having the issue, I cannot do theme.activites  */}
                           </strong>
                         </Link>
                         
@@ -150,49 +177,56 @@ const TabsPage = () => {
                     
                  
                 </TabPanel>
+
+{/* 
+              Ideally, we can get rid of the below panals if we can map trough the activites and disaply all based on their theme */}
+
+
                 <TabPanel>
-                  <p>
+                  
                     <b>Date Night Out</b> 
+                    
+                    
                     <ul>
                         <li>To</li>
                     </ul>
-                  </p>
-                  <p>
+                 
+                  
                     
-                  </p>
+                  
                 </TabPanel>
                 <TabPanel>
-                  <p>
+                 
                     <b>Netflix and Chill</b> 
                     <ul>
                         <li>Shake</li>
                     </ul>
-                  </p>
-                  <p>
+                 
+                 
                     
-                  </p>
+                 
                 </TabPanel>
                 <TabPanel>
-                  <p>
+                 
                     <b>Outdoor Avtivites</b> 
                     <ul>
                         <li>it</li>
                     </ul>
-                  </p>
-                  <p>
+                 
+                 
                     
-                  </p>
+                 
                 </TabPanel>
                 <TabPanel>
-                  <p>
+                 
                     <b>Weekend Trip</b> 
                     <ul>
                         <li>Hello</li>
                     </ul>
-                  </p>
-                  <p>
+                 
+                 
                     
-                  </p>
+                 
                 </TabPanel>
               </Tabs>
           </div>   
