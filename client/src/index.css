@@ -23,11 +23,41 @@
     transform: rotate(0deg);
   }
 }
+#jar-text{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 17px;
+  cursor: pointer
+}
+
+.cls-1{
+  fill: #fff
+}
 
 
 .wad-wobble{
-animation: wobble 1s infinite
+  display: block;
+  margin: 0 auto;
 }
+.wad-wobble[wad="1"]{
+animation: wad 1s infinite
+}
+
+@keyframes wad {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
 
 .pick-again[wobble='1']{
   animation: wobble 1s 1;
@@ -36,12 +66,6 @@ animation: wobble 1s infinite
 .pick-again {
   cursor: pointer;
   
-}
-
-#jar-text{
-  font-family: 'Architects Daughter', cursive;
-  font-size: 17px;
-  cursor: pointer
 }
 
 

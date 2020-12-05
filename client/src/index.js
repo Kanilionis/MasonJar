@@ -27,6 +27,7 @@ ReactDOM.render(
   </Auth0Provider>
   </Router>,
   document.getElementById("root")
+  
 );
 serviceWorker.unregister();
 
