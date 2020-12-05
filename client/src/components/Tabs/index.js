@@ -137,7 +137,7 @@ const TabsPage = () => {
                       <ListItem key={theme._id}>
                         <Link to={"/themes/" + theme._id}>
                           <strong>
-                             {theme.title} {theme.activity}
+                             {theme.theme} {theme.activity}
                           </strong>
                         </Link>
                         
