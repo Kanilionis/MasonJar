@@ -1,9 +1,16 @@
+
 import React, { useState, useEffect } from "react";
 // import { Redirect } from 'react-router-dom';
 // import * as ReactBootStrap from "react-bootstrap";
 import logo from "../images/logo.svg";
 import "../index.css";
 import Nav from '../components/Nav.js';
+
+import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+// import * as ReactBootStrap from "react-bootstrap";
+import shaker from "./30644-200.png";
+
 import Typical from 'react-typical';
 import LoginButton from '../components/LoginButton';
 
