@@ -8,37 +8,73 @@ import Loading from "./components/Loading";
 import Footer from "./components/Footer/index";
 import { useAuth0 } from "./react-auth0-spa";
 
-const App = () => {
+// const App = () => {
 
-  const { isLoading } = useAuth0();
+//   const { isLoading } = useAuth0();
 
-  if (isLoading) {
-    return <Loading />;
-  }
+//   if (isLoading) {
+//     return <Loading />;
+//   }
 
-  return (
+//   return (
 
     
-    <>
-    <Router>
-    <div id="app" className="d-flex flex-column h-100">
-      <div className="container flex-grow-1">
-        <Switch>
-          <Route path="/" exact component={Enter} />
-          <Route path="/shaker" exact component={Shaker} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/viewthemes" component={View} />
-        </Switch>
-      </div>
-      {/* <Footer /> */}
+//     <>
+//     <Router>
+//     <div id="app" className="d-flex flex-column h-100">
+//       <div className="container flex-grow-1">
+//         <Switch>
+//           <Route path="/" exact component={Enter} />
+//           <Route path="/shaker" exact component={Shaker} />
+//           <Route path="/contact" component={Contact} />
+//           <Route path="/viewthemes" component={View} />
+//         </Switch>
+//       </div>
+//       {/* <Footer /> */}
+//     </div>
+//     </Router>
+//     </>
+
+
+
+//   );
+// }
+
+
+function App() {
+
+  const { isAuthenticated } = useAuth0();
+
+  return (
+    <div className="container">
+      
+        <div>
+        {isAuthenticated === true ? (
+          <Router>
+          <div id="app" className="d-flex flex-column h-100">
+            <div className="container flex-grow-1">
+              <Switch>
+                {/* <Route exact path="/" exact component={Enter} /> */}
+                <Route exact path={["/shaker", "/"]} component={Shaker} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/viewthemes" component={View} />
+              </Switch>
+            </div>
+          </div>
+          </Router>
+
+        ): (
+          <Enter />
+        )
+        }
+        </div>
     </div>
-    </Router>
-    </>
-
-
-
   );
-}
+  }
+  
+  
+
+
 
 export default App;
 

@@ -16,6 +16,7 @@ const onRedirectCallback = appState => {
 };
 
 ReactDOM.render(
+  <Router>
   <Auth0Provider
     domain={config.domain}
     client_id={config.clientId}
@@ -23,7 +24,8 @@ ReactDOM.render(
     onRedirectCallback={onRedirectCallback}
   >
     <App />
-  </Auth0Provider>,
+  </Auth0Provider>
+  </Router>,
   document.getElementById("root")
 );
 serviceWorker.unregister();
