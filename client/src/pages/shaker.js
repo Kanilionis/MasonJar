@@ -65,21 +65,23 @@ function closeModal(){
 
 return(
   <>
-  <Nav />
-<center> 
-  {shakers.length ? (
-     <Carousel controls={true} slide={true} indicators={false} >
-     {shakers.map(shaker => (
-       <Carousel.Item >
-       <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
-       <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
-     </Carousel.Item>
-     ))}
-      </Carousel>
-  ) : (
-    <h3>nothing to see here</h3>
-  )}
-  </center>
+  <div className="contact-container">
+    <Nav />
+    <center> 
+      {shakers.length ? (
+        <Carousel controls={true} slide={true} indicators={false} >
+        {shakers.map(shaker => (
+          <Carousel.Item >
+          <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
+          <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
+        </Carousel.Item>
+        ))}
+          </Carousel>
+      ) : (
+        <h3>nothing to see here</h3>
+      )}
+    </center>
+  </div>
   </>
 )
 }

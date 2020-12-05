@@ -3,7 +3,7 @@ import { useAuth0 } from "../react-auth0-spa";
 import Button from 'react-bootstrap/Button';
 
 const LoginButton = () => {
-  const { loginWithRedirect , logout} = useAuth0();
+  const { loginWithRedirect } = useAuth0();
 
   return(
       <>

@@ -4,8 +4,8 @@ import TabsPage from '../components/Tabs'
 
 const viewthemes = () => {
     return (
-        <div>
-
+        <div className="contact-container">
+            
             <Nav/>
 
             <TabsPage/>

@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as RBS from "react-bootstrap";
 import shaker from "./30644-200.png"
-import AuthNav from "./AuthNav";
+// import AuthNav from "./AuthNav";
+// import AuthBtn from "./AuthBtn";
+import LogoutButton from "./LogoutButton";
 
 
 function Nav() {
@@ -14,7 +16,7 @@ function Nav() {
       <img  src={shaker} alt="Shaker Mason Jar"height="auto" width="5%"/>
 
       <RBS.Navbar.Brand>
-        <RBS.Nav.Link as={Link} to="/shaker">Shake It</RBS.Nav.Link> 
+        <RBS.Nav.Link as={Link} to="/shaker">Shake It Up</RBS.Nav.Link> 
         
       </RBS.Navbar.Brand>
 
@@ -27,12 +29,11 @@ function Nav() {
         </RBS.Nav>
       </RBS.Navbar.Collapse>
 
-    </RBS.Navbar>
+      <LogoutButton />
 
-   
+    </RBS.Navbar>
     </>
     
-
   )
 };
 

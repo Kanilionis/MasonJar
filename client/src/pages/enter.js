@@ -6,8 +6,6 @@ import "../index.css";
 import Nav from '../components/Nav.js';
 import Typical from 'react-typical';
 import LoginButton from '../components/LoginButton';
-import LogoutButton from "../components/LogoutButton";
-import Button from 'react-bootstrap/Button';
 
 
 
@@ -25,9 +23,9 @@ const Enter = () => {
             <img src={logo} alt="shaker" height="300px" onMouseOver={animation} wobble={wobble} className="shake" onAnimationEnd={() => setWobble(0)} />
             <h1>Welcome to Shake It</h1>
             <p>new ideas, no decisions</p>
-            <div>
+            {/* <div>
               <Button className="enterBtn" variant="outline-secondary" href="/shaker">ENTER</Button>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="split right">
@@ -43,7 +41,6 @@ const Enter = () => {
             />
             <div>
               <LoginButton />
-              <LogoutButton />
             </div>
           </div>
         </div>
