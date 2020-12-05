@@ -7,6 +7,7 @@ import AuthNav from "./AuthNav";
 
 function Nav() {
   return (
+    <>
 
     <RBS.Navbar bg="transparent" expand="lg">
 
@@ -14,7 +15,7 @@ function Nav() {
 
       <RBS.Navbar.Brand>
         <RBS.Nav.Link as={Link} to="/shaker">Shake It</RBS.Nav.Link> 
-      
+        
       </RBS.Navbar.Brand>
 
       <RBS.Navbar.Collapse id="basic-navbar-nav">
@@ -27,6 +28,10 @@ function Nav() {
       </RBS.Navbar.Collapse>
 
     </RBS.Navbar>
+
+   
+    </>
+    
 
   )
 };

@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
 // import { Redirect } from 'react-router-dom';
 // import * as ReactBootStrap from "react-bootstrap";
 import logo from "../images/logo.svg";
-import "../index.css"
-import Nav from '../components/Nav.js'
+import "../index.css";
+import Nav from '../components/Nav.js';
 import Typical from 'react-typical';
-import LoginButton from '../components/Login'
+import LoginButton from '../components/LoginButton';
+import LogoutButton from "../components/LogoutButton";
 import Button from 'react-bootstrap/Button';
+
+
+
 const Enter = () => {
   const [wobble, setWobble] = React.useState(0)
   const animation = () => {
@@ -38,7 +42,8 @@ const Enter = () => {
               wrapper="p"
             />
             <div>
-              <LoginButton></LoginButton>
+              <LoginButton />
+              <LogoutButton />
             </div>
           </div>
         </div>
