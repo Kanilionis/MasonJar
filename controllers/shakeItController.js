@@ -16,13 +16,13 @@ module.exports = {
   },
   create: function(req, res) {
     db.Themes
-      .create(req.body)
+      .create({theme: req.params.theme})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
     db.Themes
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({ theme: req.params.theme }, {$push: {activities: {name: req.params.activity}}})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
