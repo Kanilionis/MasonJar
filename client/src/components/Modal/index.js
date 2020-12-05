@@ -1,10 +1,15 @@
 import React from 'react';
-import {Modal, Button} from 'react-bootstrap'
+import {Modal} from 'react-bootstrap'
+import jar from "../30644-200.png"
 
 
 const ModalShow = (props) => {
-
-
+  const [wobble, setWobble] = React.useState(0)
+  function handleClick(){
+    setWobble(1);
+    props.pickAgain(props.theme)
+    
+  }
   return (
     <>
       <Modal show={props.isOpen} >
@@ -13,14 +18,12 @@ const ModalShow = (props) => {
         </Modal.Header>
         <Modal.Body>{props.currentShaker.currentActivity}</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" >
-            Eh...Try Again
-          </Button>
+          <img height="40px" src={jar} className="pick-again" variant="secondary" alt="jar" onClick={handleClick} onAnimationEnd={() => setWobble(0)} wobble={wobble} >
+          </img>
         </Modal.Footer>
       </Modal>
     </>
   );
 }
-
 
 export default ModalShow; 
