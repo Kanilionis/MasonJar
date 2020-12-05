@@ -21,9 +21,23 @@
   }
 }
 
+.wad-wobble{
+animation: wobble 1s infinite
+}
+
+.pick-again[wobble='1']{
+  animation: wobble 1s 1;
+}
+
+.pick-again {
+  cursor: pointer;
+  
+}
+
 #jar-text{
   font-family: 'Architects Daughter', cursive;
   font-size: 17px;
+  cursor: pointer
 }
 
 .cls-1{
