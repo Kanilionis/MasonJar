@@ -11,8 +11,13 @@ export default {
   },
 
   // Saves a theme to the database
-  saveTheme: function(themeData) {
-    return axios.post("/api/shakeit", themeData);
+  saveTheme: function(theme) {
+    return axios.post("/api/shakeit/"+ theme);
+  },
+
+  //Inserts a new activity into the theme
+  saveActivity: function(theme, activity){
+    return axios.put("/api/shakeit/" + theme + "/" + activity)
   }
 };
    
