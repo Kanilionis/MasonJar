@@ -25,7 +25,7 @@ const Enter = () => {
     <>
       <div className="enter-container">
         <div className="split left">
-          <Nav />
+          {/* <Nav /> */}
           <div className="centered">
             <img src={logo} alt="shaker" height="300px" onMouseOver={animation} wobble={wobble} className="shake" onAnimationEnd={() => setWobble(0)} />
             <h1>Welcome to Shake It</h1>
