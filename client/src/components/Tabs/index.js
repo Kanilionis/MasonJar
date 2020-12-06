@@ -69,8 +69,15 @@ const TabsPage = (props) => {
       .catch(err => console.log(err));
   }
 
-  function handleTabChange(theme){
-    setCurrentTab({theme: [theme]})
+  function handleTabChange(theme) {
+    setCurrentTab({ theme: [theme] })
+  }
+
+  function handleDelete(activity) {
+
+    API.deleteActivity(currentTab.theme, activity)
+      .then(res => loadThemes())
+      .catch(err => console.log(err));
   }
 
   return (
@@ -99,7 +106,7 @@ const TabsPage = (props) => {
           <Tabs>
             <TabList>
               {themes.map(theme => (
-                <Tab onClick={ () => handleTabChange(theme.theme)}>
+                <Tab onClick={() => handleTabChange(theme.theme)}>
                   {theme.theme}
                 </Tab>
               ))}
@@ -107,8 +114,20 @@ const TabsPage = (props) => {
 
             {themes.map(theme => (
               <TabPanel>
-                {theme.activities.map(activity => (
-                  <p>{activity.name}</p>
+                {theme.activities.map((activity, index) => (
+                  <>
+                    { //Check if message failed
+                      (themes.indexOf(theme) > 4 || index > 19)
+                        ?
+                        <>
+                        <Button>edit</Button><Button onClick={() => { handleDelete(activity.name) }}>delete</Button><p>{activity.name}</p>
+                        </>
+                        : 
+                        <>
+                        <p>{activity.name}</p>
+                        </>
+                    }
+                  </>
                 ))}
                 <Input
                   placeholder="activity name"

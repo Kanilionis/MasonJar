@@ -18,6 +18,10 @@ export default {
   //Inserts a new activity into the theme
   saveActivity: function(theme, activity){
     return axios.put("/api/shakeit/" + theme + "/" + activity)
+  },
+
+  deleteActivity: function(theme, activity){
+    return axios.put("/api/shakeit/delete/"+ theme + "/" + activity)
   }
 };
    
