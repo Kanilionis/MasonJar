@@ -18,7 +18,7 @@ const ModalShow = (props) => {
           <Modal.Title className="modal-title">{props.currentShaker.theme}</Modal.Title>
         </Modal.Header>
           <div className="img-card">
-            {/* <img src={logo} className="modal-image" alt={props.theme}></img> */}
+            <img height="200px" src={logo} className="modal-image" alt={props.theme}></img>
           </div>
         <Modal.Body className="modal-activity">{props.currentShaker.currentActivity}</Modal.Body>
         
