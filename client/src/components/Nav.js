@@ -5,6 +5,7 @@ import shaker from "./30644-200.png"
 // import AuthNav from "./AuthNav";
 // import AuthBtn from "./AuthBtn";
 import LogoutButton from "./LogoutButton";
+import logo from "../images/New_Jar.svg";
 
 
 function Nav() {
@@ -13,12 +14,12 @@ function Nav() {
 
     <RBS.Navbar bg="transparent" expand="lg">
 
-      <img  src={shaker} alt="Shaker Mason Jar"height="auto" width="5%"/>
+      <img className="imgNav" src={logo} alt="Shaker Mason Jar"/>
 
-      <RBS.Navbar.Brand>
-        <RBS.Nav.Link as={Link} to="/shaker">Shake It Up</RBS.Nav.Link> 
+      {/* <RBS.Navbar.Brand> */}
+        <RBS.Nav.Link as={Link} to="/shaker"> <span className="mainNav">Shake It Up</span></RBS.Nav.Link> 
         
-      </RBS.Navbar.Brand>
+      {/* </RBS.Navbar.Brand> */}
 
       <RBS.Navbar.Collapse id="basic-navbar-nav">
         <RBS.Nav className="mr-auto">
