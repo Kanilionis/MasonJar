@@ -6,11 +6,12 @@ const viewthemes = () => {
     return (
         <div className="contact-container">
             
-            <Nav/>
+            
 
+            
             <TabsPage/>
 
-            {/* <MakeYourOwnTheme/> */}
+            
             
         </div>
     )

@@ -4,6 +4,7 @@ import { Input, FormBtn } from '../Form';
 import { List, ListItem } from '../List';
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button"
+import Nav from '../Nav'
 
 import "../../../src/index.css"
 
@@ -76,9 +77,10 @@ const TabsPage = (props) => {
   return (
     <>
       <div className="container-fluid">
-        <div className="row input-container">
-          <div className="col-md-6">
-            <form>
+        <div className="row input-container split">
+          
+          <div className="shaker-form">
+            <form className="shaker-form-size">
               <h3>Create A New Shaker</h3>
               <Input
                 onChange={handleInputChange}
@@ -95,33 +97,37 @@ const TabsPage = (props) => {
             </form>
           </div>
         </div>
-        <div className="tableResults">
-          <Tabs>
-            <TabList>
-              {themes.map(theme => (
-                <Tab onClick={ () => handleTabChange(theme.theme)}>
-                  {theme.theme}
-                </Tab>
-              ))}
-            </TabList>
-
-            {themes.map(theme => (
-              <TabPanel>
-                {theme.activities.map(activity => (
-                  <p>{activity.name}</p>
+        <div className="row export-container split">
+          <div className="col-md-6"> 
+           <div className="tabs-container"> 
+            <Tabs>
+              <TabList>
+                {themes.map(theme => (
+                  <Tab onClick={ () => handleTabChange(theme.theme)}>
+                    {theme.theme}
+                  </Tab>
                 ))}
-                <Input
-                  placeholder="activity name"
-                  value={formObject.name}
-                  name="activity"
-                  onChange={handleInputChange}>
-                </Input>
-                <Button variant="outline-secondary"
-                  disabled={!(formObject.activity)}
-                  onClick={handleNewActivity}>Add A New Activity</Button>
-              </TabPanel>
-            ))}
-          </Tabs>
+              </TabList>
+
+              {themes.map(theme => (
+                <TabPanel>
+                  {theme.activities.map(activity => (
+                    <p>{activity.name}</p>
+                  ))}
+                  <Input
+                    placeholder="activity name"
+                    value={formObject.name}
+                    name="activity"
+                    onChange={handleInputChange}>
+                  </Input>
+                  <Button variant="outline-secondary"
+                    disabled={!(formObject.activity)}
+                    onClick={handleNewActivity}>Add A New Activity</Button>
+                </TabPanel>
+              ))}
+            </Tabs>
+           </div> 
+           </div> 
         </div>
       </div>
     </>
