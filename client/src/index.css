@@ -1,6 +1,7 @@
 
-/* Main Shaker Page Sytling */
-
+/* Main Shaker Page Sytling 
+////////////////////////////////////////////////////////////////////////////////////////////////
+*/
 .shake {
   display: block;
   margin: 0 auto;
@@ -57,8 +58,6 @@ animation: wad 1s infinite
   }
 }
 
-
-
 .pick-again[wobble='1']{
   animation: wobble 1s 1;
 }
@@ -84,7 +83,10 @@ animation: wad 1s infinite
 	50% {transform:translateY(-1%);}
 } */
 
-/* styling for contact page */
+
+/* styling for contact page 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
   
 .contact-container {
   min-height: 692px;
@@ -102,9 +104,6 @@ animation: wad 1s infinite
   );
 }
 
-/* .home-container{
-  
-} */
 
 .signup{
   height: 100%;
@@ -155,11 +154,35 @@ animation: wad 1s infinite
 }
 
 
-/* Styling for landing/home page */
+/* Styling for landing/home page
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
 
-/* .enter-container{
+h1 {
+  font-family: 'Cookie', cursive;
+  color: rgb(241, 240, 240);
+  font-size: 100px;
+  margin: 20px;
+}
 
-} */
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight:bold;
+  color: rgba(163, 133, 155, 0.685);
+}
+
+.enterText {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 50;
+}
+
+.infinityText {
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  font-style: italic;
+}
 
 /* Split the screen in half */
 .split {
@@ -173,7 +196,6 @@ animation: wad 1s infinite
   padding-right:20px;
   padding-left: 20px;
   padding-bottom: 20px;
-  
 }
 
 /* Control the left side */
@@ -204,7 +226,7 @@ animation: wad 1s infinite
 /* Style the image inside the centered container, if needed */
 .centered-img {
   width: 150px;
-  border-radius: 50%;
+  border-radius: 50%;  
 }
 
 /* React Tabs Comp Styling */
@@ -260,3 +282,62 @@ animation: wad 1s infinite
 .enterBtn{
   margin: 0 10px
 }
+
+/* Modal Styling 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+/* div.modal-title.h4 {
+  color: black;
+  font-size: 30;
+} */
+
+ img.modal-img {
+  /* width: 10%;
+  height: auto; 
+  display:block;
+  margin: 0 auto;
+  padding-top:40px;
+  padding-bottom:40px;  */
+  padding: 50px;
+ } 
+
+.img-card {
+  border: dotted rgb(163, 133, 155) 15px; 
+}  */
+
+div.modal-body {
+  text-align:center;
+  color:rgb(226, 19, 171);
+  font-size: 30px;
+}
+
+/* NavBar Styling 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+.mainNav {
+  font-family: 'Cookie', cursive;
+  color: rgb(241, 240, 240);
+  font-size: 50px;
+ 
+  padding-right:10px;
+}
+
+.nav-link {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  padding-right: 20px; 
+}
+
+.imgNav {
+  width:6%;
+  height:auto;
+  padding: 20px;
+  
+}
+
+
+
+
+
