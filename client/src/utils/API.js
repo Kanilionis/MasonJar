@@ -12,7 +12,7 @@ export default {
 
   // Saves a theme to the database
   saveTheme: function(theme) {
-    return axios.post("/api/shakeit/"+ theme);
+    return axios.post("/api/shakeit/" + theme);
   },
 
   //Inserts a new activity into the theme
@@ -21,7 +21,11 @@ export default {
   },
 
   deleteActivity: function(theme, activity){
-    return axios.put("/api/shakeit/delete/"+ theme + "/" + activity)
+    return axios.put("/api/shakeit/delete/" + theme + "/" + activity)
+  },
+
+  updateActivity: function(theme, activity, index){
+    return axios.put("/api/shakeit/update/" + theme + "/" + activity + "/" + index)
   }
 };
    
