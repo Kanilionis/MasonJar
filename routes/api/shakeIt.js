@@ -12,10 +12,12 @@ router
 .get(shakeItController.findByTheme)
 .post(shakeItController.create)
 // .put(shakeItController.update)
-// .delete(shakeItController.remove);
 
 router
 .route("/:theme/:activity")
   .put(shakeItController.update)
 
+  router
+.route("/delete/:theme/:activity")
+  .put(shakeItController.remove);
 module.exports = router;

@@ -44,6 +44,13 @@ const App = () => {
         ) */}
         {/* } */}
         </div>
+        </Router>
+
+      ) : (
+        <Enter />
+      )
+      }
+      </div>
     </div>
   );
   }
