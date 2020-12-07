@@ -97,18 +97,6 @@ animation: wobblw 1s infinite
   
 }
 
-
-/* .modal{
-  transition-delay: .5s
-} */
-
-
-/* .shaking {
-	animation: shake 0.6s ease-out;
-}
-
-
-
 /* styling for contact page 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 */
@@ -121,14 +109,9 @@ animation: wobblw 1s infinite
   right: 0;
   top: 0;
   z-index: 0;
-  overflow: hidden;
-  background: linear-gradient(
-    108deg,
-    rgb(163, 133, 155) 0%,
-    rgb(241, 211, 211) 100%
-  );
+  overflow: scroll;
+  background-color: #C199A1
 }
-
 
 .signup{
   height: 100%;
@@ -140,29 +123,44 @@ animation: wobblw 1s infinite
 .suggestion-row{
   height: 100%;
   display: flex;
-  /* flex-direction: column; */
   justify-content: right;
 }
 
 .form-container-backdrop{
-  background: #fbf7f5;
+  background: #F3EBE9;
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 80%;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  margin-top: -28px;
+  width: 650px;
+  height: 850px;
 }
+.aboout-form{
+  background: #F3EBE9;
+  padding: 24px 24px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 80%;
+  width:450px;
+  margin-bottom:50px;
+  text-align: center;
+  width: 650px;
+  height: 850px;
+  
+}
+
 .form-container-backdrop:hover{
   transform: scale(1.02);
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-
 }
 
 .h1-contact{
-  font-size: 20px;
+  font-size: 50px;
   color:#2f0909;
-  margin-top: 10px;
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -173,9 +171,33 @@ animation: wobblw 1s infinite
   text-align: center;
 }
 
-.button-contact-form{
+.button-contact-form {
   color: white;
   background: #2f0909;
+}
+
+.developer-card-img {
+  height: 120px; 
+  width: auto;
+  border: #2f0909 dotted 4px;
+  margin: 12px;
+}
+
+.developer-card {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.developer-name {
+  color: #8687A3;
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+}
+
+.developer-col {
+  padding-top:30px;
 }
 
 
@@ -319,7 +341,7 @@ h2 {
 
 /* Log in / Log Out Buttons */
 .enterBtn{
-  margin: 0 10px
+  margin-bottom: 10px
 }
 
 /* Modal Styling 
@@ -567,30 +589,9 @@ div.modal-content {
     transform: scale(1.05);
   }
 }
-@keyframes slides-set-3 {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  64% {
-    opacity: 0;
-    transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  67% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-  97% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(100px);
-    transform: scale(1.05);
-  } */
-/* } */
+
+.customizeShaker, .contactShaker{
+  background-color: rgb(241, 240, 240);
+  padding: 20px;
+  margin: 10px
+}

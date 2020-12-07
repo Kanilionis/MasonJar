@@ -3,8 +3,8 @@ import axios from 'axios';
 import Nav from "../components/Nav";
 import "../index.css"
 import Footer from '../components/Footer'
-
-
+import developers from "../developers.json";
+import DeveloperCard from "../components/DeveloperCard";
 
 
 class Contact extends React.Component {
@@ -14,7 +14,8 @@ class Contact extends React.Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      developers: developers,
     }
   }
 
@@ -44,24 +45,20 @@ class Contact extends React.Component {
       
       <div className="contact-container">
         <Nav />
-      
         <div className ="row suggestion-row">
-        <div className="container col-4 home-container">
-          <div className="aboout-form">
-            <h1 className = "h1-contact">Meet the Team!</h1>
-              <br></br>
-                <p></p>
+          <div className="container col-5 home-container">
+            <div className="aboout-form">
+              <h1 className = "h1-contact">Meet the Team!</h1>
+                {this.state.developers.map(developer => (
+                    <DeveloperCard {...developer} /> 
+                ))}
             </div>
           </div>
-          
-            
-          <div className="container col-4 home-container signup">
+        
+          <div className="container col-5 home-container signup">
             <div className="form-container-backdrop">
               <h1 className = "h1-contact">Contact Us</h1>
                 <p className="p-contact">Didn't see something you like? Make a suggestion to the Shaker Team!</p>
-                  <br></br>
-
-              
               <div className="App">
                 <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                   <div className="form-group">
@@ -78,12 +75,9 @@ class Contact extends React.Component {
                   </div>
                   <button type="submit" className="btn btn-primary button-contact-form">Submit</button>
                 </form>
-                
               </div>
-              
             </div>
           </div>
-          
          </div>
          <Footer/>
       </div>
