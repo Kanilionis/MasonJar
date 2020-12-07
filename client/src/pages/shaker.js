@@ -31,6 +31,32 @@ const [modalOpen, setModalOpen] = useState({
   isOpen: false
 })
 
+const settings ={
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+}
+
 useEffect(() => {
   loadThemes()
 }, [])
@@ -74,6 +100,8 @@ function closeModal(){
   setModalOpen({isOpen: false})
 }
 
+
+
 return(
   <>
 
@@ -83,15 +111,20 @@ return(
       <br></br>
       <ShakerTop />
       {shakers.length ? (
-        <Carousel controls={true} slide={true} indicators={false} >
+     
+        <Carousel indicators={false} fade={true} className="carousel" >
         {shakers.map(shaker => (
           
-          <Carousel.Item className="carousel" >
+          
+          <Carousel.Item className="carousel-item" >
           <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
+          
           <ModalShow pickAgain={pickAgain} isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
-        </Carousel.Item>
+          </Carousel.Item>
+       
         ))}
-          </Carousel>
+        </Carousel>
+       
       ) : (
         <h3>nothing to see here</h3>
       )}
