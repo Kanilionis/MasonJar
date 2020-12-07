@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button"
 import Nav from '../Nav'
 import Table from "react-bootstrap/Table"
+import Edit from '../EditableText/EditableText'
+// import EditableText from '../EditableText'
 import {
   FaEdit,
   FaTrash,
@@ -192,24 +194,35 @@ const TabsPage = (props) => {
                       className="themeTable" striped bordered hover>
                       <tbody>
                         {theme.activities.map((activity, index) => (
-                          <>
+                          <> 
                             { //Check if seed data or custom
                               (themes.indexOf(theme) > 4 || index > 19)
                                 ?
                                 <>
                                   <tr>
+                                    
                                     <td value={editActivity.activity}>
-                                      <FaEdit onClick={() => handleEdit(activity.name)} />
-                                      <FaTrash onClick={() => handleDelete(activity.name)} />
-                                      <FaSave onClick={() => handleSave(activity.name, index)} />
-                                      {activity.name}</td>
+                                    
+                                      <FaEdit onClick={() => handleEdit(activity.name)}/> 
+                                      <FaTrash onClick={() => handleDelete(activity.name)}/>
+                                      <FaSave onClick={() => handleSave(activity.name, index)}/>
+                                      
+                                      <Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name}/>
+                                        </td> 
+                                      
                                   </tr>
                                 </>
                                 :
                                 <>
+                                
+                                  
                                   <tr>
-                                    <td>{activity.name}</td>
+                                  <Edit>
+                                    <td>{activity.name}</td> 
+                                  </Edit>
                                   </tr>
+                                  
+                                
                                 </>
                             }
                           </>
