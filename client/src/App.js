@@ -7,6 +7,7 @@ import View from './pages/viewthemes';
 import Loading from "./components/Loading";
 import Footer from "./components/Footer/index";
 import { useAuth0 } from "./react-auth0-spa";
+import Profile from "./pages/profile"
 
 
 
@@ -32,6 +33,7 @@ const App = () => {
               <Route exact path={["/shaker", "/"]} component={Shaker} />
               <Route path="/contact" component={Contact} />
               <Route path="/viewthemes" component={View} />
+              <Route path="/profile" component={Profile} />
             </Switch>
           </div>
         </div>
