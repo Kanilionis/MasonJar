@@ -278,6 +278,20 @@ h2 {
 .react-tabs__tab-panel--selected {
   display: block;
 }
+.themeTable{
+  width: 50%
+}
+
+.tabsRoot{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.input-container{
+  margin: 0 auto;
+}
+
+
 /* Log in / Log Out Buttons */
 .enterBtn{
   margin: 0 10px

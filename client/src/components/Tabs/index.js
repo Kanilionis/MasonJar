@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Input, FormBtn } from '../Form';
 import { List, ListItem } from '../List';
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button"
+import Table from "react-bootstrap/Table"
 
 import "../../../src/index.css"
 
@@ -102,8 +103,8 @@ const TabsPage = (props) => {
             </form>
           </div>
         </div>
-        <div className="tableResults">
-          <Tabs>
+        <div className="tableResults tabsRoot">
+          <Tabs defaultTab="vertical-tab-one" vertical className="vertical-tabs">
             <TabList>
               {themes.map(theme => (
                 <Tab onClick={() => handleTabChange(theme.theme)}>
@@ -114,21 +115,31 @@ const TabsPage = (props) => {
 
             {themes.map(theme => (
               <TabPanel>
-                {theme.activities.map((activity, index) => (
-                  <>
-                    { //Check if seed data or custom
-                      (themes.indexOf(theme) > 4 || index > 19)
-                        ?
-                        <>
-                        <Button>edit</Button><Button onClick={() => { handleDelete(activity.name) }}>delete</Button><p>{activity.name}</p>
-                        </>
-                        : 
-                        <>
-                        <p>{activity.name}</p>
-                        </>
-                    }
-                  </>
-                ))}
+                <Table className="themeTable" striped bordered hover>
+                  <tbody>
+                    {theme.activities.map((activity, index) => (
+                      <>
+                        { //Check if seed data or custom
+                          (themes.indexOf(theme) > 4 || index > 19)
+                            ?
+                            <>
+                              <tr>
+                                <td>
+                                  <Button>edit</Button><Button onClick={() => { handleDelete(activity.name) }}>delete</Button>
+                                  {activity.name}</td>
+                              </tr>
+                            </>
+                            :
+                            <>
+                              <tr>
+                                <td>{activity.name}</td>
+                              </tr>
+                            </>
+                        }
+                      </>
+                    ))}
+                  </tbody>
+                </Table>
                 <Input
                   placeholder="activity name"
                   value={formObject.name}
