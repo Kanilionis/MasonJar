@@ -15,39 +15,39 @@ const App = () => {
 
   const { isLoading } = useAuth0();
 
-    if (isLoading) {
-      return <Loading />;
-    }
-  
+  if (isLoading) {
+    return <Loading />;
+  }
+
 
   const { isAuthenticated } = useAuth0();
 
   return (
     <div className="container">
       <div>
-      {/* {isAuthenticated === true ? ( */}
-        <Router>
-        <div id="app" className="d-flex flex-column h-100">
-          <div className="container flex-grow-1">
-            <Switch>
-              <Route exact path={["/shaker", "/"]} component={Shaker} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/viewthemes" component={View} />
-              <Route path="/profile" component={Profile} />
-            </Switch>
-          </div>
-        </div>
-        </Router>
+        {isAuthenticated === true ? (
+          <Profile />
 
-      {/* // ) : (
-      //   <Enter />
-      // )
-      // } */}
+        ) : (
+          <Router>
+          <div id="app" className="d-flex flex-column h-100">
+            <div className="container flex-grow-1">
+              <Switch>
+                <Route exact path={["/shaker"]} component={Shaker} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/viewthemes" component={View} />
+                <Route path="/" component={Enter} />
+              </Switch>
+            </div>
+          </div>
+        </Router>
+          )
+        }
       </div>
     </div>
   );
-  }
-  
+}
+
 
 export default App;
 
