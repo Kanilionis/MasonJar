@@ -89,13 +89,17 @@ const TabsPage = (props) => {
   return (
     <>
       <div className="container-fluid">
-        <Nav/>
+       
         <div className="row input-container split">
         <div className="input-area">
+        
           <div className="shaker-form">
+          {/* <div className="text-area-above-input"></div> */}
             <form className="shaker-form-size">
-              <h3>Create A New Shaker</h3>
+              
+              <h3 className="new-shaker-text">Create A New Shaker</h3>
               <Input
+                className="input-box-text"
                 onChange={handleInputChange}
                 name="theme"
                 placeholder='What to make for dinner'
