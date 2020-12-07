@@ -5,7 +5,7 @@ import ShakerAnim from "../components/ShakerAnim"
 import Nav from "../components/Nav";
 import ModalShow from "../components/Modal";
 import { Carousel } from "react-bootstrap";
-
+import Slider from "react-slick"
 
 
 const Shaker = () => {
@@ -28,6 +28,32 @@ const [shakers, setShakers] = useState({
 const [modalOpen, setModalOpen] = useState({
   isOpen: false
 })
+
+const settings ={
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+}
 
 useEffect(() => {
   loadThemes()
@@ -72,6 +98,8 @@ function closeModal(){
   setModalOpen({isOpen: false})
 }
 
+
+
 return(
   <>
 
@@ -80,18 +108,33 @@ return(
     <center> 
       <br></br>
       {shakers.length ? (
-        <Carousel controls={true} slide={true} indicators={false} >
+     
+        <Carousel indicators={false} fade={true} className="carousel" >
         {shakers.map(shaker => (
           
-          <Carousel.Item className="carousel" >
+          
+          <Carousel.Item className="carousel-item" >
           <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
+          
           <ModalShow pickAgain={pickAgain} isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
-        </Carousel.Item>
+          </Carousel.Item>
+       
         ))}
-          </Carousel>
+        </Carousel>
+       
       ) : (
         <h3>nothing to see here</h3>
       )}
+      {/* <Card style={{ width: '18rem' }}>
+        <Card.Body>
+          <Card.Title>{shaker.theme}</Card.Title>
+          
+          <Button variant="primary">Go somewhere</Button>
+        </Card.Body>
+      </Card> */}
+
+        
+       
     </center>
   </div>
 
