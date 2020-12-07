@@ -5,6 +5,8 @@ import ShakerAnim from "../components/ShakerAnim"
 import Nav from "../components/Nav";
 import ModalShow from "../components/Modal";
 import { Carousel } from "react-bootstrap";
+import ShakerTop from "../components/ShakerTop"
+import ShakerBottom from "../components/ShakerBottom"
 
 
 
@@ -79,6 +81,7 @@ return(
     <Nav />
     <center> 
       <br></br>
+      <ShakerTop />
       {shakers.length ? (
         <Carousel controls={true} slide={true} indicators={false} >
         {shakers.map(shaker => (
@@ -92,6 +95,7 @@ return(
       ) : (
         <h3>nothing to see here</h3>
       )}
+      <ShakerBottom />
     </center>
   </div>
 
