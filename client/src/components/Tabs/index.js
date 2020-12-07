@@ -8,7 +8,8 @@ import Nav from '../Nav'
 import Table from "react-bootstrap/Table"
 import {
   FaEdit,
-  FaTrash
+  FaTrash,
+  FaSave
   
 } from 'react-icons/fa'
 
@@ -30,16 +31,14 @@ const TabsPage = (props) => {
   })
   const [currentTab, setCurrentTab] = useState({})
 
+  const [editActivity, setEditActivity] = useState({})
+
   //loading all themes and storing them within setThemes
   useEffect(() => {
     loadThemes()
   }, [])
 
-  const rowEvents = {
-    onClick: (e, Table) => {
-      console.log(Table)
-    }
-  };
+  //Loads a single theme and its activities based on a click
 
 
 
@@ -91,6 +90,16 @@ const TabsPage = (props) => {
       .catch(err => console.log(err));
   }
 
+  function handleEdit(activity){
+    console.log(activity)
+    setEditActivity({activity: [activity]})
+  }
+
+  function handleSave(){
+    console.log("howdy")
+    // API.updateActivity(currentTab.theme, formObject.activity)
+  }
+
   return (
     <>
       <div className="container-fluid">
@@ -134,7 +143,6 @@ const TabsPage = (props) => {
                 {themes.map(theme => (
                   <TabPanel>
                     <Table 
-                    onClick={rowEvents}
                     className="themeTable" striped bordered hover>
                       <tbody>
                         {theme.activities.map((activity, index) => (
@@ -144,10 +152,10 @@ const TabsPage = (props) => {
                                 ?
                                 <>
                                   <tr>
-                                    <td>
-                                      <FaEdit/>
-                                      <FaTrash onClick={() => { handleDelete(activity.name) }}/>
-                                      
+                                    <td value={editActivity.activity}>
+                                      <FaEdit onClick={() => handleEdit(activity.name)}/>
+                                      <FaTrash onClick={() => handleDelete(activity.name)}/>
+                                      <FaSave onClick={() => handleSave(activity.name)}/>
                                       {activity.name}</td>
                                   </tr>
                                 </>
