@@ -1,5 +1,17 @@
 
+/* Navbar styling*/
+.navStyle{
+  margin-top: 10px;
+  height: 30px;
+  font-family: 'Architects Daughter', cursive;}
+
 /* Main Shaker Page Sytling */
+.carousel{
+  padding-top: 30px;
+  padding-bottom: 20px
+ 
+  
+}
 
 .shake {
   display: block;
@@ -24,8 +36,9 @@
   }
 }
 #jar-text{
+  text-shadow: 0 0 3px white, 0 0 5px grey;  
   font-family: 'Architects Daughter', cursive;
-  font-size: 17px;
+  font-size: 20px;
   cursor: pointer
 }
 
@@ -38,24 +51,10 @@
   display: block;
   margin: 0 auto;
 }
-.wad-wobble[wad="1"]{
-animation: wad 1s infinite
+.wad-wobble[wobble="1"]{
+animation: wobblw 1s infinite
 }
 
-@keyframes wad {
-  25% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-30deg);
-  }
-  75% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 
 
 
@@ -77,12 +76,7 @@ animation: wad 1s infinite
 /* .shaking {
 	animation: shake 0.6s ease-out;
 }
-@keyframes shake {
-	from, to {transform:translateY(0);}
-	12.5% {transform:translateY(-4%);}
-	25% {transform:translateY(4%);}
-	50% {transform:translateY(-1%);}
-} */
+
 
 /* styling for contact page */
   

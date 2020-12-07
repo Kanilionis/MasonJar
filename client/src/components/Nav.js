@@ -11,7 +11,7 @@ function Nav() {
   return (
     <>
 
-    <RBS.Navbar bg="transparent" expand="lg">
+    <RBS.Navbar className="navStyle" bg="transparent" expand="lg">
 
       <img  src={shaker} alt="Shaker Mason Jar"height="auto" width="5%"/>
 
