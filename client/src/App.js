@@ -23,33 +23,24 @@ const App = () => {
 
   return (
     <div className="container">
-      
-      
-        <div>
-        {/* {isAuthenticated === true ? ( */}
-          <Router>
-          <div id="app" className="d-flex flex-column h-100">
-            <div className="container flex-grow-1">
-              <Switch>
-                <Route exact path={["/shaker", "/"]} component={Shaker} />
-                <Route path="/contact" component={Contact} />
-                <Route path="/viewthemes" component={View} />
-              </Switch>
-            </div>
+      <div>
+      {/* {isAuthenticated === true ? ( */}
+        <Router>
+        <div id="app" className="d-flex flex-column h-100">
+          <div className="container flex-grow-1">
+            <Switch>
+              <Route exact path={["/shaker", "/"]} component={Shaker} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/viewthemes" component={View} />
+            </Switch>
           </div>
-          </Router>
-
-        {/* ): (
-          <Enter />
-        ) */}
-        {/* } */}
         </div>
         </Router>
 
-      ) : (
-        <Enter />
-      )
-      }
+      {/* // ) : (
+      //   <Enter />
+      // )
+      // } */}
       </div>
     </div>
   );

@@ -86,7 +86,7 @@ const TabsPage = (props) => {
     <>
       <div className="container-fluid">
         <div className="row input-container split">
-          
+        <div className="input-area">
           <div className="shaker-form">
             <form className="shaker-form-size">
               <h3>Create A New Shaker</h3>
@@ -105,55 +105,58 @@ const TabsPage = (props) => {
             </form>
           </div>
         </div>
-        <div className="tableResults tabsRoot">
-          <Tabs defaultTab="vertical-tab-one" vertical className="vertical-tabs">
-            <TabList>
-              {themes.map(theme => (
-                <Tab onClick={() => handleTabChange(theme.theme)}>
-                  {theme.theme}
-                </Tab>
-              ))}
-            </TabList>
+          <div className="export-container split">
+            <div className="tableResults tabsRoot tabs-container">
+              <Tabs defaultTab="vertical-tab-one" vertical className="vertical-tabs">
+                <TabList>
+                  {themes.map(theme => (
+                    <Tab onClick={() => handleTabChange(theme.theme)}>
+                      {theme.theme}
+                    </Tab>
+                  ))}
+                </TabList>
 
-            {themes.map(theme => (
-              <TabPanel>
-                <Table className="themeTable" striped bordered hover>
-                  <tbody>
-                    {theme.activities.map((activity, index) => (
-                      <>
-                        { //Check if seed data or custom
-                          (themes.indexOf(theme) > 4 || index > 19)
-                            ?
-                            <>
-                              <tr>
-                                <td>
-                                  <Button>edit</Button><Button onClick={() => { handleDelete(activity.name) }}>delete</Button>
-                                  {activity.name}</td>
-                              </tr>
-                            </>
-                            :
-                            <>
-                              <tr>
-                                <td>{activity.name}</td>
-                              </tr>
-                            </>
-                        }
-                      </>
-                    ))}
-                  </tbody>
-                </Table>
-                <Input
-                  placeholder="activity name"
-                  value={formObject.name}
-                  name="activity"
-                  onChange={handleInputChange}>
-                </Input>
-                <Button variant="outline-secondary"
-                  disabled={!(formObject.activity)}
-                  onClick={handleNewActivity}>Add A New Activity</Button>
-              </TabPanel>
-            ))}
-          </Tabs>
+                {themes.map(theme => (
+                  <TabPanel>
+                    <Table className="themeTable" striped bordered hover>
+                      <tbody>
+                        {theme.activities.map((activity, index) => (
+                          <>
+                            { //Check if seed data or custom
+                              (themes.indexOf(theme) > 4 || index > 19)
+                                ?
+                                <>
+                                  <tr>
+                                    <td>
+                                      <Button>edit</Button><Button onClick={() => { handleDelete(activity.name) }}>delete</Button>
+                                      {activity.name}</td>
+                                  </tr>
+                                </>
+                                :
+                                <>
+                                  <tr>
+                                    <td>{activity.name}</td>
+                                  </tr>
+                                </>
+                            }
+                          </>
+                        ))}
+                      </tbody>
+                    </Table>
+                    <Input
+                      placeholder="activity name"
+                      value={formObject.name}
+                      name="activity"
+                      onChange={handleInputChange}>
+                    </Input>
+                    <Button variant="outline-secondary"
+                      disabled={!(formObject.activity)}
+                      onClick={handleNewActivity}>Add A New Activity</Button>
+                  </TabPanel>
+                ))}
+              </Tabs>
+            </div>
+          </div>
         </div>
       </div>
     </>
