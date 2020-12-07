@@ -26,6 +26,10 @@ export default {
 
   updateActivity: function(theme, activity, index){
     return axios.put("/api/shakeit/update/" + theme + "/" + activity + "/" + index)
+  },
+
+  deleteTheme: function(theme){
+    return axios.delete("/api/shakeit/" + theme)
   }
 };
    

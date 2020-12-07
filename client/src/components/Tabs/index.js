@@ -10,8 +10,10 @@ import {
   FaEdit,
   FaTrash,
   FaSave
-  
+
 } from 'react-icons/fa'
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
 
 import "../../../src/index.css"
 
@@ -90,61 +92,104 @@ const TabsPage = (props) => {
       .catch(err => console.log(err));
   }
 
-  function handleEdit(activity){
+  function handleEdit(activity) {
     console.log(activity)
-    setEditActivity({activity: [activity]})
+    setEditActivity({ activity: [activity] })
   }
 
-  function handleSave(index){
+  function handleSave(index) {
     API.updateActivity(currentTab.theme, editActivity.activity, index)
+      .then(res => loadThemes())
+      .catch(err => console.log(err));
+  }
+
+  function handleDeleteTheme(theme){
+    API.deleteTheme(theme)
     .then(res => loadThemes())
     .catch(err => console.log(err));
   }
 
+  function confirmDelete(theme) {
+    const options = {
+      childrenElement: () => <div />,
+      customUI: ({ onClose }) =>
+      <div className='custom-ui'>
+      <h1 className="confirmHeader">Are you sure?</h1>
+      <p>Are you sure you would like to delete {theme}?</p>
+      <Button variant="outline-secondary" onClick={onClose}>No</Button>
+      <Button variant="outline-secondary" onClick={() => {
+          handleDeleteTheme(theme)
+          onClose()
+      }}>Yes, Delete it!</Button>
+    </div>,
+      closeOnEscape: true,
+      closeOnClickOutside: true,
+      willUnmount: () => {},
+      afterClose: () => {},
+      onClickOutside: () => {},
+      onKeypressEscape: () => {}
+    };
+    confirmAlert(options)
+  };
+
   return (
     <>
       <div className="container-fluid">
-       <Nav className="nav-overly"/>
+        <Nav className="nav-overly" />
         <div className="row input-container split-2">
-        <Nav className="nav-overly"/>
-        <div className="input-area">
-        
-          <div className="shaker-form">
-          {/* <div className="text-area-above-input"></div> */}
-            <form className="shaker-form-size">
-              
-              <h3 className="new-shaker-text">Create A New Shaker</h3>
-              <Input
-                className="input-box-text"
-                onChange={handleInputChange}
-                name="theme"
-                placeholder='What to make for dinner'
-                value={formObject.name}
-              />
-              <Button variant="outline-secondary"
-                disabled={!(formObject.theme)}
-                onClick={handleNewShaker}
-              >
-                Submit
+          <Nav className="nav-overly" />
+          <div className="input-area">
+
+            <div className="shaker-form">
+              {/* <div className="text-area-above-input"></div> */}
+              <form className="shaker-form-size">
+
+                <h3 className="new-shaker-text">Create A New Shaker</h3>
+                <Input
+                  className="input-box-text"
+                  onChange={handleInputChange}
+                  name="theme"
+                  placeholder='What to make for dinner'
+                  value={formObject.name}
+                />
+                <Button variant="outline-secondary"
+                  disabled={!(formObject.theme)}
+                  onClick={handleNewShaker}
+                >
+                  Submit
               </Button>
-            </form>
+              </form>
+            </div>
           </div>
-        </div>
           <div className="export-container split-2">
             <div className="tableResults tabsRoot tabs-container">
               <Tabs defaultIndex={0}>
                 <TabList>
-                  {themes.map(theme => (
-                    <Tab onClick={() => handleTabChange(theme.theme)}>
-                      {theme.theme}
-                    </Tab>
+                  {themes.map((theme, index) => (
+                    <>
+                      {
+                        (index < 5)
+                          ?
+                          <>
+                            <Tab onClick={() => handleTabChange(theme.theme)}>
+                              {theme.theme}
+                            </Tab>
+                          </>
+                          :
+                          <>
+                            <Tab onClick={() => handleTabChange(theme.theme)}>
+                              {theme.theme} <FaTrash onClick={() => confirmDelete(theme.theme)} />
+                            </Tab>
+                          </>
+                      }
+                    </>
                   ))}
                 </TabList>
 
                 {themes.map(theme => (
                   <TabPanel>
-                    <Table 
-                    className="themeTable" striped bordered hover>
+                    <Table
+                      className="themeTable" striped bordered hover>
                       <tbody>
                         {theme.activities.map((activity, index) => (
                           <>
@@ -154,9 +199,9 @@ const TabsPage = (props) => {
                                 <>
                                   <tr>
                                     <td value={editActivity.activity}>
-                                      <FaEdit onClick={() => handleEdit(activity.name)}/>
-                                      <FaTrash onClick={() => handleDelete(activity.name)}/>
-                                      <FaSave onClick={() => handleSave(activity.name, index)}/>
+                                      <FaEdit onClick={() => handleEdit(activity.name)} />
+                                      <FaTrash onClick={() => handleDelete(activity.name)} />
+                                      <FaSave onClick={() => handleSave(activity.name, index)} />
                                       {activity.name}</td>
                                   </tr>
                                 </>
