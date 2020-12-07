@@ -96,7 +96,7 @@ animation: wad 1s infinite
   right: 0;
   top: 0;
   z-index: 0;
-  overflow: hidden;
+  overflow: scroll;
   background: linear-gradient(
     108deg,
     rgb(163, 133, 155) 0%,
@@ -125,7 +125,9 @@ animation: wad 1s infinite
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 80%;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  margin-top: -50px;
+  
 }
 .form-container-backdrop:hover{
   transform: scale(1.02);

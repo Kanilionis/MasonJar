@@ -51,7 +51,7 @@ class Contact extends React.Component {
                   
           <div className="container col-4 home-container signup">
             <div className="form-container-backdrop">
-              <h1 className = "h1-contact">Make A Suggestion</h1>
+              <h1 className = "h1-contact">Contact Us</h1>
                 <p className="p-contact">Didn't see something you like? Make a suggestion to the Shaker Team!</p>
                   <br></br>
 
@@ -74,12 +74,12 @@ class Contact extends React.Component {
                 </form>
                 
               </div>
-              <Footer/>
+              
             </div>
           </div>
           
          </div>
-         
+         <Footer/>
       </div>
       </>
     );
