@@ -24,6 +24,17 @@ const EditableText = (props) => {
 
     return (
         <div>
+              {inputVisible ? (
+                <input
+                    ref={inputRef} // Set the Ref
+                    value={text} // Now input value uses local state
+                    onChange={e => {
+                    setText(e.target.value);
+                }}
+              />
+            ) : (
+        <span onClick={() => setInputVisible(true)}>{text}</span>
+      )}
             
         </div>
     )
