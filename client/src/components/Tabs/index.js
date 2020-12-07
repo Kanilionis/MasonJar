@@ -217,9 +217,7 @@ const TabsPage = (props) => {
                                 
                                   
                                   <tr>
-                                  <Edit>
-                                    <td>{activity.name}</td> 
-                                  </Edit>
+                                    <td><Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name}/></td> 
                                   </tr>
                                   
                                 
