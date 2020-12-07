@@ -25,7 +25,8 @@ function Nav() {
         <RBS.Nav className="mr-auto">
           <RBS.Nav>
             <RBS.Nav.Link as={Link} to="/contact">Contact</RBS.Nav.Link>
-            <RBS.Nav.Link as={Link} to="/viewthemes">Themes</RBS.Nav.Link>         
+            <RBS.Nav.Link as={Link} to="/viewthemes">Themes</RBS.Nav.Link> 
+            <RBS.Nav.Link as={Link} to="/profile">Profile</RBS.Nav.Link>           
           </RBS.Nav>
         </RBS.Nav>
       </RBS.Navbar.Collapse>
