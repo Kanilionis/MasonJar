@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div className="container">
       <div>
-      {isAuthenticated === true ? (
+      {/* {isAuthenticated === true ? ( */}
         <Router>
         <div id="app" className="d-flex flex-column h-100">
           <div className="container flex-grow-1">
@@ -37,10 +37,10 @@ const App = () => {
         </div>
         </Router>
 
-      ) : (
+      {/* ) : (
         <Enter />
       )
-      }
+      } */}
       </div>
     </div>
   );

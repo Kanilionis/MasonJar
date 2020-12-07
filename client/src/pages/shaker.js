@@ -78,10 +78,12 @@ return(
   <div className="contact-container">
     <Nav />
     <center> 
+      <br></br>
       {shakers.length ? (
         <Carousel controls={true} slide={true} indicators={false} >
         {shakers.map(shaker => (
-          <Carousel.Item >
+          
+          <Carousel.Item className="carousel" >
           <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
           <ModalShow pickAgain={pickAgain} isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
         </Carousel.Item>

@@ -12,7 +12,7 @@ function Nav() {
   return (
     <>
 
-    <RBS.Navbar bg="transparent" expand="lg">
+    <RBS.Navbar className="navStyle" bg="transparent" expand="lg">
 
       <img className="imgNav" src={logo} alt="Shaker Mason Jar"/>
 
