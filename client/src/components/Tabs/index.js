@@ -116,7 +116,7 @@ const TabsPage = (props) => {
               <TabPanel>
                 {theme.activities.map((activity, index) => (
                   <>
-                    { //Check if message failed
+                    { //Check if seed data or custom
                       (themes.indexOf(theme) > 4 || index > 19)
                         ?
                         <>
