@@ -6,6 +6,11 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button"
 import Nav from '../Nav'
 import Table from "react-bootstrap/Table"
+import {
+  FaEdit,
+  FaTrash
+  
+} from 'react-icons/fa'
 
 import "../../../src/index.css"
 
@@ -89,8 +94,9 @@ const TabsPage = (props) => {
   return (
     <>
       <div className="container-fluid">
-       
-        <div className="row input-container split">
+       <Nav className="nav-overly"/>
+        <div className="row input-container split-2">
+        <Nav className="nav-overly"/>
         <div className="input-area">
         
           <div className="shaker-form">
@@ -114,9 +120,9 @@ const TabsPage = (props) => {
             </form>
           </div>
         </div>
-          <div className="export-container split">
+          <div className="export-container split-2">
             <div className="tableResults tabsRoot tabs-container">
-              <Tabs defaultTab="vertical-tab-one" vertical className="vertical-tabs">
+              <Tabs defaultIndex={0}>
                 <TabList>
                   {themes.map(theme => (
                     <Tab onClick={() => handleTabChange(theme.theme)}>
@@ -139,7 +145,9 @@ const TabsPage = (props) => {
                                 <>
                                   <tr>
                                     <td>
-                                      <Button>edit</Button><Button onClick={() => { handleDelete(activity.name) }}>delete</Button>
+                                      <FaEdit/>
+                                      <FaTrash onClick={() => { handleDelete(activity.name) }}/>
+                                      
                                       {activity.name}</td>
                                   </tr>
                                 </>

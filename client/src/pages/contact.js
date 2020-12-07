@@ -46,9 +46,15 @@ class Contact extends React.Component {
         <Nav />
       
         <div className ="row suggestion-row">
-        <div className="container col-4 home-container"></div>
+        <div className="container col-4 home-container">
+          <div className="aboout-form">
+            <h1 className = "h1-contact">Meet the Team!</h1>
+              <br></br>
+                <p></p>
+            </div>
+          </div>
           
-                  
+            
           <div className="container col-4 home-container signup">
             <div className="form-container-backdrop">
               <h1 className = "h1-contact">Contact Us</h1>

@@ -129,6 +129,16 @@ animation: wad 1s infinite
   margin-top: -50px;
   
 }
+.aboout-form{
+  background: #fbf7f5;
+  padding: 24px 24px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 80%;
+  width:450px;
+  margin-bottom: 100px;
+  margin-top: -20;
+}
 .form-container-backdrop:hover{
   transform: scale(1.02);
   transition: all 0.2s ease-in-out;
@@ -383,10 +393,33 @@ div.modal-content {
 
 /* Styling for the themes page ////////////////////////  */
 
+/* Split the screen in half */
+.split-2 {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-right:20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.nav-overly{
+  padding-top: -40px;
+  margin-top: -50;
+  position: absolute;
+  top: left;
+  
+  
+}
 
 /* This creates a container for the input section of the page snd splits it in half  */
 .input-container{
   left: 0;
+  z-index: 1;
   align-content: center;
   background: linear-gradient(
     108deg,
@@ -398,6 +431,7 @@ div.modal-content {
 /* This creates a container for the export and DB section of the page snd splits it in half  */
 .export-container{
   right: 0;
+  z-index: 1;
   align-content: center; 
   background: linear-gradient(
     108deg,
