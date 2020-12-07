@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import API from '../../utils/API';
 
 const EditableText = (props) => {
     const inputRef = useRef(null);
@@ -11,10 +12,16 @@ const EditableText = (props) => {
             setInputVisible(false); //Disable text input 
         }
     }
+    function handleSave(){
+        API.updateActivity(props.currentTheme, text, props.index)
+        .then(res => props.loadThemes())
+        .catch(err => console.log(err));
+      }
 
     useEffect(() =>{
         if (inputVisible){
             document.addEventListener("mousedown", onClickOutSide); 
+            handleSave();
         }
         return () => {
             document.removeEventListener("mousedown", onClickOutSide);
