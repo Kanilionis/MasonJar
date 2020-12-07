@@ -4,7 +4,13 @@ import { Input, FormBtn } from '../Form';
 import { List, ListItem } from '../List';
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button"
+import Nav from '../Nav'
 import Table from "react-bootstrap/Table"
+import {
+  FaEdit,
+  FaTrash
+  
+} from 'react-icons/fa'
 
 import "../../../src/index.css"
 
@@ -29,7 +35,11 @@ const TabsPage = (props) => {
     loadThemes()
   }, [])
 
-  //Loads a single theme and its activities based on a click
+  const rowEvents = {
+    onClick: (e, Table) => {
+      console.log(Table)
+    }
+  };
 
 
 
@@ -84,11 +94,18 @@ const TabsPage = (props) => {
   return (
     <>
       <div className="container-fluid">
-        <div className="row input-container">
-          <div className="col-md-6">
-            <form>
-              <h3>Create A New Shaker</h3>
+       <Nav className="nav-overly"/>
+        <div className="row input-container split-2">
+        <Nav className="nav-overly"/>
+        <div className="input-area">
+        
+          <div className="shaker-form">
+          {/* <div className="text-area-above-input"></div> */}
+            <form className="shaker-form-size">
+              
+              <h3 className="new-shaker-text">Create A New Shaker</h3>
               <Input
+                className="input-box-text"
                 onChange={handleInputChange}
                 name="theme"
                 placeholder='What to make for dinner'
@@ -103,55 +120,62 @@ const TabsPage = (props) => {
             </form>
           </div>
         </div>
-        <div className="tableResults tabsRoot">
-          <Tabs defaultTab="vertical-tab-one" vertical className="vertical-tabs">
-            <TabList>
-              {themes.map(theme => (
-                <Tab onClick={() => handleTabChange(theme.theme)}>
-                  {theme.theme}
-                </Tab>
-              ))}
-            </TabList>
+          <div className="export-container split-2">
+            <div className="tableResults tabsRoot tabs-container">
+              <Tabs defaultIndex={0}>
+                <TabList>
+                  {themes.map(theme => (
+                    <Tab onClick={() => handleTabChange(theme.theme)}>
+                      {theme.theme}
+                    </Tab>
+                  ))}
+                </TabList>
 
-            {themes.map(theme => (
-              <TabPanel>
-                <Table className="themeTable" striped bordered hover>
-                  <tbody>
-                    {theme.activities.map((activity, index) => (
-                      <>
-                        { //Check if seed data or custom
-                          (themes.indexOf(theme) > 4 || index > 19)
-                            ?
-                            <>
-                              <tr>
-                                <td>
-                                  <Button>edit</Button><Button onClick={() => { handleDelete(activity.name) }}>delete</Button>
-                                  {activity.name}</td>
-                              </tr>
-                            </>
-                            :
-                            <>
-                              <tr>
-                                <td>{activity.name}</td>
-                              </tr>
-                            </>
-                        }
-                      </>
-                    ))}
-                  </tbody>
-                </Table>
-                <Input
-                  placeholder="activity name"
-                  value={formObject.name}
-                  name="activity"
-                  onChange={handleInputChange}>
-                </Input>
-                <Button variant="outline-secondary"
-                  disabled={!(formObject.activity)}
-                  onClick={handleNewActivity}>Add A New Activity</Button>
-              </TabPanel>
-            ))}
-          </Tabs>
+                {themes.map(theme => (
+                  <TabPanel>
+                    <Table 
+                    onClick={rowEvents}
+                    className="themeTable" striped bordered hover>
+                      <tbody>
+                        {theme.activities.map((activity, index) => (
+                          <>
+                            { //Check if seed data or custom
+                              (themes.indexOf(theme) > 4 || index > 19)
+                                ?
+                                <>
+                                  <tr>
+                                    <td>
+                                      <FaEdit/>
+                                      <FaTrash onClick={() => { handleDelete(activity.name) }}/>
+                                      
+                                      {activity.name}</td>
+                                  </tr>
+                                </>
+                                :
+                                <>
+                                  <tr>
+                                    <td>{activity.name}</td>
+                                  </tr>
+                                </>
+                            }
+                          </>
+                        ))}
+                      </tbody>
+                    </Table>
+                    <Input
+                      placeholder="activity name"
+                      value={formObject.name}
+                      name="activity"
+                      onChange={handleInputChange}>
+                    </Input>
+                    <Button variant="outline-secondary"
+                      disabled={!(formObject.activity)}
+                      onClick={handleNewActivity}>Add A New Activity</Button>
+                  </TabPanel>
+                ))}
+              </Tabs>
+            </div>
+          </div>
         </div>
       </div>
     </>

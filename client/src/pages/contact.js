@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Nav from "../components/Nav";
 import "../index.css"
-// import Footer from '../components/Footer'
+import Footer from '../components/Footer'
 
 
 
@@ -43,15 +43,21 @@ class Contact extends React.Component {
       <>
       
       <div className="contact-container">
-      <Nav />
+        <Nav />
       
         <div className ="row suggestion-row">
-        <div className="container col-4 home-container"></div>
+        <div className="container col-4 home-container">
+          <div className="aboout-form">
+            <h1 className = "h1-contact">Meet the Team!</h1>
+              <br></br>
+                <p></p>
+            </div>
+          </div>
           
-                  
+            
           <div className="container col-4 home-container signup">
             <div className="form-container-backdrop">
-              <h1 className = "h1-contact">Make A Suggestion</h1>
+              <h1 className = "h1-contact">Contact Us</h1>
                 <p className="p-contact">Didn't see something you like? Make a suggestion to the Shaker Team!</p>
                   <br></br>
 
@@ -72,12 +78,14 @@ class Contact extends React.Component {
                   </div>
                   <button type="submit" className="btn btn-primary button-contact-form">Submit</button>
                 </form>
+                
               </div>
+              
             </div>
           </div>
           
          </div>
-         
+         <Footer/>
       </div>
       </>
     );

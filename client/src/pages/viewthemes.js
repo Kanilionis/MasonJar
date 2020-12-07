@@ -8,9 +8,10 @@ const viewthemes = () => {
             
             <Nav/>
 
+            
             <TabsPage/>
 
-            {/* <MakeYourOwnTheme/> */}
+            
             
         </div>
     )
