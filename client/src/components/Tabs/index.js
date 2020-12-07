@@ -30,7 +30,11 @@ const TabsPage = (props) => {
     loadThemes()
   }, [])
 
-  //Loads a single theme and its activities based on a click
+  const rowEvents = {
+    onClick: (e, Table) => {
+      console.log(Table)
+    }
+  };
 
 
 
@@ -85,6 +89,7 @@ const TabsPage = (props) => {
   return (
     <>
       <div className="container-fluid">
+        <Nav/>
         <div className="row input-container split">
         <div className="input-area">
           <div className="shaker-form">
@@ -118,7 +123,9 @@ const TabsPage = (props) => {
 
                 {themes.map(theme => (
                   <TabPanel>
-                    <Table className="themeTable" striped bordered hover>
+                    <Table 
+                    onClick={rowEvents}
+                    className="themeTable" striped bordered hover>
                       <tbody>
                         {theme.activities.map((activity, index) => (
                           <>
