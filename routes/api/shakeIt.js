@@ -17,7 +17,11 @@ router
 .route("/:theme/:activity")
   .put(shakeItController.update)
 
-  router
+router
 .route("/delete/:theme/:activity")
   .put(shakeItController.remove);
+
+router
+.route("/update/:theme/:activity/:index")
+  .put(shakeItController.updateArray)
 module.exports = router;
