@@ -12,6 +12,15 @@ const EditableText = (props) => {
         }
     }
 
+    useEffect(() =>{
+        if (inputVisible){
+            document.addEventListener("mousedown", onClickOutSide); 
+        }
+        return () => {
+            document.removeEventListener("mousedown", onClickOutSide);
+          };
+    });
+
 
     return (
         <div>
