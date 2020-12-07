@@ -95,9 +95,10 @@ const TabsPage = (props) => {
     setEditActivity({activity: [activity]})
   }
 
-  function handleSave(){
-    console.log("howdy")
-    // API.updateActivity(currentTab.theme, formObject.activity)
+  function handleSave(index){
+    API.updateActivity(currentTab.theme, editActivity.activity, index)
+    .then(res => loadThemes())
+    .catch(err => console.log(err));
   }
 
   return (
@@ -155,7 +156,7 @@ const TabsPage = (props) => {
                                     <td value={editActivity.activity}>
                                       <FaEdit onClick={() => handleEdit(activity.name)}/>
                                       <FaTrash onClick={() => handleDelete(activity.name)}/>
-                                      <FaSave onClick={() => handleSave(activity.name)}/>
+                                      <FaSave onClick={() => handleSave(activity.name, index)}/>
                                       {activity.name}</td>
                                   </tr>
                                 </>
