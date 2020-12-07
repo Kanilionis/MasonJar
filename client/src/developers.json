@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "name": "Claire Bohlen",
+      "github": "https://github.com/ClaireBohlen",
+      "image": "../images/claire.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Nora Curcio",
+      "github": "https://github.com/noracurcio",
+      "image": "../images/nora.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Tessa Pierce",
+      "github": "https://github.com/tesssapierce",
+      "image": "../images/tessa.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Katie Anilionis",
+      "github": "https://github.com/Kanilionis",
+      "image": "../images/katie.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Dana Kuglin",
+      "github": "https://github.com/dakuglin",
+      "image": "../images/dana.jpg"
+    }
+   
+]
+  

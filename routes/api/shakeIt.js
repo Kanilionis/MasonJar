@@ -11,6 +11,7 @@ router
 .route("/:theme")
 .get(shakeItController.findByTheme)
 .post(shakeItController.create)
+.delete(shakeItController.removeTheme)
 // .put(shakeItController.update)
 
 router

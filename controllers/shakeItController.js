@@ -34,7 +34,13 @@ module.exports = {
   },
   updateArray: function (req,res){
     db.Themes
-    .findOneAndUpdate({ theme: req.params.theme }, {$set:{ ["activities." + req.params.index + ".name"]: req.params.activity}})
+    .findOneAndUpdate({ theme: req.params.theme }, {$set:{ ["activities." + req.params.index + ".name"]: req.params.activity} })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  removeTheme: function (req,res){
+    db.Themes
+    .findOneAndDelete({ theme: req.params.theme })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
