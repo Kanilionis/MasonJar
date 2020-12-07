@@ -1,16 +1,41 @@
 
-/* Main Shaker Page Sytling 
-////////////////////////////////////////////////////////////////////////////////////////////////
-*/
+/* Navbar styling*/
+/* .navStyle{
+  margin-top: 10px;
+  height: 30px;
+  font-family: 'Architects Daughter', cursive;} */
+
+/* Main Shaker Page Sytling */
+.carousel{
+  padding-top: 30px;
+  padding-bottom: 20px
+ 
+  
+}
+
 .shake {
   display: block;
   margin: 0 auto;
 }
 .shake[wobble='1'] {
-  animation: wobble 1s 1;
+  animation-name: wobble;
+  animation-duration: .5s;
+  animation-iteration-count: 5;
 }
-
 @keyframes wobble {
+  0% { transform: translate(1px, 5px) rotate(0deg); }
+  10% { transform: translate(-1px, -5px) rotate(-20deg); }
+  20% { transform: translate(-3px, 5px) rotate(20deg); }
+  30% { transform: translate(3px, 5px) rotate(0deg); }
+  40% { transform: translate(1px, -5px) rotate(20deg); }
+  50% { transform: translate(-1px, 5px) rotate(-20deg); }
+  60% { transform: translate(-3px, 5px) rotate(0deg); }
+  70% { transform: translate(3px, 5px) rotate(-20deg); }
+  80% { transform: translate(-1px, -5px) rotate(20deg); }
+  90% { transform: translate(1px, 5px) rotate(0deg); }
+  100% { transform: translate(1px, -5px) rotate(-20deg); }
+}
+/* @keyframes wobble {
   25% {
     transform: rotate(15deg);
   }
@@ -23,12 +48,14 @@
   100% {
     transform: rotate(0deg);
   }
-}
+} */
 #jar-text{
+  text-shadow: 0 0 3px white, 0 0 5px grey;  
   font-family: 'Architects Daughter', cursive;
-  font-size: 17px;
+  font-size: 20px;
   cursor: pointer
 }
+
 
 .cls-1{
   fill: #fff
@@ -39,24 +66,10 @@
   display: block;
   margin: 0 auto;
 }
-.wad-wobble[wad="1"]{
-animation: wad 1s infinite
+.wad-wobble[wobble="1"]{
+animation: wobblw 1s infinite
 }
 
-@keyframes wad {
-  25% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-30deg);
-  }
-  75% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 
 .pick-again[wobble='1']{
   animation: wobble 1s 1;
@@ -76,12 +89,7 @@ animation: wad 1s infinite
 /* .shaking {
 	animation: shake 0.6s ease-out;
 }
-@keyframes shake {
-	from, to {transform:translateY(0);}
-	12.5% {transform:translateY(-4%);}
-	25% {transform:translateY(4%);}
-	50% {transform:translateY(-1%);}
-} */
+
 
 
 /* styling for contact page 
@@ -368,7 +376,7 @@ div.modal-content {
 /* NavBar Styling 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
-
+/* 
 .mainNav {
   font-family: 'Cookie', cursive;
   color: rgb(241, 240, 240);
@@ -381,12 +389,28 @@ div.modal-content {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   padding-right: 20px; 
+} */
+
+.mainNav{
+  text-shadow: 0 0 3px white, 0 0 5px grey;
+  color: rgb(241, 240, 240);
+  font-size: 40px;
+  word-spacing: -5px;
+  margin-top: 10px;
+  height: 30px;
+  margin-left: -17px;
+  font-family: 'Architects Daughter', cursive;
+}
+.nav-link{
+ 
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
 }
 
 .imgNav {
-  width:6%;
+  width:7%;
   height:auto;
-  padding: 20px;
+  padding: 15px;
   
 }
 
