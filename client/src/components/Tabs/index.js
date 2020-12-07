@@ -115,40 +115,40 @@ const TabsPage = (props) => {
 
             {themes.map(theme => (
               <TabPanel>
-                <Table striped bordered hover>
+                <Table className="themeTable" striped bordered hover>
                   <tbody>
                     {theme.activities.map((activity, index) => (
                       <>
                         { //Check if seed data or custom
                           (themes.indexOf(theme) > 4 || index > 19)
-                          ?
-                          <>
+                            ?
+                            <>
                               <tr>
-                              <td>
-                              <Button>edit</Button><Button onClick={() => { handleDelete(activity.name) }}>delete</Button>
-                              {activity.name}</td>
+                                <td>
+                                  <Button>edit</Button><Button onClick={() => { handleDelete(activity.name) }}>delete</Button>
+                                  {activity.name}</td>
                               </tr>
                             </>
                             :
                             <>
                               <tr>
-                              <td>{activity.name}</td>
+                                <td>{activity.name}</td>
                               </tr>
                             </>
                         }
                       </>
                     ))}
                   </tbody>
-              </Table>
-                    <Input
-                      placeholder="activity name"
-                      value={formObject.name}
-                      name="activity"
-                      onChange={handleInputChange}>
-                    </Input>
-                    <Button variant="outline-secondary"
-                      disabled={!(formObject.activity)}
-                      onClick={handleNewActivity}>Add A New Activity</Button>
+                </Table>
+                <Input
+                  placeholder="activity name"
+                  value={formObject.name}
+                  name="activity"
+                  onChange={handleInputChange}>
+                </Input>
+                <Button variant="outline-secondary"
+                  disabled={!(formObject.activity)}
+                  onClick={handleNewActivity}>Add A New Activity</Button>
               </TabPanel>
             ))}
           </Tabs>
