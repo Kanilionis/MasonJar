@@ -15,13 +15,7 @@ import {
     // NavLogoImg
 } from "./FooterElements"
 
-import {
-    FaTwitter,
-    FaLinkedin,
-    FaGithub,
-    FaCodepen,
-
-} from 'react-icons/fa';
+import {FaGithub} from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
@@ -37,10 +31,11 @@ const Footer = () => {
                     <FooterLinksContainer>
                         <FooterLinksWrapper>
                             <FooterLinkItems>
-                                <FooterLinkTitle> Socials</FooterLinkTitle>
-                                <FooterLink to="/">Github</FooterLink>
-                                <FooterLink to="/">LinkedIn</FooterLink>
-                                <FooterLink to="/">Codepen</FooterLink>
+                                <FooterLinkTitle> Meet the Developers</FooterLinkTitle>
+                                <FooterLink to="/">Katie Anilionis</FooterLink>
+                                <FooterLink to="/">Nora Curcio</FooterLink>
+                                <FooterLink to="/">Dana Kuglin </FooterLink>
+                                
                             </FooterLinkItems>
                         </FooterLinksWrapper>
                     </FooterLinksContainer>
@@ -50,23 +45,27 @@ const Footer = () => {
                         </SocialLogo>
                         <WebsiteRights>Shake It © 2020 </WebsiteRights>
                         <SocialIcons>
-                            <SocialIconLink href='//' target='_blank' aria-label='LinkedIn'>
-                                <FaLinkedin />
-                            </SocialIconLink>
+                            
                             <SocialIconLink href='/' target='_blank' aria-label='Github'>
                                 <FaGithub />
-                            </SocialIconLink>
-                            <SocialIconLink href='/' target='_blank' aria-label='CodePen'>
-                                <FaCodepen />
-                            </SocialIconLink>
-                            <SocialIconLink href='/' target='_blank' aria-label='Twitter'>
-                                <FaTwitter />
                             </SocialIconLink>
                             
                         </SocialIcons>
                         
 
                     </SocailMediaWrap>
+                    <FooterLinksContainer>
+                        <FooterLinksWrapper>
+                            <FooterLinkItems>
+                                <FooterLinkTitle> Meet the Developers</FooterLinkTitle>
+                                <FooterLink to="/">Tessa Pierce</FooterLink>
+                                <FooterLink to="/">Claire Bohlen</FooterLink>
+                                <FooterLink to="/"></FooterLink>
+                                
+                                
+                            </FooterLinkItems>
+                        </FooterLinksWrapper>
+                    </FooterLinksContainer>
                 </FooterWrap>
                             
             </FooterContainer>
@@ -75,4 +74,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default Footer;

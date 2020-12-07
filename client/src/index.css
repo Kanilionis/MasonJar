@@ -1,12 +1,41 @@
+
+/* Navbar styling*/
+/* .navStyle{
+  margin-top: 10px;
+  height: 30px;
+  font-family: 'Architects Daughter', cursive;} */
+
+/* Main Shaker Page Sytling */
+.carousel{
+  padding-top: 30px;
+  padding-bottom: 20px
+ 
+  
+}
+
 .shake {
   display: block;
   margin: 0 auto;
 }
 .shake[wobble='1'] {
-  animation: wobble 1s 1;
+  animation-name: wobble;
+  animation-duration: .5s;
+  animation-iteration-count: 5;
 }
-
 @keyframes wobble {
+  0% { transform: translate(1px, 5px) rotate(0deg); }
+  10% { transform: translate(-1px, -5px) rotate(-20deg); }
+  20% { transform: translate(-3px, 5px) rotate(20deg); }
+  30% { transform: translate(3px, 5px) rotate(0deg); }
+  40% { transform: translate(1px, -5px) rotate(20deg); }
+  50% { transform: translate(-1px, 5px) rotate(-20deg); }
+  60% { transform: translate(-3px, 5px) rotate(0deg); }
+  70% { transform: translate(3px, 5px) rotate(-20deg); }
+  80% { transform: translate(-1px, -5px) rotate(20deg); }
+  90% { transform: translate(1px, 5px) rotate(0deg); }
+  100% { transform: translate(1px, -5px) rotate(-20deg); }
+}
+/* @keyframes wobble {
   25% {
     transform: rotate(15deg);
   }
@@ -19,16 +48,39 @@
   100% {
     transform: rotate(0deg);
   }
+} */
+#jar-text{
+  text-shadow: 0 0 3px white, 0 0 5px grey;  
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+  cursor: pointer
 }
 
-#jar-text{
-  font-family: 'Architects Daughter', cursive;
-  font-size: 17px;
-}
 
 .cls-1{
   fill: #fff
 }
+
+
+.wad-wobble{
+  display: block;
+  margin: 0 auto;
+}
+.wad-wobble[wobble="1"]{
+animation: wobblw 1s infinite
+}
+
+
+.pick-again[wobble='1']{
+  animation: wobble 1s 1;
+}
+
+.pick-again {
+  cursor: pointer;
+  
+}
+
+
 /* .modal{
   transition-delay: .5s
 } */
@@ -37,14 +89,12 @@
 /* .shaking {
 	animation: shake 0.6s ease-out;
 }
-@keyframes shake {
-	from, to {transform:translateY(0);}
-	12.5% {transform:translateY(-4%);}
-	25% {transform:translateY(4%);}
-	50% {transform:translateY(-1%);}
-} */
 
-/* styling for contact page */
+
+
+/* styling for contact page 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
   
 .contact-container {
   min-height: 692px;
@@ -54,7 +104,7 @@
   right: 0;
   top: 0;
   z-index: 0;
-  overflow: hidden;
+  overflow: scroll;
   background: linear-gradient(
     108deg,
     rgb(163, 133, 155) 0%,
@@ -62,9 +112,6 @@
   );
 }
 
-/* .home-container{
-  
-} */
 
 .signup{
   height: 100%;
@@ -86,7 +133,19 @@
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 80%;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  margin-top: -50px;
+  
+}
+.aboout-form{
+  background: #fbf7f5;
+  padding: 24px 24px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 80%;
+  width:450px;
+  margin-bottom: 100px;
+  margin-top: -20;
 }
 .form-container-backdrop:hover{
   transform: scale(1.02);
@@ -115,11 +174,35 @@
 }
 
 
-/* Styling for landing/home page */
+/* Styling for landing/home page
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
 
-/* .enter-container{
+h1 {
+  font-family: 'Cookie', cursive;
+  color: rgb(241, 240, 240);
+  font-size: 100px;
+  margin: 20px;
+}
 
-} */
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight:bold;
+  color: rgba(163, 133, 155, 0.685);
+}
+
+.enterText {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 50;
+}
+
+.infinityText {
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  font-style: italic;
+}
 
 /* Split the screen in half */
 .split {
@@ -133,7 +216,6 @@
   padding-right:20px;
   padding-left: 20px;
   padding-bottom: 20px;
-  
 }
 
 /* Control the left side */
@@ -164,5 +246,287 @@
 /* Style the image inside the centered container, if needed */
 .centered-img {
   width: 150px;
-  border-radius: 50%;
+  border-radius: 50%;  
 }
+
+
+/* Tabs container styling /////////////////// */
+
+/* This aligns the tabs container with the list of activites  */
+.react-tabs__tab-list {
+  border-bottom: 1px solid #aaa;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+/* Display Tabs in tabs verses links */
+.react-tabs__tab {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* This outlines the selected tab with a border and shadow  */
+.react-tabs__tab--selected {
+  background: #fff;
+  border-color: #aaa;
+  color: black;
+  border-radius: 5px 5px 0 0;
+}
+/* .react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+} */
+/* .react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+} */
+/* .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: rgb(85, 56, 56);
+} */
+
+/* Wait for this until final */
+/* .react-tabs__tab-panel {
+  display: none;
+} */
+
+
+/* Displays the list of activites for each shaker */
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+
+
+
+/* Log in / Log Out Buttons////////////////////////////////// */
+.themeTable{
+  width: 50%
+}
+
+.tabsRoot{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.input-container{
+  margin: 0 auto;
+}
+
+
+/* Log in / Log Out Buttons */
+.enterBtn{
+  margin: 0 10px
+}
+
+/* Modal Styling 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+div.modal-content {
+  background-color: rgb(241, 240, 240);
+}
+.modal-title.h4 {
+  color: #00000080;
+  font-family: 'Cookie', cursive;
+  text-shadow: 2px 2px 8px rgba(224, 152, 205, 0.89);
+  font-size: 60px;
+}
+
+ img.modal-img {
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+
+ } 
+
+.img-card {
+ border: groove rgba(163, 133, 155, 0.89) 20px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 120px;
+  padding-right: 120px;
+}  
+
+.modal-activity.modal-body {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color:#00000080;
+  font-size: 35px;
+  font-style: italic;
+}
+
+
+/* NavBar Styling 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+/* 
+.mainNav {
+  font-family: 'Cookie', cursive;
+  color: rgb(241, 240, 240);
+  font-size: 50px;
+ 
+  padding-right:10px;
+}
+
+.nav-link {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  padding-right: 20px; 
+} */
+
+.mainNav{
+  text-shadow: 0 0 3px white, 0 0 5px grey;
+  color: rgb(241, 240, 240);
+  font-size: 40px;
+  word-spacing: -5px;
+  margin-top: 10px;
+  height: 30px;
+  margin-left: -17px;
+  font-family: 'Architects Daughter', cursive;
+}
+.nav-link{
+ 
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+}
+
+.imgNav {
+  width:7%;
+  height:auto;
+  padding: 15px;
+  
+}
+
+
+/* Styling for the themes page ////////////////////////  */
+
+/* Split the screen in half */
+.split-2 {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-right:20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.nav-overly{
+  padding-top: -40px;
+  margin-top: -50;
+  position: absolute;
+  top: left;
+  
+  
+}
+
+/* This creates a container for the input section of the page snd splits it in half  */
+.input-container{
+  left: 0;
+  z-index: 1;
+  align-content: center;
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  ); 
+
+}
+/* This creates a container for the export and DB section of the page snd splits it in half  */
+.export-container{
+  right: 0;
+  z-index: 1;
+  align-content: center; 
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  );
+
+}
+
+
+/* This is a container that displays the tabs and DB information */
+.tabs-container{
+  background: #fbf7f5;
+  padding: 24px 24px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 80%;
+  width: 500px;
+  margin-top: 100px;
+  /* margin-bottom: 70px;  */
+  overflow-y: scroll;
+
+
+  }  /* margin-right: 400px; */
+  /* align-items: center;
+
+
+
+/* This is the form for adding a new shaker */
+.input-area{
+  height: 50%;
+  width: 500px;
+  background: #fbf7f5;
+  align-content: center;
+  padding: 24px 24px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin-top: 0px;
+  margin-left: 60px;
+  
+}
+.text-area-above-input{
+  background: #fbf7f5;
+  height: 200px;
+  width: 200px;
+
+
+}
+
+/* This is the form itself  */
+.shaker-form-size{
+  width: 500px;
+  height: 100px;
+  margin-left: 30px;
+  align-content: center;
+
+}
+
+/* This is for the input box size  */
+.input-box-text{
+  width: 300px;
+
+}
+
+/* Create a new shaker text */
+
+.new-shaker-text{
+  font-size: 20px;
+
+}
+
+
+

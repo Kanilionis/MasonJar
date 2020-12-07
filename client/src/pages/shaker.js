@@ -59,27 +59,42 @@ function chooseTheme(theme){
   }).catch(err => console.log(err))
 }
 
+function pickAgain(){
+  var theme = currentShaker.theme;
+ API.getActivitiesByTheme(theme).then(res => {
+   console.log(res.data)
+   var randomPick = Math.floor(Math.random() * res.data[0].activities.length)
+   setCurrentShaker({...currentShaker, currentActivity: res.data[0].activities[randomPick].name})
+ }).catch(err => console.log(err))
+}
+
 function closeModal(){
   setModalOpen({isOpen: false})
 }
 
 return(
   <>
-  <Nav />
-<center> 
-  {shakers.length ? (
-     <Carousel controls={true} slide={true} indicators={false} >
-     {shakers.map(shaker => (
-       <Carousel.Item >
-       <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
-       <ModalShow isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
-     </Carousel.Item>
-     ))}
-      </Carousel>
-  ) : (
-    <h3>nothing to see here</h3>
-  )}
-  </center>
+
+  <div className="contact-container">
+    <Nav />
+    <center> 
+      <br></br>
+      {shakers.length ? (
+        <Carousel controls={true} slide={true} indicators={false} >
+        {shakers.map(shaker => (
+          
+          <Carousel.Item className="carousel" >
+          <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
+          <ModalShow pickAgain={pickAgain} isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
+        </Carousel.Item>
+        ))}
+          </Carousel>
+      ) : (
+        <h3>nothing to see here</h3>
+      )}
+    </center>
+  </div>
+
   </>
 )
 }

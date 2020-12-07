@@ -351,50 +351,50 @@ let shakeItSeed = [
     ]
   },
   {
-    theme: "Night on the town",
+    theme: "Night On The Town",
     activities: [
       {
-        name: "Karaoke",
+        name: "Sing Your Heart Out At Karaoke",
         submittedBy: "Admin"
       },
       {
-        name: "Dancing",
+        name: "Dance Like No One Is Watching",
         submittedBy: "Admin"
       },
       {
-        name: "Local Concert",
+        name: "Find a Local Concert",
         submittedBy: "Admin"
       },
       {
-        name: "Trivia Night",
+        name: "Trivia Night! Better Study Up",
         submittedBy: "Admin"
       },
       {
-        name: "Museum",
+        name: "Vist Local Museum",
         submittedBy: "Admin"
       },
       {
-        name: "Zoo",
+        name: "Go To The Zoo",
         submittedBy: "Admin"
       },
       {
-        name: "Shopping",
+        name: "Shop Till You Drop",
         submittedBy: "Admin"
       },
       {
-        name: "Canvas and Cocktails",
+        name: "Canvas and Cocktails...Emphasis on the Cocktails",
         submittedBy: "Admin"
       },
       {
-        name: "Murder Mystery Party",
+        name: "Host a Murder Mystery Party",
         submittedBy: "Admin"
       },
       {
-        name: "Escape Room",
+        name: "Escape Room. Better Hurry, Time is Running Out",
         submittedBy: "Admin"
       },
       {
-        name: "Bowling",
+        name: "Go Bowling",
         submittedBy: "Admin"
       },
       {

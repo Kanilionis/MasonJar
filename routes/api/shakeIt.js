@@ -4,13 +4,20 @@ const shakeItController = require("../../controllers/shakeItController");
 //Matches with "/api/shakeit"
 router.route("/")
 .get(shakeItController.findAll)
-.post(shakeItController.create);
+// .post(shakeItController.create);
 
 //Matches with "/api/shakeit/:theme"
 router
 .route("/:theme")
 .get(shakeItController.findByTheme)
-.put(shakeItController.update)
-.delete(shakeItController.remove);
+.post(shakeItController.create)
+// .put(shakeItController.update)
 
+router
+.route("/:theme/:activity")
+  .put(shakeItController.update)
+
+  router
+.route("/delete/:theme/:activity")
+  .put(shakeItController.remove);
 module.exports = router;
