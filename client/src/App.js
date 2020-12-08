@@ -11,12 +11,9 @@ import Profile from "./pages/profile"
 const App = () => {
 
   return (
-    <div className="container">
-      <div>
-     
+    <>
         <Router>
         <div id="app" className="d-flex flex-column h-100">
-          <div className="container flex-grow-1">
             <Switch>
               <Route exact path="/shaker" component={Shaker} />
               <Route path="/contact" component={Contact} />
@@ -25,10 +22,10 @@ const App = () => {
               <Route path="/" component={Enter} />
             </Switch>
           </div>
-        </div>
+
         </Router>
-      </div>
-    </div>
+        </>
+    
   );
 }
   

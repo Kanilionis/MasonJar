@@ -6,10 +6,32 @@
   font-family: 'Architects Daughter', cursive;} */
 
 /* Main Shaker Page Sytling */
+
 .carousel{
+  margin-top: 10px;
   padding-top: 30px;
   padding-bottom: 20px 
 }
+
+
+
+.carousel-item{
+  padding: 20px
+}
+
+.cls-1-label{fill:#fff;}.cls-2-label{stroke:#000;stroke-miterlimit:10;}
+
+.cls-1-wad1{opacity:.9;}.cls-2-wad1{fill:#fed20d;}.cls-3-wad1{fill:#f5f2a2;}
+
+.cls-1-wad2{opacity:.9;}.cls-2-wad2{fill:#007f76;}.cls-3-wad2{fill:#87cfc0;}
+
+.cls-1-wad3{opacity:.9;}.cls-2-wad3{fill:#422f90;}.cls-3-wad3{fill:#8f90c7;}
+
+.cls-1-wad4{opacity:.9;}.cls-2-wad4{fill:#e44699;}.cls-3-wad4{fill:#eba8cb;}
+
+.cls-1-wad5{opacity:.9;}.cls-2-wad5{fill:#05689d;}.cls-3-wad5{fill:#52c9ed;}
+
+.cls-1-wad6{opacity:.9;}.cls-2-wad6{fill:#e18f1d;}.cls-3-wad6{fill:#fa7d10;}.cls-4-wad6{fill:rgb(223, 101, 8);}
 
 .shake {
   display: block;
@@ -33,40 +55,21 @@
   90% { transform: translate(1px, 5px) rotate(0deg); }
   100% { transform: translate(1px, -5px) rotate(-20deg); }
 }
-/* @keyframes wobble {
-  25% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-30deg);
-  }
-  75% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-} */
+
 #jar-text{
   text-shadow: 0 0 3px white, 0 0 5px grey;  
   font-family: 'Architects Daughter', cursive;
-  font-size: 20px;
-  cursor: pointer
+  font-size: 23px;
+  cursor: pointer;
+  word-spacing: -3px;
 }
 
 
 .cls-1{
-  fill: #fff
+  fill: #fff;
+ 
 }
 
-
-.wad-wobble{
-  display: block;
-  margin: 0 auto;
-}
-.wad-wobble[wobble="1"]{
-animation: wobblw 1s infinite
-}
 
 
 .pick-again[wobble='1']{
@@ -257,17 +260,15 @@ h2 {
   border-radius: 50%;  
 }
 
-
-/* Tabs container styling /////////////////// */
-
-/* This aligns the tabs container with the list of activites  */
+/* React Tabs Comp Styling */
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
 .react-tabs__tab-list {
   border-bottom: 1px solid #aaa;
   margin: 0 0 10px;
   padding: 0;
 }
-
-/* Display Tabs in tabs verses links */
 .react-tabs__tab {
   display: inline-block;
   border: 1px solid transparent;
@@ -278,8 +279,6 @@ h2 {
   padding: 6px 12px;
   cursor: pointer;
 }
-
-/* This outlines the selected tab with a border and shadow  */
 .react-tabs__tab--selected {
   background: #fff;
   border-color: #aaa;
@@ -309,7 +308,7 @@ h2 {
 
 /* Log in / Log Out Buttons */
 .enterBtn{
-  margin: 0 10px
+  margin-bottom: 10px
 }
 
 /* Modal Styling 
@@ -484,9 +483,6 @@ div.modal-content {
   font-size: 20px;
 }
 
-.confirmHeader{
-  color: rgba(0,0,0,.5)
-}
 
 .customizeShaker, .contactShaker{
   background-color: rgb(241, 240, 240);
