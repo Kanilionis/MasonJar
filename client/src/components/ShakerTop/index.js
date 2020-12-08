@@ -6,7 +6,7 @@ const ShakerTop = () => {
 
 
     return (
-        <div className="container">
+        <div className="shaker-top-container">
         <div className="row">
           <div className="col-12">
             to begin, click on your shaker below...
