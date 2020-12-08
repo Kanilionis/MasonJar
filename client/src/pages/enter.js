@@ -17,16 +17,10 @@ const Enter = () => {
         <div className="split left">
           {/* <Nav /> */}
           <div className="centered">
-<<<<<<< HEAD
-            <img src={logo} alt="shaker" height="300px" />
-            <h1>Welcome To Shake It Up </h1>
-            <p className="enterText">new ideas, no decisions.</p>
-=======
             <Logo />
             {/* <img src={logo} alt="shaker" height="400px" /> */}
             {/* <h1>Welcome To Shake It Up! </h1> */}
             <p className="enterText">new ideas...no decisions</p>
->>>>>>> main
           </div>
         </div>
         <div className="split right">
@@ -55,11 +49,6 @@ const Enter = () => {
             
             
             <div>
-<<<<<<< HEAD
-              <LoginButton className="enter-buttons" /> <br/>
-              <GuestButton className="enter-buttons"/>
-=======
->>>>>>> main
             </div>
           </div>
         </div>

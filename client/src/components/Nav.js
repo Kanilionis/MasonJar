@@ -2,13 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as RBS from "react-bootstrap";
 import LogoutButton from "./LogoutButton";
-<<<<<<< HEAD
 import logo from "../images/NewFaviconNoWriting.svg";
-=======
-import logo from "../images/New_Jar.svg";
 import { useAuth0 } from "../react-auth0-spa";
 import Authenticated from "../components/Authenticated";
->>>>>>> main
 
 
 function Nav() {
@@ -51,12 +47,8 @@ function Nav() {
         </RBS.Nav>
       </RBS.Navbar.Collapse>
 
-<<<<<<< HEAD
-      <LogoutButton className="logout-button" />
-=======
       {/* <LogoutButton /> */}
       <Authenticated />
->>>>>>> main
 
     </RBS.Navbar>
 
