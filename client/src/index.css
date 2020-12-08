@@ -59,7 +59,11 @@
 }
 
 #jar-text{
+<<<<<<< HEAD
   text-shadow: 0 0 4px white, 0 0 5px grey;  
+=======
+  text-shadow: 0 0 3px white,  grey;  
+>>>>>>> main
   font-family: 'Architects Daughter', cursive;
   font-size: 23px;
   cursor: pointer;
@@ -100,9 +104,17 @@
 /* styling for contact page 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 */
+
+.container.col-12.col-md-5.home-container.form-container-backdrop {
+  height: 960px;
+}
   
+<<<<<<< HEAD
 .contact-container {
   font-family: 'Montserrat', sans-serif;
+=======
+.container-contact {
+>>>>>>> main
   min-height: 692px;
   position: fixed;
   bottom: 0;
@@ -111,7 +123,12 @@
   top: 0;
   z-index: 0;
   overflow: scroll;
-  background-color: #C199A1
+  background: linear-gradient(
+    108deg,
+    rgb(193, 153, 161) 0%,
+    rgb(243, 235, 233) 100%
+  );
+  
 }
 
 .contactSection{
@@ -133,10 +150,6 @@
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: auto;
-  /* margin-bottom: 100px;
-  margin-top: -28px;
-  width: 650px;
-  height: 850px; */
 }
 
 .aboout-form{
@@ -149,8 +162,7 @@
   margin-bottom:50px;
   text-align: center;
   width: 650px;
-  height: 850px;
-  
+  height: 850px; 
 }
 
 .form-container-backdrop:hover{
@@ -185,13 +197,6 @@
   margin: 12px;
 }
 
-.developer-card {
-  width: 200px;
-  display: block;
-  margin: 0 auto;
-  
-}
-
 .developer-name {
   color: #8687A3;
   font-family: 'Montserrat', sans-serif;
@@ -199,7 +204,11 @@
 }
 
 .developer-col {
-  padding-top:30px;
+  padding-top:30px;  
+}
+
+.col-6.developer-col.col {
+  text-align: center;
 }
 
 
@@ -372,12 +381,18 @@ h2 {
 */
 
 div.modal-content {
-  background-color: rgb(241, 240, 240);
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  );
 }
 .modal-title.h4 {
-  color: #00000080;
-  font-family: 'Cookie', cursive;
-  text-shadow: 2px 2px 8px rgba(224, 152, 205, 0.89);
+  color: white; text-shadow: 5px black; 
+  margin-left: 10%;
+  text-align: center;
+  font-family: 'Architects Daughter', cursive ;
+  text-shadow: 2px 2px 8px rgba( 176, 175, 215);
   font-size: 60px;
 }
 
@@ -389,7 +404,8 @@ div.modal-content {
  } 
 
 .img-card {
- border: groove rgba(163, 133, 155, 0.89) 20px; 
+ /* border: groove rgba( 134, 135, 163) 20px;  */
+ 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: block;
   margin: 0 auto;
@@ -398,14 +414,16 @@ div.modal-content {
   padding-bottom: 20px;
   padding-left: 120px;
   padding-right: 120px;
+  background-color: rgb(226, 226, 236);
 }  
 
 .modal-activity.modal-body {
   text-align: center;
-  font-family: 'Lato', sans-serif;
-  color:#00000080;
+  color: white; 
+  text-shadow: 10px black;
+  font-family: 'Architects Daughter', cursive ;
+  text-shadow: 2px 2px 8px rgba( 176, 175, 215);
   font-size: 35px;
-  font-style: italic;
 }
 
 
@@ -441,12 +459,33 @@ div.modal-content {
 ///////////////////////////////////////////////////////////////////////////////////////////////////  
 */
 
+@media only screen and ( max-width: 800px) {
+  
+  .tabs-container  {
+    width: 22rem !important;
+  }
+
+  .wrapper-around{
+    width: 20px;
+  }
+
+  .form-container-backdrop:hover{
+    transform: scale(1);
+  }
+
+}
+
+/* .themes-page{
+  background: #fbf7f5;
+
+} */
+
 /* Split the screen in half */
 .split-2 {
   height: 100%;
-  width: 50%;
+  width: 75%;
   position: fixed;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
@@ -455,16 +494,46 @@ div.modal-content {
   padding-bottom: 20px;
 }
 
-.nav-overly{
-  padding-top: -40px;
-  margin-top: -50;
-  position: absolute;
-  top: left; 
+.smaller-text{
+  font-size: 10px;
+  padding-top: 20px;
 }
 
+.input-area {
+  position: absolute;
+  width: 40%;
+  left: 0;
+  background-color: rgb(241, 240, 240);
+}  
+
+/* Control the right side */
+.export-container {
+  position: absolute;
+  width: 60%;
+  right: 0;
+  height:100%;
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  );
+}
+
+.navStyle{
+  z-index: 10;
+}
+  
+
+
+
+
 /* This creates a container for the input section of the page snd splits it in half  */
+<<<<<<< HEAD
 .input-container{
   font-family: 'Montserrat', sans-serif;
+=======
+/* .input-container{
+>>>>>>> main
   left: 0;
   z-index: 1;
   align-content: center;
@@ -474,9 +543,9 @@ div.modal-content {
     rgb(241, 211, 211) 100%
   ); 
 
-}
+} */
 /* This creates a container for the export and DB section of the page snd splits it in half  */
-.export-container{
+/* .export-container{
   right: 0;
   z-index: 1;
   align-content: center; 
@@ -486,7 +555,7 @@ div.modal-content {
     rgb(241, 211, 211) 100%
   );
 
-}
+} */
 
 
 /* This is a container that displays the tabs and DB information */
@@ -496,26 +565,31 @@ div.modal-content {
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: 80%;
+  height: 80%; 
   width: 500px;
-  margin-top: 100px;
-  /* margin-bottom: 70px;  */
+  margin-top: 100px; 
+  margin-bottom: 70px;  
   overflow-y: scroll;
 } 
 
 /* This is the form for adding a new shaker */
 .input-area{
+<<<<<<< HEAD
   font-family: 'Montserrat', sans-serif;
   height: 50%;
   width: 500px;
+=======
+  height: 100%;
+  width: 600px;
+>>>>>>> main
   background: #fbf7f5;
   align-content: center;
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   display: flex;
-  margin-top: 0px;
-  margin-left: 60px;
+  
+  
 }
 
 .text-area-above-input{
@@ -530,7 +604,18 @@ div.modal-content {
   width: 500px;
   height: 100px;
   margin-left: 30px;
+  margin-top: 300px;
   align-content: center;
+  
+
+}
+
+.wrapper-around{
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 400px;
+
 
 }
 
@@ -547,9 +632,36 @@ div.modal-content {
 
 
 .customizeShaker, .contactShaker{
-  background-color: rgb(241, 240, 240);
+  background-color: rgb(193, 153, 161);
   padding: 20px;
-  margin: 10px
+  margin-left: 10%;
+  margin: 10px;
+  border-radius: 20px;
+  font-family: 'Architects Daughter', cursive;
+  
+  
+}
+.customizeShaker:hover{
+box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2)
+}
+
+.contactShaker:hover{
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.shaker-info{
+  font-family: 'Architects Daughter', cursive;
+  color: rgba(0, 0, 0, 0.603);
+  font-size: 20px;
+}
+
+.extras{
+  background-color: rgb(134, 135, 163) ;
+  
+}
+
+.enter-cards{
+  padding-left: 20%;
 }
 
 

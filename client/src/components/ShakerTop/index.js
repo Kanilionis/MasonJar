@@ -6,10 +6,10 @@ const ShakerTop = () => {
 
 
     return (
-        <div className="shaker-top-container">
+        <div className="container shaker-info">
         <div className="row">
           <div className="col-12">
-            to begin, click on your shaker below...
+            Click the jar shake it up...
           </div>
         </div>
       </div>

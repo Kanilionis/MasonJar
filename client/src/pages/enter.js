@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/New_Jar.svg";
+import logo from "../images/NewFavicon.svg";
 import "../index.css";
 import Typical from 'react-typical';
 import LoginButton from '../components/LoginButton';
