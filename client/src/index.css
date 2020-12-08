@@ -255,17 +255,16 @@ h2 {
 
 .login-btn{
   cursor: pointer;
-  z-index: 1;
   position: absolute;
-  padding-left: 17%;
+  margin-left: -80px;
   margin-top: -80px;
-  overflow: hidden
+  
 }
 .guest-btn{
   cursor: pointer;
   position: absolute;
-  padding-left: 17%;
-  margin-top: 7px
+  margin-left: 36px;
+  margin-top: 20px
  
 }
 /* Control the left side */
