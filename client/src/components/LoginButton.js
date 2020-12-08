@@ -8,7 +8,8 @@ const LoginButton = () => {
 
   return(
       <>
-       <Button className="enterBtn" variant="outline-secondary" onClick={() => loginWithRedirect()}>Log In</Button>  <img src={logo} height="auto" width="7%"/>
+       <Button className="enterBtn" variant="outline-secondary" onClick={() => loginWithRedirect()}>Log In</Button>  
+       {/* <img src={logo} height="auto" width="7%"/> */}
        
     </>
   )

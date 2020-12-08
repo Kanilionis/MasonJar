@@ -8,9 +8,7 @@
 /* Main Shaker Page Sytling */
 .carousel{
   padding-top: 30px;
-  padding-bottom: 20px
- 
-  
+  padding-bottom: 20px 
 }
 
 .shake {
@@ -288,38 +286,11 @@ h2 {
   color: black;
   border-radius: 5px 5px 0 0;
 }
-/* .react-tabs__tab--disabled {
-  color: GrayText;
-  cursor: default;
-} */
-/* .react-tabs__tab:focus {
-  box-shadow: 0 0 5px hsl(208, 99%, 50%);
-  border-color: hsl(208, 99%, 50%);
-  outline: none;
-} */
-/* .react-tabs__tab:focus:after {
-  content: "";
-  position: absolute;
-  height: 5px;
-  left: -4px;
-  right: -4px;
-  bottom: -5px;
-  background: rgb(85, 56, 56);
-} */
-
-/* Wait for this until final */
-/* .react-tabs__tab-panel {
-  display: none;
-} */
-
 
 /* Displays the list of activites for each shaker */
 .react-tabs__tab-panel--selected {
   display: block;
 }
-
-
-
 
 /* Log in / Log Out Buttons////////////////////////////////// */
 .themeTable{
@@ -386,20 +357,6 @@ div.modal-content {
 /* NavBar Styling 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
-/* 
-.mainNav {
-  font-family: 'Cookie', cursive;
-  color: rgb(241, 240, 240);
-  font-size: 50px;
- 
-  padding-right:10px;
-}
-
-.nav-link {
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
-  padding-right: 20px; 
-} */
 
 .mainNav{
   text-shadow: 0 0 3px white, 0 0 5px grey;
@@ -424,8 +381,9 @@ div.modal-content {
   
 }
 
-
-/* Styling for the themes page ////////////////////////  */
+/* Styling for the themes page 
+///////////////////////////////////////////////////////////////////////////////////////////////////  
+*/
 
 /* Split the screen in half */
 .split-2 {
@@ -445,9 +403,7 @@ div.modal-content {
   padding-top: -40px;
   margin-top: -50;
   position: absolute;
-  top: left;
-  
-  
+  top: left; 
 }
 
 /* This creates a container for the input section of the page snd splits it in half  */
@@ -487,12 +443,7 @@ div.modal-content {
   margin-top: 100px;
   /* margin-bottom: 70px;  */
   overflow-y: scroll;
-
-
-  }  /* margin-right: 400px; */
-  /* align-items: center;
-
-
+} 
 
 /* This is the form for adding a new shaker */
 .input-area{
@@ -506,14 +457,12 @@ div.modal-content {
   display: flex;
   margin-top: 0px;
   margin-left: 60px;
-  
 }
+
 .text-area-above-input{
   background: #fbf7f5;
   height: 200px;
   width: 200px;
-
-
 }
 
 /* This is the form itself  */
@@ -528,14 +477,11 @@ div.modal-content {
 /* This is for the input box size  */
 .input-box-text{
   width: 300px;
-
 }
 
 /* Create a new shaker text */
-
 .new-shaker-text{
   font-size: 20px;
-
 }
 
 .confirmHeader{
@@ -546,4 +492,39 @@ div.modal-content {
   background-color: rgb(241, 240, 240);
   padding: 20px;
   margin: 10px
+}
+
+/* Styling Profile Page
+///////////////////////////////////////////////////////////////////////////////////////////////////  
+*/
+
+.profile-container {
+  background-color: #C199A1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+} 
+
+.user-info {
+  font-size: 30px;
+  color: #2f0909;
+}
+
+.profile-title {
+  color: #2f0909;
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.acount-container {
+  padding-left:20px;
+  padding-bottom: 105px;
+}
+
+.user-name {
+  color: #2f0909;
 }
