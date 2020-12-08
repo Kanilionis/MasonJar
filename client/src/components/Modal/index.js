@@ -1,7 +1,8 @@
 import React from 'react';
 import { Modal, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import jar from "../30644-200.png"
-import logo from "../../images/logo.svg"
+
+import logo from "../../images/NewFavicon.svg"
 
 
 const ModalShow = (props) => {

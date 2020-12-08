@@ -5,7 +5,7 @@ import shaker from "./30644-200.png"
 // import AuthNav from "./AuthNav";
 // import AuthBtn from "./AuthBtn";
 import LogoutButton from "./LogoutButton";
-import logo from "../images/New_Jar.svg";
+import logo from "../images/NewFaviconNoWriting.svg";
 
 
 function Nav() {
@@ -31,7 +31,7 @@ function Nav() {
         </RBS.Nav>
       </RBS.Navbar.Collapse>
 
-      <LogoutButton />
+      <LogoutButton className="logout-button" />
 
     </RBS.Navbar>
     </>

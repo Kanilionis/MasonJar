@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
-import logo from "../images/New_Jar.svg"
+import logo from "../images/NewFavicon.svg"
 
 
 

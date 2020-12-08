@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/New_Jar.svg";
+import logo from "../images/NewFavicon.svg";
 import "../index.css";
 import Typical from 'react-typical';
 import LoginButton from '../components/LoginButton';
@@ -15,7 +15,7 @@ const Enter = () => {
           {/* <Nav /> */}
           <div className="centered">
             <img src={logo} alt="shaker" height="300px" />
-            <h1>Welcome To Shake It! </h1>
+            <h1>Welcome To Shake It Up </h1>
             <p className="enterText">new ideas, no decisions.</p>
           </div>
         </div>
@@ -31,8 +31,8 @@ const Enter = () => {
               wrapper="p"
             />
             <div>
-              <LoginButton /> <br/>
-              <GuestButton />
+              <LoginButton className="enter-buttons" /> <br/>
+              <GuestButton className="enter-buttons"/>
             </div>
           </div>
         </div>
