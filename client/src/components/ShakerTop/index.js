@@ -9,7 +9,7 @@ const ShakerTop = () => {
         <div className="container shaker-info">
         <div className="row">
           <div className="col-12">
-            Click the jar shake it up...
+            Click the jar to shake it up...
           </div>
         </div>
       </div>
