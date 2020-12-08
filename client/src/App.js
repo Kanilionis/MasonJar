@@ -22,7 +22,6 @@ const App = () => {
               <Route path="/" component={Enter} />
             </Switch>
           </div>
-
         </Router>
         </>
     
