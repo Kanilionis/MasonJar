@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Input, FormBtn } from '../Form';
-import { List, ListItem } from '../List';
-import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button"
 import Nav from '../Nav'
 import Table from "react-bootstrap/Table"
 import Edit from '../EditableText/EditableText'
-// import EditableText from '../EditableText'
 import {
   FaEdit,
   FaTrash,
-  FaSave
+  FaSave,
+  FaArrowRight
 
 } from 'react-icons/fa'
-import { confirmAlert } from 'react-confirm-alert'; 
+import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
 
 import "../../../src/index.css"
@@ -105,31 +103,31 @@ const TabsPage = (props) => {
       .catch(err => console.log(err));
   }
 
-  function handleDeleteTheme(theme){
+  function handleDeleteTheme(theme) {
     API.deleteTheme(theme)
-    .then(res => loadThemes())
-    .catch(err => console.log(err));
+      .then(res => loadThemes())
+      .catch(err => console.log(err));
   }
 
   function confirmDelete(theme) {
     const options = {
       childrenElement: () => <div />,
       customUI: ({ onClose }) =>
-      <div className='custom-ui'>
-      <h1 className="confirmHeader">Are you sure?</h1>
-      <p>Are you sure you would like to delete {theme}?</p>
-      <Button variant="outline-secondary" onClick={onClose}>No</Button>
-      <Button variant="outline-secondary" onClick={() => {
-          handleDeleteTheme(theme)
-          onClose()
-      }}>Yes, Delete it!</Button>
-    </div>,
+        <div className='custom-ui'>
+          <h1 className="confirmHeader">Are you sure?</h1>
+          <p>Are you sure you would like to delete {theme}?</p>
+          <Button variant="outline-secondary" onClick={onClose}>No</Button>
+          <Button variant="outline-secondary" onClick={() => {
+            handleDeleteTheme(theme)
+            onClose()
+          }}>Yes, Delete it!</Button>
+        </div>,
       closeOnEscape: true,
       closeOnClickOutside: true,
-      willUnmount: () => {},
-      afterClose: () => {},
-      onClickOutside: () => {},
-      onKeypressEscape: () => {}
+      willUnmount: () => { },
+      afterClose: () => { },
+      onClickOutside: () => { },
+      onKeypressEscape: () => { }
     };
     confirmAlert(options)
   };
@@ -137,7 +135,7 @@ const TabsPage = (props) => {
   return (
     <>
       <div className="themes-page">
-        <Nav/>
+        <Nav />
         <div className="row input-container">
           {/* <Nav className="nav-overly" /> */}
           <div className="input-area split-2">
@@ -150,34 +148,38 @@ const TabsPage = (props) => {
                 </div>
                 
               <div class="wrapper-around">
-                
-              <form className="shaker-form-size">
-              <h3 className="new-shaker-text">Create A New Shaker</h3>
-                
-                <Input
-                  className="input-box-text"
-                  onChange={handleInputChange}
-                  name="theme"
-                  placeholder='What to make for dinner'
-                  value={formObject.name}
-                />
-                <svg variant="outline-secondary"
-                  disabled={!(formObject.theme)}
-                  onClick={handleNewShaker} className="enter-btn login-btn" height="150px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231.08 373.45"><defs></defs><path d="M214.68,385.93c6.72,0,13.33.19,19.93-.12a8.13,8.13,0,0,0,5.33-2.56c29.53-35.86,88.6-35.83,118.22.06a8.24,8.24,0,0,0,5.34,2.51c5.63.32,11.28.11,17.68.11v56c-5.45,0-11.54-.19-17.6.12a8.25,8.25,0,0,0-5.44,2.46c-16.5,20-38.23,27.61-63.35,26.52-22.14-1-41-9.23-55.19-26.89-1-1.28-3.34-2-5.09-2.11-6.47-.25-13-.1-19.83-.1Z" transform="translate(-181.79 -224.01)"/><rect className="cls-2" x="16" y="160.88" width="200.2" height="57.05"/><text  id="login-jar" x="50%" y="53%" textAnchor="middle" fill="white">submit</text></svg>
-                {/* <Button variant="outline-secondary"
-                  disabled={!(formObject.theme)}
-                  onClick={handleNewShaker}
-                >
-                  Submit
-                </Button> */}
-              </form>
+                <form className="shaker-form-size">
+
+                  <h2>Welcome to the customized shaker!</h2>
+                  <p>Please enter the title/theme of your shaker below</p>
+
+                  <h3 className="new-shaker-text">Create A New Shaker</h3>
+                  <Input
+                    className="input-box-text"
+                    onChange={handleInputChange}
+                    name="theme"
+                    placeholder="ex. 'What's for Dinner'"
+                    value={formObject.name}
+                  />
+                  <div className="newShakerBtn">
+                  <Button variant="outline-secondary"
+                    disabled={!(formObject.theme)}
+                    onClick={handleNewShaker}
+                  >
+                    Submit
+                </Button>
+                </div>
+                  <p>Now add some ideas over here</p>
+                  <FaArrowRight />
+                </form>
+              </div>
             </div>
-           </div>
           </div>
           <div className="export-container split-2">
+            <h2 className="customizeShakerH2">customize your shaker</h2>
             <div className="tableResults tabsRoot tabs-container">
-              
-              <Tabs defaultIndex={0}>
+
+              <Tabs>
                 <TabList>
                   {themes.map((theme, index) => (
                     <>
@@ -206,31 +208,31 @@ const TabsPage = (props) => {
                       className="themeTable" striped bordered hover>
                       <tbody>
                         {theme.activities.map((activity, index) => (
-                          <> 
+                          <>
                             { //Check if seed data or custom
                               (themes.indexOf(theme) > 4 || index > 19)
                                 ?
                                 <>
                                   <tr>
-                                    
+
                                     <td value={editActivity.activity}>
                                       <>
-                                      <FaTrash onClick={() => handleDelete(activity.name)}/>
-                                      <Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name}/>
+                                        <FaTrash onClick={() => handleDelete(activity.name)} />
+                                        <Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name} />
                                       </>
-                                        </td> 
-                                      
+                                    </td>
+
                                   </tr>
                                 </>
                                 :
                                 <>
-                                
-                                  
+
+
                                   <tr>
-                                    <td><Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name}/></td> 
+                                    <td><Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name} /></td>
                                   </tr>
-                                  
-                                
+
+
                                 </>
                             }
                           </>
