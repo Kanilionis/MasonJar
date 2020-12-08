@@ -97,9 +97,8 @@
   background-color: #C199A1
 }
 
-.signup{
-  height: 100%;
-  display: flex;
+.contactSection{
+  height: 6;
   flex-direction: column;
   justify-content: center;
 }
@@ -115,12 +114,13 @@
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: 80%;
-  margin-bottom: 100px;
+  height: auto;
+  /* margin-bottom: 100px;
   margin-top: -28px;
   width: 650px;
-  height: 850px;
+  height: 850px; */
 }
+
 .aboout-form{
   background: #F3EBE9;
   padding: 24px 24px;
@@ -490,6 +490,24 @@ div.modal-content {
   margin: 10px
 }
 
+
+@media only screen and ( max-width: 800px) {
+  
+  .developer-card  {
+    width: 22rem !important;
+  }
+
+  .form-container-backdrop{
+    max-width: auto;
+    margin: 10px auto;
+    height: auto;
+  }
+
+  .form-container-backdrop:hover{
+    transform: scale(1);
+  }
+
+}
 /* Styling Profile Page
 ///////////////////////////////////////////////////////////////////////////////////////////////////  
 */
