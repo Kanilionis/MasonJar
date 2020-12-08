@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/New_Jar.svg";
+import logo from "../images/NewFavicon.svg";
 import "../index.css";
 import Typical from 'react-typical';
 import LoginButton from '../components/LoginButton';
@@ -37,7 +37,7 @@ const Enter = () => {
            
               <div className="row">
               <div className="col-md-3">
-              <LoginButton />
+              <LoginButton/>
               </div>
               <div className="col-md-6"></div>
               <div className="col-md-3">
