@@ -3,7 +3,8 @@ import logo from "../images/New_Jar.svg";
 import "../index.css";
 import Typical from 'react-typical';
 import LoginButton from '../components/LoginButton';
-import GuestButton from '../components/GuestButton.js';
+// import GuestButton from '../components/GuestButton.js';
+import Nav from "../components/Nav";
 
 
 const Enter = () => {
@@ -12,7 +13,7 @@ const Enter = () => {
     <>
       <div className="enter-container">
         <div className="split left">
-          {/* <Nav /> */}
+          <Nav />
           <div className="centered">
             <img src={logo} alt="shaker" height="300px" />
             <h1>Welcome To Shake It! </h1>
@@ -31,8 +32,6 @@ const Enter = () => {
               wrapper="p"
             />
             <div>
-              <LoginButton /> <br/>
-              <GuestButton />
             </div>
           </div>
         </div>

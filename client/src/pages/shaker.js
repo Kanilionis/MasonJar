@@ -75,8 +75,6 @@ function closeModal(){
   setModalOpen({isOpen: false})
 }
 
-
-
 return(
   <>
 
