@@ -37,7 +37,7 @@ const Enter = () => {
            
               <div className="row">
               <div className="col-md-3">
-              <LoginButton />
+              <LoginButton/>
               </div>
               <div className="col-md-6"></div>
               <div className="col-md-3">

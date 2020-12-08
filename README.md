@@ -1,44 +1,67 @@
 # MasonJar
-Group Project 3
 
-## MVP:
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### Homepage - "this is our app and how it can help you"
--enter here button
-
-### Categories
-- Katie - Date Night In
-- Dana - Date Night Out (Active)
-- Tessa - Netflix and Chill
-- Nora - Travel/Weekend Getaway
-- Claire - Outdoor Activities
--button to choose for you
-
-### Suggest an Idea
-- suggest an activity to us to add (nodemailer)
-- form
-  - choose theme (dropdown?)
-  - type activity here
-  - submit
-- FUTURE- view all activites by theme before suggesting  
-
-### Not Required
-- authentication
-
-## Future Developments
-### Profile
-- link to facebook/login with facebook
-- saved activities
-- suggest an activity to us to add
-- save to profile
-### GeoLocation
-- specific to where you live and weather conditions
-
-## Breakdown of Tasks
-- Katie: create repo, mern file, Math.Random functionality, shaker animation and onClick for modal, theme components (one for each jar)
-- Dana: Header/Nav/html routes/enter site page "enter" button
-- Tessa: databases/api routes
-- Claire: front-end
-- Nora: modal for each theme, "choose again" button, contact page (nodemailer)
+## Description
 
 
+
+## Table of Contents 
+
+* [Video](#video)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+* [Questions](#questions)
+* [Future-Development](#future-development)
+* [Heroku](#heroku)
+
+## Video
+
+
+![Walkthrough Video](./raw/main/applicationVideo.gif)
+
+## Installation
+
+Steps to install project include:
+* npm install the dependencies 
+
+## Usage 
+
+![Getting Started](./.PNG)
+* . 
+
+![Getting Started](./.PNG)
+*
+
+## Credits
+
+All of the code was developed by:
+ * Claire Bohlen
+    * GitHub Username: ClaireBohlen
+    * GitHub Profile: (https://github.com/ClaireBohlen)
+ * Dana Kuglin
+    * GitHub Username: dakuglin
+    * GitHub Profile: (https://github.com/dakuglin)
+ * Nora Curcio
+    * GitHub Username: noracurcio
+    * GitHub Profile: https://github.com/noracurcio)
+ * Tessa Pierce 
+    * GitHub Username: tesssapierce
+    * GitHub Profile: (https://github.com/tesssapierce)
+ * Katie Anilionis 
+    * GitHub Username: Kanilionis
+    * GitHub Profile: (https://github.com/Kanilionis)
+
+## License
+
+This project is licensed under MIT.
+
+## Future-Development
+
+
+
+## Heroku
+
+This application is deployed on Heroku and can be found at the following link: (https://shake-it-up.herokuapp.com/)

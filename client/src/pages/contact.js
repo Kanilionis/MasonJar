@@ -63,7 +63,7 @@ class Contact extends React.Component {
             <div className="container col-12 col-md-5 home-container contactSection">
               <div className="form-container-backdrop">
                 <h1 className="h1-contact">Contact Us</h1>
-                <p className="p-contact">Didn't see something you like? Make a suggestion to the Shaker Team!</p>
+                {/* <p className="p-contact">Didn't see something you like? Make a suggestion to the Shaker Team!</p> */}
                 <div className="App">
                   <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                     <div className="form-group">
@@ -75,7 +75,7 @@ class Contact extends React.Component {
                       <input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="message">Suggestion</label>
+                      <label htmlFor="message">Message</label>
                       <textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
                     </div>
                     <button type="submit" className="btn btn-primary button-contact-form">Submit</button>
