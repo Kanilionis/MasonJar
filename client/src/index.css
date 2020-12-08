@@ -431,3 +431,11 @@ div.modal-content {
   }
 }
 
+
+
+
+.customizeShaker, .contactShaker{
+  background-color: rgb(241, 240, 240);
+  padding: 20px;
+  margin: 10px
+}
