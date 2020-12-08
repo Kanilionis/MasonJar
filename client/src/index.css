@@ -6,17 +6,24 @@
   font-family: 'Architects Daughter', cursive;} */
 
 /* Main Shaker Page Sytling */
-
-
-
-
-
-
-
+p{
+  font-family: 'Montserrat', sans-serif;
+}
+li{
+  font-family: 'Montserrat', sans-serif;
+}
 .carousel{
+  /* width: 1500px; */
   margin-top: -40px;
   padding-top: 30px;
-  padding-bottom: 20px 
+  padding-bottom: 30px 
+}
+
+.carousel .carousel-indicators li {
+  width: 10px;
+ height: 10px;
+ margin: 8px;
+ border-radius: 100%;
 }
 
 .logo-style{
@@ -65,8 +72,7 @@
 }
 
 #jar-text{
-
-  text-shadow: 0 0 3px white, 0 0 5px grey;  
+  text-shadow: 0 0 2px white, 0 0 5px grey;  
   font-family: 'Architects Daughter', cursive;
   font-size: 23px;
   cursor: pointer;
@@ -112,7 +118,6 @@
   height: 960px;
 }
   
-
 .contact-container {
   font-family: 'Montserrat', sans-serif;
   min-height: 692px;
@@ -126,6 +131,12 @@
   background-color: #C199A1
 }
 
+.contact-btn{
+  margin-left: 43%
+}
+#message{
+  margin-bottom: -30px;
+}
 .contactSection{
   height: 6;
   flex-direction: column;
@@ -144,7 +155,7 @@
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: auto;
+  height: 600px;
 }
 
 .aboout-form{
@@ -381,7 +392,17 @@ h2 {
 /* Log in / Log Out Buttons////////////////////////////////// */
 .themeTable{
   font-family: 'Montserrat', sans-serif;
-  width: 50%
+  width: 75%;
+  margin: 20px auto;
+}
+
+.newShakerBtn{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 15px;
 }
 
 .tabsRoot{
@@ -391,7 +412,17 @@ h2 {
 
 .input-container{
   font-family: 'Montserrat', sans-serif;
+}
+
+.form-group {
+  width: 60%;
   margin: 0 auto;
+  padding-top: 20px
+}
+
+.newActivityBtn {
+  text-align: center;
+  padding-top: 20px;
 }
 
 
@@ -405,12 +436,19 @@ h2 {
 */
 
 div.modal-content {
-  background-color: rgb(241, 240, 240);
+  
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  );
 }
 .modal-title.h4 {
-  color: #00000080;
-  font-family: 'Cookie', cursive;
-  text-shadow: 2px 2px 8px rgba(224, 152, 205, 0.89);
+  color: white; text-shadow: 5px black; 
+  margin-left: 10%;
+  text-align: center;
+  font-family: 'Architects Daughter', cursive ;
+  text-shadow: 2px 2px 8px rgba( 176, 175, 215);
   font-size: 60px;
 }
 
@@ -422,8 +460,8 @@ div.modal-content {
  } 
 
 .img-card {
- border: groove rgba(163, 133, 155, 0.89) 20px; 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ /* border: groove rgba(163, 133, 155, 0.89) 20px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   display: block;
   margin: 0 auto;
   margin-top: 15px;
@@ -431,14 +469,17 @@ div.modal-content {
   padding-bottom: 20px;
   padding-left: 120px;
   padding-right: 120px;
+  /* background-color: rgb(226, 226, 236); */
 }  
 
 .modal-activity.modal-body {
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  color:#00000080;
+  color: white; 
+  text-shadow: 10px black;
+  font-family: 'Montserrat', sans-serif; ;
+  text-shadow: 2px 2px 8px rgba( 176, 175, 215);
   font-size: 35px;
-  font-style: italic;
+  text-align: center;
+  
 }
 
 
@@ -467,7 +508,7 @@ div.modal-content {
   width:7%;
   height:auto;
   padding: 15px;
-  
+  cursor: pointer
 }
 
 /* Styling for the themes page 
@@ -479,6 +520,7 @@ div.modal-content {
   .tabs-container  {
     width: 22rem !important;
   }
+
 
   .wrapper-around{
     width: 20px;
@@ -497,34 +539,28 @@ div.modal-content {
 
 /* Split the screen in half */
 .split-2 {
-  height: 100%;
-  width: 75%;
+  /* height: 100%; */
+  width: 100%;
   position: fixed;
   z-index: 0;
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
   padding-right:20px;
-  padding-left: 20px;
   padding-bottom: 20px;
 }
 
 .smaller-text{
+  
   font-size: 10px;
   padding-top: 20px;
 }
 
-.input-area {
-  position: absolute;
-  width: 40%;
-  left: 0;
-  background-color: rgb(241, 240, 240);
-}  
 
 /* Control the right side */
 .export-container {
   position: absolute;
-  width: 60%;
+  width: 75%;
   right: 0;
   height:100%;
   background: linear-gradient(
@@ -536,16 +572,12 @@ div.modal-content {
 
 .navStyle{
   z-index: 10;
+  width: 50%
 }
-  
-
-
 
 
 /* This creates a container for the input section of the page snd splits it in half  */
-
 /* .input-container{
-
   left: 0;
   z-index: 1;
   align-content: center;
@@ -571,22 +603,27 @@ div.modal-content {
 
 
 /* This is a container that displays the tabs and DB information */
+
+.new-act-text{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 34px
+}
+
 .tabs-container{
   font-family: 'Montserrat', sans-serif;
-  background: #fbf7f5;
+  background-color: rgb(241, 240, 240);
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 80%; 
-  width: 700px;
-  margin-top: 100px; 
+  width: 75rem;
+  margin-top: 50px; 
   margin-bottom: 70px;  
   overflow-y: scroll;
 } 
 
 /* This is the form for adding a new shaker */
 .input-area{
-
   font-family: 'Montserrat', sans-serif;
   height: 100%;
   width: 600px;
@@ -607,30 +644,6 @@ div.modal-content {
   width: 200px;
 }
 
-/* This is the form itself  */
-.shaker-form-size{
-  width: 500px;
-  height: 100px;
-  margin-left: 30px;
-  margin-top: 300px;
-  align-content: center;
-  
-
-}
-
-.wrapper-around{
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: 300px;
-  width: 400px;
-
-
-}
-
-/* This is for the input box size  */
-.input-box-text{
-  width: 300px;
-}
 
 /* Create a new shaker text */
 .new-shaker-text{
@@ -642,13 +655,56 @@ div.modal-content {
 .customizeShaker, .contactShaker{
   background-color: rgb(241, 240, 240);
   padding: 20px;
-  margin: 10px
+  margin-left: 10%;
+  margin: 10px;
+  border-radius: 20px;
+  font-family: 'Architects Daughter', cursive;
+  
+  
+}
+.customizeShaker:hover{
+box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2)
+}
+
+.contactShaker:hover{
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2)
+}
+
+.shaker-info{
+  font-family: 'Architects Daughter', cursive;
+  color: rgba(0, 0, 0, 0.603);
+  font-size: 20px;
+}
+
+.shaker-pg-btn-1{
+  margin-top: -33px;
+margin-bottom: -50px;
+
+}
+#try-it{
+  font-size: 36px;
+}
+#contact-us{
+  font-size: 36px
+}
+.shaker-pg-btn-2{
+  margin-top: -33px;
+margin-bottom: -50px
+}
+.extras{
+  background-color: rgb(134, 135, 163) ;
+  
+}
+
+.enter-cards{
+  padding-left: 20%;
 }
 
 
 @media only screen and ( max-width: 800px) {
   
   .developer-card  {
+    font-family: 'Montserrat', sans-serif;
     width: 22rem !important;
   }
 
@@ -668,7 +724,7 @@ div.modal-content {
 */
 
 .profile-container {
-  font-family: 'Montserrat', sans-serif;
+  
   background-color: #C199A1;
   position: fixed;
   top: 0;
@@ -685,9 +741,10 @@ div.modal-content {
 
 .profile-title {
   color: #2f0909;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Architects Daughter', cursive;
+
   font-size: 40px;
-  font-style: italic;
+ 
   font-weight: bold;
 }
 
@@ -697,6 +754,7 @@ div.modal-content {
 }
 
 .user-name {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Architects Daughter', cursive;
+
   color: #2f0909;
 }

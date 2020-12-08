@@ -7,7 +7,6 @@ import ModalShow from "../components/Modal";
 import { Carousel } from "react-bootstrap";
 import ShakerTop from "../components/ShakerTop"
 import ShakerBottom from "../components/ShakerBottom"
-import Button from 'react-bootstrap/Button'
 
 const Shaker = () => {
 
@@ -82,26 +81,12 @@ return(
   <div className="contact-container">
     <Nav />
     <center> 
-      <br></br>
+      
       <ShakerTop />
      
       {shakers.length ? (
-     <div className="container">
-     <div className="row">
-       <div className="col-md-4 customizeShaker">
-       <h3>Customize Your Shaker</h3>
-       <p>did you know what you can do?</p>
-         <ul>
-         <li>Create Custom Shakers</li>
-             <li>Add New Activities</li>
-             <li>Delete Activities</li>
-             <li>Update Activities</li>
-
-         </ul>
-         
-         <Button variant="outline-secondary" href="/viewthemes">Start Customizing</Button> 
-       </div>
-       <Carousel className="center carousel col-md-3" indicators={false} fade={true} >
+     
+        <Carousel className="center carousel col-md-3" indicators={true} fade={true} >
         {shakers.map(shaker => (
           
           
@@ -110,23 +95,14 @@ return(
           
           <ModalShow pickAgain={pickAgain} isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
           </Carousel.Item>
-       
+        
         ))}
         </Carousel>
-
-       <div className="col-md-4 contactShaker">
-         <h3>See ways we can improve?</h3>
-         <p>contact us to tell us more!</p>
-         <Button variant="outline-secondary" href="/contact">Contact Us</Button>
-       </div>
-     </div>
-   </div>
-        
        
       ) : (
         <h3>nothing to see here</h3>
       )}
-     
+      <ShakerBottom />
     </center>
   </div>
 
