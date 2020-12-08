@@ -137,9 +137,9 @@ const TabsPage = (props) => {
   return (
     <>
       <div className="container-fluid">
-        <Nav className="nav-overly" />
+        {/* <Nav className="nav-overly" /> */}
         <div className="row input-container split-2">
-          <Nav className="nav-overly" />
+          {/* <Nav className="nav-overly" /> */}
           <div className="input-area">
 
             <div className="shaker-form">
@@ -202,12 +202,10 @@ const TabsPage = (props) => {
                                   <tr>
                                     
                                     <td value={editActivity.activity}>
-                                    
-                                      <FaEdit onClick={() => handleEdit(activity.name)}/> 
+                                      <>
                                       <FaTrash onClick={() => handleDelete(activity.name)}/>
-                                      <FaSave onClick={() => handleSave(activity.name, index)}/>
-                                      
                                       <Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name}/>
+                                      </>
                                         </td> 
                                       
                                   </tr>

@@ -557,7 +557,8 @@ div.modal-content {
     transform: scale(1);
   }
 } */
-/* @keyframes slides-set-2 {
+
+@keyframes slides-set-2 {
   0% {
     opacity: 0;
     transform: translateY(-100px);
