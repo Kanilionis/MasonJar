@@ -75,6 +75,7 @@ const Shaker = () => {
   
 
 
+<<<<<<< HEAD
 
   return (
     <>
@@ -111,6 +112,42 @@ const Shaker = () => {
 
     </>
   )
+=======
+return(
+  <>
+
+  <div className="contact-container">
+    <Nav />
+    <center> 
+      <br></br>
+      <ShakerTop />
+      <br></br>
+      <br></br>
+      {shakers.length ? (
+     
+        <Carousel className="center carousel col-md-3" indicators={false} fade={true} >
+        {shakers.map(shaker => (
+          
+          
+          <Carousel.Item className="carousel-item" >
+          <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
+          
+          <ModalShow pickAgain={pickAgain} isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
+          </Carousel.Item>
+       
+        ))}
+        </Carousel>
+       
+      ) : (
+        <h3>nothing to see here</h3>
+      )}
+      <ShakerBottom />
+    </center>
+  </div>
+
+  </>
+)
+>>>>>>> main
 }
 
 export default Shaker
