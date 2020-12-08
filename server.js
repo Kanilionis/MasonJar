@@ -1,6 +1,7 @@
 var express = require('express');
 const mongoose = require("mongoose");
 const routes = require("./routes");
+var router = express.Router();
 const app = express()
 const PORT = process.env.PORT || 3001;
 
@@ -84,3 +85,8 @@ router.post('/send', (req, res, next) => {
     }
   })
 })
+
+app.get("*", function(req, res) {
+    
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
