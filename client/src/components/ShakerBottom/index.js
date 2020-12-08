@@ -19,8 +19,10 @@ const ShakerBottom = () => {
                 <li>Update Activities</li>
 
             </ul>
+            
             <Button variant="outline-secondary" href="/viewthemes">Start Customizing</Button> 
           </div>
+         
           <div className="col-5 contactShaker">
             <h3>See ways we can improve?</h3>
             <p>contact us to tell us more!</p>
