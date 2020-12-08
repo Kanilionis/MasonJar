@@ -1,4 +1,3 @@
-
 /* Navbar styling*/
 /* .navStyle{
   margin-top: 10px;
@@ -6,108 +5,197 @@
   font-family: 'Architects Daughter', cursive;} */
 
 /* Main Shaker Page Sytling */
-p{
-  font-family: 'Montserrat', sans-serif;
+p {
+  font-family: "Montserrat", sans-serif;
 }
-li{
-  font-family: 'Montserrat', sans-serif;
+li {
+  font-family: "Montserrat", sans-serif;
 }
-.carousel{
-  /* width: 1500px; */
+.carousel {
   margin-top: -40px;
   padding-top: 30px;
-  padding-bottom: 30px 
+  padding-bottom: 30px;
 }
 
 .carousel .carousel-indicators li {
   width: 10px;
- height: 10px;
- margin: 8px;
- border-radius: 100%;
+  height: 10px;
+  margin: 8px;
+  border-radius: 100%;
 }
 
-.logo-style{
-  fill: #fff
+.logo-style {
+  fill: #fff;
 }
 
-.carousel-item{
-  padding: 20px
+.carousel-item {
+  padding: 20px;
 }
 
-.cls-1-label{fill:#fff;}.cls-2-label{stroke:#000;stroke-miterlimit:10;}
+.cls-1-label {
+  fill: #fff;
+}
+.cls-2-label {
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
 
-.cls-1-wad1{opacity:.9;}.cls-2-wad1{fill:#fed20d;}.cls-3-wad1{fill:#f5f2a2;}
+.cls-1-wad1 {
+  opacity: 0.9;
+}
+.cls-2-wad1 {
+  fill: #fed20d;
+}
+.cls-3-wad1 {
+  fill: #f5f2a2;
+}
 
-.cls-1-wad2{opacity:.9;}.cls-2-wad2{fill:#007f76;}.cls-3-wad2{fill:#87cfc0;}
+.cls-1-wad2 {
+  opacity: 0.9;
+}
+.cls-2-wad2 {
+  fill: #007f76;
+}
+.cls-3-wad2 {
+  fill: #87cfc0;
+}
 
-.cls-1-wad3{opacity:.9;}.cls-2-wad3{fill:#422f90;}.cls-3-wad3{fill:#8f90c7;}
+.cls-1-wad3 {
+  opacity: 0.9;
+}
+.cls-2-wad3 {
+  fill: #422f90;
+}
+.cls-3-wad3 {
+  fill: #8f90c7;
+}
 
-.cls-1-wad4{opacity:.9;}.cls-2-wad4{fill:#e44699;}.cls-3-wad4{fill:#eba8cb;}
+.cls-1-wad4 {
+  opacity: 0.9;
+}
+.cls-2-wad4 {
+  fill: #e44699;
+}
+.cls-3-wad4 {
+  fill: #eba8cb;
+}
 
-.cls-1-wad5{opacity:.9;}.cls-2-wad5{fill:#05689d;}.cls-3-wad5{fill:#52c9ed;}
+.cls-1-wad5 {
+  opacity: 0.9;
+}
+.cls-2-wad5 {
+  fill: #05689d;
+}
+.cls-3-wad5 {
+  fill: #52c9ed;
+}
 
-.cls-1-wad6{opacity:.9;}.cls-2-wad6{fill:#e18f1d;}.cls-3-wad6{fill:#fa7d10;}.cls-4-wad6{fill:rgb(223, 101, 8);}
+.cls-1-wad6 {
+  opacity: 0.9;
+}
+.cls-2-wad6 {
+  fill: #e18f1d;
+}
+.cls-3-wad6 {
+  fill: #fa7d10;
+}
+.cls-4-wad6 {
+  fill: rgb(223, 101, 8);
+}
 
 .shake {
   display: block;
   margin: 0 auto;
 }
-.shake[shake='1'] {
+.shake[shake="1"] {
   animation-name: shake;
   animation-duration: 1s;
   animation-iteration-count: 2;
 }
 @keyframes shake {
-  0% { transform: translate(1px, 5px) rotate(0deg); }
-  10% { transform: translate(-1px, -5px) rotate(-20deg); }
-  20% { transform: translate(-3px, 5px) rotate(20deg); }
-  30% { transform: translate(3px, 5px) rotate(0deg); }
-  40% { transform: translate(1px, -5px) rotate(20deg); }
-  50% { transform: translate(-1px, 5px) rotate(-20deg); }
-  60% { transform: translate(-3px, 5px) rotate(0deg); }
-  70% { transform: translate(3px, 5px) rotate(-20deg); }
-  80% { transform: translate(-1px, -5px) rotate(20deg); }
-  90% { transform: translate(1px, 5px) rotate(0deg); }
-  100% { transform: translate(1px, -5px) rotate(-20deg); }
+  0% {
+    transform: translate(1px, 5px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -5px) rotate(-20deg);
+  }
+  20% {
+    transform: translate(-3px, 5px) rotate(20deg);
+  }
+  30% {
+    transform: translate(3px, 5px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -5px) rotate(20deg);
+  }
+  50% {
+    transform: translate(-1px, 5px) rotate(-20deg);
+  }
+  60% {
+    transform: translate(-3px, 5px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 5px) rotate(-20deg);
+  }
+  80% {
+    transform: translate(-1px, -5px) rotate(20deg);
+  }
+  90% {
+    transform: translate(1px, 5px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -5px) rotate(-20deg);
+  }
 }
 
-#jar-text{
-  text-shadow: 0 0 2px white, 0 0 5px grey;  
-  font-family: 'Architects Daughter', cursive;
+#jar-text {
+  text-shadow: 0 0 2px white, 0 0 5px grey;
+  font-family: "Architects Daughter", cursive;
   font-size: 23px;
   cursor: pointer;
   word-spacing: -3px;
 }
 
-
-.cls-1{
+.cls-1 {
   fill: #fff;
- 
 }
 
-.enter-page-wobble[wobble='1']{
+.enter-page-wobble[wobble="1"] {
   animation-name: wobble;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
 
 @keyframes wobble {
-  0% { transform: translateX(0%); } 
-  15% { transform: translateX(-25%) rotate(-10deg); } 
-  30% { transform: translateX(20%) rotate(8deg); } 
-  45% { transform: translateX(-15%) rotate(-8deg); } 
-  60% { transform: translateX(10%) rotate(3deg); }
-  75% { transform: translateX(-5%) rotate(-3deg); }
-  100% { transform: translateX(0%); } 
-} 
+  0% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-25%) rotate(-10deg);
+  }
+  30% {
+    transform: translateX(20%) rotate(8deg);
+  }
+  45% {
+    transform: translateX(-15%) rotate(-8deg);
+  }
+  60% {
+    transform: translateX(10%) rotate(3deg);
+  }
+  75% {
+    transform: translateX(-5%) rotate(-3deg);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 
-.pick-again[wobble='1']{
+.pick-again[wobble="1"] {
   animation: wobble 1s 1;
 }
 
 .pick-again {
   cursor: pointer;
-  
 }
 
 /* styling for contact page 
@@ -117,76 +205,66 @@ li{
 .container.col-12.col-md-5.home-container.form-container-backdrop {
   height: 960px;
 }
-  
+
 .contact-container {
-  font-family: 'Montserrat', sans-serif;
-  min-height: 692px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 0;
-  overflow: scroll;
-  background-color: #C199A1
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  );
+  min-height: 1370px;
 }
 
-.contact-btn{
-  margin-left: 43%
+.contact-btn {
+  margin-left: 43%;
 }
-#message{
+#message {
   margin-bottom: -30px;
 }
-.contactSection{
-  height: 6;
-  flex-direction: column;
-  justify-content: center;
+
+.suggestion-row {
+  font-family: "Montserrat", sans-serif;
+  padding: 70px 0px;
 }
 
-.suggestion-row{
-  font-family: 'Montserrat', sans-serif;
-  height: 100%;
-  display: flex;
-  justify-content: right;
-}
-
-.form-container-backdrop{
-  background: #F3EBE9;
+.form-container-backdrop {
+  background: #f3ebe9;
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 600px;
 }
 
-.aboout-form{
-  background: #F3EBE9;
+.aboout-form {
+  background: #f3ebe9;
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 80%;
-  width:450px;
-  margin-bottom:50px;
+  width: 450px;
+  margin-bottom: 50px;
   text-align: center;
   width: 650px;
-  height: 850px; 
+  height: 850px;
 }
 
-.form-container-backdrop:hover{
+.form-container-backdrop:hover {
   transform: scale(1.02);
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
-.h1-contact{
+.h1-contact {
   font-size: 50px;
-  color:#2f0909;
+  color: #2f0909;
   margin-top: 5px;
   text-align: center;
 }
 
 .p-contact {
   font-size: 16px;
-  color:#2f0909;
+  color: #2f0909;
   margin-top: 10px;
   text-align: center;
 }
@@ -197,20 +275,20 @@ li{
 }
 
 .developer-card-img {
-  height: 120px; 
+  height: 120px;
   width: auto;
   border: #2f0909 dotted 4px;
   margin: 12px;
 }
 
 .developer-name {
-  color: #8687A3;
-  font-family: 'Montserrat', sans-serif;
+  color: #8687a3;
+  font-family: "Montserrat", sans-serif;
   font-size: 25px;
 }
 
 .developer-col {
-  padding-top:30px;  
+  padding-top: 30px;
 }
 
 .col-6.developer-col.col {
@@ -222,10 +300,9 @@ li{
   font-size: 40px;
 }
 .user-github:hover {
-  color: #C199A1;
+  color: #c199a1;
   transition: 0.3s ease-out;
 }
-
 
 /* Styling for landing/home page
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -234,57 +311,61 @@ li{
 @media only screen and (max-width: 600px) {
   .login-btn {
     width: 80px;
-    height:  80px;
-
+    height: 80px;
   }
 }
 @media only screen and (max-width: 600px) {
   .enterBtn {
     display: inline-block;
     width: 28%;
-
-    
-
   }
 }
 
-
-
-
 h1 {
-  font-family: 'Architects Daughter', cursive;
+  font-family: "Architects Daughter", cursive;
   color: rgb(241, 240, 240);
   font-size: 100px;
   margin: 20px;
 }
 
 h2 {
-  font-family: 'Architects Daughter', cursive;
+  font-family: "Architects Daughter", cursive;
   font-size: 40px;
-  font-weight:bold;
+  font-weight: bold;
   color: rgba(163, 133, 155, 0.685);
 }
 
 .enterText {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 50;
-  padding-top: 10px
+  padding-top: 10px;
 }
 
 .infinityText {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 25px;
   font-style: italic;
 }
-#guest-jar{
-  font-family: 'Architects Daughter', cursive;
+#guest-jar {
+  font-family: "Architects Daughter", cursive;
   font-size: 40px;
 }
-#login-jar{
-  font-family: 'Architects Daughter', cursive;
+#login-jar {
+  font-family: "Architects Daughter", cursive;
   font-size: 40px;
 }
+
+#themes-jar {
+  font-family: "Architects Daughter", cursive;
+  font-size: 25px;
+}
+
+#newshaker-jar {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+} 
+
 /* Split the screen in half */
 .split {
   height: 100%;
@@ -294,24 +375,22 @@ h2 {
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
-  padding-right:20px;
+  padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
 
-.login-btn{
+.login-btn {
   cursor: pointer;
   position: absolute;
   margin-left: -60px;
   /* margin-top: -80px; */
-  
 }
-.guest-btn{
+.guest-btn {
   cursor: pointer;
   position: absolute;
   margin-left: -60px;
   /* margin-top: 20px */
- 
 }
 /* Control the left side */
 .left {
@@ -345,10 +424,10 @@ h2 {
 /* Style the image inside the centered container, if needed */
 .centered-img {
   width: 150px;
-  border-radius: 50%;  
+  border-radius: 50%;
 }
 
-.centered-right{
+.centered-right {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -361,13 +440,13 @@ h2 {
   -webkit-tap-highlight-color: transparent;
 }
 .react-tabs__tab-list {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   border-bottom: 1px solid #aaa;
   margin: 0 0 10px;
   padding: 0;
 }
 .react-tabs__tab {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: inline-block;
   border: 1px solid transparent;
   border-bottom: none;
@@ -390,45 +469,39 @@ h2 {
 }
 
 /* Log in / Log Out Buttons////////////////////////////////// */
-.themeTable{
-  font-family: 'Montserrat', sans-serif;
+.themeTable {
+  font-family: "Montserrat", sans-serif;
   width: 75%;
   margin: 20px auto;
-}
-
-.newShakerBtn{
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 input::-webkit-input-placeholder {
   font-size: 15px;
 }
 
-.tabsRoot{
+.tabsRoot {
   width: 50%;
   margin: 0 auto;
 }
 
-.input-container{
-  font-family: 'Montserrat', sans-serif;
+.input-container {
+  font-family: "Montserrat", sans-serif;
 }
 
 .form-group {
   width: 60%;
   margin: 0 auto;
-  padding-top: 20px
+  padding-top: 20px;
 }
 
 .newActivityBtn {
   text-align: center;
-  padding-top: 20px;
+  cursor: pointer;
 }
 
-
 /* Log in / Log Out Buttons */
-.enterBtn{
-  margin-bottom: 10px
+.enterBtn {
+  margin-bottom: 10px;
 }
 
 /* Modal Styling 
@@ -452,12 +525,11 @@ div.modal-content {
   font-size: 60px;
 }
 
- img.modal-img {
+img.modal-img {
   height: 150px;
   display: block;
   margin: 0 auto;
-
- } 
+}
 
 .img-card {
  /* border: groove rgba(163, 133, 155, 0.89) 20px; 
@@ -469,8 +541,7 @@ div.modal-content {
   padding-bottom: 20px;
   padding-left: 120px;
   padding-right: 120px;
-  /* background-color: rgb(226, 226, 236); */
-}  
+}
 
 .modal-activity.modal-body {
   color: white; 
@@ -479,15 +550,13 @@ div.modal-content {
   text-shadow: 2px 2px 8px rgba( 176, 175, 215);
   font-size: 35px;
   text-align: center;
-  
 }
-
 
 /* NavBar Styling 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.mainNav{
+.mainNav {
   text-shadow: 0 0 3px white, 0 0 5px grey;
   color: rgb(241, 240, 240);
   font-size: 40px;
@@ -495,41 +564,37 @@ div.modal-content {
   margin-top: 10px;
   height: 30px;
   margin-left: -17px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-.nav-link{
- 
-  font-family: 'Montserrat', sans-serif;
+.nav-link {
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  color: black
+  color: black;
 }
 
 .imgNav {
-  width:7%;
-  height:auto;
+  width: 7%;
+  height: auto;
   padding: 15px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 /* Styling for the themes page 
 ///////////////////////////////////////////////////////////////////////////////////////////////////  
 */
 
-@media only screen and ( max-width: 800px) {
-  
-  .tabs-container  {
+@media only screen and (max-width: 800px) {
+  .tabs-container {
     width: 22rem !important;
   }
 
-
-  .wrapper-around{
+  .wrapper-around {
     width: 20px;
   }
 
-  .form-container-backdrop:hover{
+  .form-container-backdrop:hover {
     transform: scale(1);
   }
-
 }
 
 /* .themes-page{
@@ -548,21 +613,20 @@ div.modal-content {
   padding-top: 20px;
   padding-right:20px;
   padding-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-.smaller-text{
-  
+.smaller-text {
   font-size: 10px;
   padding-top: 20px;
 }
-
 
 /* Control the right side */
 .export-container {
   position: absolute;
   width: 75%;
   right: 0;
-  height:100%;
+  height: 100%;
   background: linear-gradient(
     108deg,
     rgb(163, 133, 155) 0%,
@@ -570,24 +634,13 @@ div.modal-content {
   );
 }
 
-.navStyle{
+.navStyle {
   z-index: 10;
-  width: 50%
+  width: 50%;
 }
 
-
 /* This creates a container for the input section of the page snd splits it in half  */
-/* .input-container{
-  left: 0;
-  z-index: 1;
-  align-content: center;
-  background: linear-gradient(
-    108deg,
-    rgb(163, 133, 155) 0%,
-    rgb(241, 211, 211) 100%
-  ); 
 
-} */
 /* This creates a container for the export and DB section of the page snd splits it in half  */
 /* .export-container{
   right: 0;
@@ -601,160 +654,158 @@ div.modal-content {
 
 } */
 
-
 /* This is a container that displays the tabs and DB information */
 
-.new-act-text{
-  font-family: 'Architects Daughter', cursive;
-  font-size: 34px
+.new-act-text {
+  font-family: "Architects Daughter", cursive;
+  font-size: 34px;
 }
 
-.tabs-container{
-  font-family: 'Montserrat', sans-serif;
+/* THEMES PAGE DONT TOUCH ME DAMMIT */
+
+.tabs-container {
+  font-family: "Montserrat", sans-serif;
   background-color: rgb(241, 240, 240);
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: 80%; 
+  height: 75%;
   width: 75rem;
-  margin-top: 50px; 
-  margin-bottom: 70px;  
+  margin-top: 50px;
+  margin-bottom: 70px;
   overflow-y: scroll;
-} 
+}
 
 /* This is the form for adding a new shaker */
 .input-area{
   font-family: 'Montserrat', sans-serif;
-  height: 100%;
-  width: 600px;
-  background: #fbf7f5;
-  align-content: center;
-  padding: 24px 24px;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  display: flex;
-  
-  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  overflow: scroll;
+  background-color: rgb(241, 240, 240);
 }
 
-.text-area-above-input{
-  font-family: 'Montserrat', sans-serif;
-  background: #fbf7f5;
-  height: 200px;
-  width: 200px;
+/* Div section around form element */
+.shaker-form {
+  width: 25%;
+  position: absolute;
+  transform: translate(0%, 50%);
+  text-align: center;
+}
+
+/* Header for customize */
+.customizeShakerH2 {
+  color: white;
+  text-align: center;
+  padding-top: 20px;
 }
 
 
 /* Create a new shaker text */
-.new-shaker-text{
-  font-family: 'Montserrat', sans-serif;
+.new-shaker-text {
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
 }
 
-
-.customizeShaker, .contactShaker{
+.customizeShaker,
+.contactShaker {
   background-color: rgb(241, 240, 240);
   padding: 20px;
   margin-left: 10%;
   margin: 10px;
   border-radius: 20px;
-  font-family: 'Architects Daughter', cursive;
-  
-  
+  font-family: "Architects Daughter", cursive;
 }
-.customizeShaker:hover{
-box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2)
+.customizeShaker:hover {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-.contactShaker:hover{
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2)
+.contactShaker:hover {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-.shaker-info{
-  font-family: 'Architects Daughter', cursive;
+.shaker-info {
+  font-family: "Architects Daughter", cursive;
   color: rgba(0, 0, 0, 0.603);
   font-size: 20px;
 }
 
-.shaker-pg-btn-1{
+.shaker-pg-btn-1 {
   margin-top: -33px;
-margin-bottom: -50px;
-
+  margin-bottom: -50px;
 }
-#try-it{
+#try-it {
   font-size: 36px;
 }
-#contact-us{
-  font-size: 36px
+#contact-us {
+  font-size: 36px;
 }
-.shaker-pg-btn-2{
+.shaker-pg-btn-2 {
   margin-top: -33px;
-margin-bottom: -50px
+  margin-bottom: -50px;
 }
-.extras{
-  background-color: rgb(134, 135, 163) ;
-  
+.extras {
+  background-color: rgb(134, 135, 163);
 }
 
-.enter-cards{
+.enter-cards {
   padding-left: 20%;
 }
 
-
-@media only screen and ( max-width: 800px) {
-  
-  .developer-card  {
-    font-family: 'Montserrat', sans-serif;
+@media only screen and (max-width: 800px) {
+  .developer-card {
+    font-family: "Montserrat", sans-serif;
     width: 22rem !important;
   }
 
-  .form-container-backdrop{
+  .form-container-backdrop {
     max-width: auto;
     margin: 10px auto;
     height: auto;
   }
 
-  .form-container-backdrop:hover{
+  .form-container-backdrop:hover {
     transform: scale(1);
   }
-
 }
 /* Styling Profile Page
 ///////////////////////////////////////////////////////////////////////////////////////////////////  
 */
 
 .profile-container {
-  
-  background-color: #C199A1;
+  background-color: #c199a1;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-} 
+}
 
 .user-info {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   color: #2f0909;
 }
 
 .profile-title {
   color: #2f0909;
-  font-family: 'Architects Daughter', cursive;
+  font-family: "Architects Daughter", cursive;
 
   font-size: 40px;
- 
+
   font-weight: bold;
 }
 
 .acount-container {
-  padding-left:20px;
+  padding-left: 20px;
   padding-bottom: 105px;
 }
 
 .user-name {
-  font-family: 'Architects Daughter', cursive;
+  font-family: "Architects Daughter", cursive;
 
   color: #2f0909;
 }
