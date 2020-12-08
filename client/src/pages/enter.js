@@ -5,16 +5,19 @@ import Typical from 'react-typical';
 import LoginButton from '../components/LoginButton';
 import GuestButton from '../components/GuestButton.js';
 import Logo from "../components/Logo"
+// import GuestButton from '../components/GuestButton.js';
+import Nav from "../components/Nav";
+
 
 const Enter = () => {
-
+  
   return (
     <>
       <div className="enter-container">
         <div className="split left">
           {/* <Nav /> */}
           <div className="centered">
-            <Logo/>
+            <Logo />
             {/* <img src={logo} alt="shaker" height="400px" /> */}
             {/* <h1>Welcome To Shake It Up! </h1> */}
             <p className="enterText">new ideas...no decisions</p>
@@ -31,9 +34,9 @@ const Enter = () => {
               loop={Infinity}
               wrapper="p"
             />
+            <LoginButton/>
+            <GuestButton/>
             <div>
-              <LoginButton /> <br/>
-              <GuestButton />
             </div>
           </div>
         </div>
