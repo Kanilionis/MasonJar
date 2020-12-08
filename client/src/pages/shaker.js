@@ -83,8 +83,7 @@ return(
     <center> 
       <br></br>
       <ShakerTop />
-      <br></br>
-      <br></br>
+     
       {shakers.length ? (
      
         <Carousel className="center carousel col-md-3" indicators={false} fade={true} >
