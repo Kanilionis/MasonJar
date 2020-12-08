@@ -34,8 +34,20 @@ const Enter = () => {
               loop={Infinity}
               wrapper="p"
             />
-            <LoginButton/>
-            <GuestButton/>
+           
+              <div className="row">
+              <div className="col-md-3">
+              <LoginButton />
+              </div>
+              <div className="col-md-6"></div>
+              <div className="col-md-3">
+              <GuestButton/>
+              </div>
+              
+              </div>
+            
+            
+            
             <div>
             </div>
           </div>
