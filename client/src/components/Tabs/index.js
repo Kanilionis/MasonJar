@@ -144,13 +144,16 @@ const TabsPage = (props) => {
 
             <div className="shaker-form">
               {/* <div className="text-area-above-input"></div> */}
-              <div class="wrapper-around">
-              <form className="shaker-form-size">
-                
-                <h2 className="smaller-text">Welcome to the customized shaker! <br></br>Please enter the title/theme of your <br></br> 
+              <div class="wrapper-around"></div>
+              <h2 className="smaller-text">Welcome to the customized shaker! <br></br>Please enter the title/theme of your <br></br> 
                 shaker below and customized your activites to the right.</h2>
-
-                <h3 className="new-shaker-text">Create A New Shaker</h3>
+                </div>
+                
+              <div class="wrapper-around">
+                
+              <form className="shaker-form-size">
+              <h3 className="new-shaker-text">Create A New Shaker</h3>
+                
                 <Input
                   className="input-box-text"
                   onChange={handleInputChange}
@@ -158,12 +161,15 @@ const TabsPage = (props) => {
                   placeholder='What to make for dinner'
                   value={formObject.name}
                 />
-                <Button variant="outline-secondary"
+                <svg variant="outline-secondary"
+                  disabled={!(formObject.theme)}
+                  onClick={handleNewShaker} className="enter-btn login-btn" height="150px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231.08 373.45"><defs></defs><path d="M214.68,385.93c6.72,0,13.33.19,19.93-.12a8.13,8.13,0,0,0,5.33-2.56c29.53-35.86,88.6-35.83,118.22.06a8.24,8.24,0,0,0,5.34,2.51c5.63.32,11.28.11,17.68.11v56c-5.45,0-11.54-.19-17.6.12a8.25,8.25,0,0,0-5.44,2.46c-16.5,20-38.23,27.61-63.35,26.52-22.14-1-41-9.23-55.19-26.89-1-1.28-3.34-2-5.09-2.11-6.47-.25-13-.1-19.83-.1Z" transform="translate(-181.79 -224.01)"/><rect className="cls-2" x="16" y="160.88" width="200.2" height="57.05"/><text  id="login-jar" x="50%" y="53%" textAnchor="middle" fill="white">submit</text></svg>
+                {/* <Button variant="outline-secondary"
                   disabled={!(formObject.theme)}
                   onClick={handleNewShaker}
                 >
                   Submit
-                </Button>
+                </Button> */}
               </form>
             </div>
            </div>
@@ -237,16 +243,18 @@ const TabsPage = (props) => {
                       name="activity"
                       onChange={handleInputChange}>
                     </Input>
-                    <Button variant="outline-secondary"
+                    <svg variant="outline-secondary"
                       disabled={!(formObject.activity)}
-                      onClick={handleNewActivity}>Add A New Activity</Button>
+                      onClick={handleNewActivity} className="new-act-btn" height="150px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231.08 373.45"><defs></defs><path d="M214.68,385.93c6.72,0,13.33.19,19.93-.12a8.13,8.13,0,0,0,5.33-2.56c29.53-35.86,88.6-35.83,118.22.06a8.24,8.24,0,0,0,5.34,2.51c5.63.32,11.28.11,17.68.11v56c-5.45,0-11.54-.19-17.6.12a8.25,8.25,0,0,0-5.44,2.46c-16.5,20-38.23,27.61-63.35,26.52-22.14-1-41-9.23-55.19-26.89-1-1.28-3.34-2-5.09-2.11-6.47-.25-13-.1-19.83-.1Z" transform="translate(-181.79 -224.01)"/><rect className="cls-2" x="16" y="160.88" width="200.2" height="57.05"/><text  className="new-act-text" x="50%" y="53%" textAnchor="middle" fill="white">add activity</text></svg>
+                    {/* <Button variant="outline-secondary"
+                      disabled={!(formObject.activity)}
+                      onClick={handleNewActivity}>Add A New Activity</Button> */}
                   </TabPanel>
                 ))}
               </Tabs>
             </div>
           </div>
         </div>
-      </div>
     </>
   )
 }

@@ -6,11 +6,24 @@
   font-family: 'Architects Daughter', cursive;} */
 
 /* Main Shaker Page Sytling */
-
+p{
+  font-family: 'Montserrat', sans-serif;
+}
+li{
+  font-family: 'Montserrat', sans-serif;
+}
 .carousel{
+  /* width: 1500px; */
   margin-top: -40px;
   padding-top: 30px;
-  padding-bottom: 20px 
+  padding-bottom: 30px 
+}
+
+.carousel .carousel-indicators li {
+  width: 10px;
+ height: 10px;
+ margin: 8px;
+ border-radius: 100%;
 }
 
 .logo-style{
@@ -59,11 +72,7 @@
 }
 
 #jar-text{
-<<<<<<< HEAD
-  text-shadow: 0 0 4px white, 0 0 5px grey;  
-=======
-  text-shadow: 0 0 3px white,  grey;  
->>>>>>> main
+  text-shadow: 0 0 2px white, 0 0 5px grey;  
   font-family: 'Architects Daughter', cursive;
   font-size: 23px;
   cursor: pointer;
@@ -109,12 +118,8 @@
   height: 960px;
 }
   
-<<<<<<< HEAD
 .contact-container {
   font-family: 'Montserrat', sans-serif;
-=======
-.container-contact {
->>>>>>> main
   min-height: 692px;
   position: fixed;
   bottom: 0;
@@ -131,6 +136,12 @@
   
 }
 
+.contact-btn{
+  margin-left: 43%
+}
+#message{
+  margin-bottom: -30px;
+}
 .contactSection{
   height: 6;
   flex-direction: column;
@@ -149,7 +160,7 @@
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: auto;
+  height: 600px;
 }
 
 .aboout-form{
@@ -452,7 +463,7 @@ div.modal-content {
   width:7%;
   height:auto;
   padding: 15px;
-  
+  cursor: pointer
 }
 
 /* Styling for the themes page 
@@ -464,6 +475,7 @@ div.modal-content {
   .tabs-container  {
     width: 22rem !important;
   }
+
 
   .wrapper-around{
     width: 20px;
@@ -495,6 +507,7 @@ div.modal-content {
 }
 
 .smaller-text{
+  
   font-size: 10px;
   padding-top: 20px;
 }
@@ -528,12 +541,7 @@ div.modal-content {
 
 
 /* This creates a container for the input section of the page snd splits it in half  */
-<<<<<<< HEAD
-.input-container{
-  font-family: 'Montserrat', sans-serif;
-=======
 /* .input-container{
->>>>>>> main
   left: 0;
   z-index: 1;
   align-content: center;
@@ -559,6 +567,12 @@ div.modal-content {
 
 
 /* This is a container that displays the tabs and DB information */
+
+.new-act-text{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 34px
+}
+
 .tabs-container{
   font-family: 'Montserrat', sans-serif;
   background: #fbf7f5;
@@ -574,14 +588,9 @@ div.modal-content {
 
 /* This is the form for adding a new shaker */
 .input-area{
-<<<<<<< HEAD
   font-family: 'Montserrat', sans-serif;
-  height: 50%;
-  width: 500px;
-=======
   height: 100%;
   width: 600px;
->>>>>>> main
   background: #fbf7f5;
   align-content: center;
   padding: 24px 24px;
@@ -655,6 +664,21 @@ box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2)
   font-size: 20px;
 }
 
+.shaker-pg-btn-1{
+  margin-top: -33px;
+margin-bottom: -50px;
+
+}
+#try-it{
+  font-size: 36px;
+}
+#contact-us{
+  font-size: 36px
+}
+.shaker-pg-btn-2{
+  margin-top: -33px;
+margin-bottom: -50px
+}
 .extras{
   background-color: rgb(134, 135, 163) ;
   
@@ -668,6 +692,7 @@ box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2)
 @media only screen and ( max-width: 800px) {
   
   .developer-card  {
+    font-family: 'Montserrat', sans-serif;
     width: 22rem !important;
   }
 
@@ -687,7 +712,7 @@ box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2)
 */
 
 .profile-container {
-  font-family: 'Montserrat', sans-serif;
+  
   background-color: #C199A1;
   position: fixed;
   top: 0;
@@ -704,9 +729,10 @@ box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2)
 
 .profile-title {
   color: #2f0909;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Architects Daughter', cursive;
+
   font-size: 40px;
-  font-style: italic;
+ 
   font-weight: bold;
 }
 
@@ -716,6 +742,7 @@ box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2)
 }
 
 .user-name {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Architects Daughter', cursive;
+
   color: #2f0909;
 }
