@@ -23,12 +23,7 @@ class Contact extends React.Component {
     e.preventDefault();
     axios({
       method: "POST",
-      url: "/send",
-      proxy: {
-        protocol: 'https',
-        host: '127.0.0.1',
-        port: 3001,
-      },
+      url: "https://localhost:3001/send",
       data: this.state
     }).then((response) => {
       if (response.data.status === 'success') {

@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Input, FormBtn } from '../Form';
-import { List, ListItem } from '../List';
-import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button"
 import Nav from '../Nav'
 import Table from "react-bootstrap/Table"
 import Edit from '../EditableText/EditableText'
-// import EditableText from '../EditableText'
 import {
   FaEdit,
   FaTrash,
-  FaSave
+  FaSave,
+  FaArrowRight
 
 } from 'react-icons/fa'
-import { confirmAlert } from 'react-confirm-alert'; 
+import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
 
 import "../../../src/index.css"
@@ -105,31 +103,31 @@ const TabsPage = (props) => {
       .catch(err => console.log(err));
   }
 
-  function handleDeleteTheme(theme){
+  function handleDeleteTheme(theme) {
     API.deleteTheme(theme)
-    .then(res => loadThemes())
-    .catch(err => console.log(err));
+      .then(res => loadThemes())
+      .catch(err => console.log(err));
   }
 
   function confirmDelete(theme) {
     const options = {
       childrenElement: () => <div />,
       customUI: ({ onClose }) =>
-      <div className='custom-ui'>
-      <h1 className="confirmHeader">Are you sure?</h1>
-      <p>Are you sure you would like to delete {theme}?</p>
-      <Button variant="outline-secondary" onClick={onClose}>No</Button>
-      <Button variant="outline-secondary" onClick={() => {
-          handleDeleteTheme(theme)
-          onClose()
-      }}>Yes, Delete it!</Button>
-    </div>,
+        <div className='custom-ui'>
+          <h1 className="confirmHeader">Are you sure?</h1>
+          <p>Are you sure you would like to delete {theme}?</p>
+          <Button variant="outline-secondary" onClick={onClose}>No</Button>
+          <Button variant="outline-secondary" onClick={() => {
+            handleDeleteTheme(theme)
+            onClose()
+          }}>Yes, Delete it!</Button>
+        </div>,
       closeOnEscape: true,
       closeOnClickOutside: true,
-      willUnmount: () => {},
-      afterClose: () => {},
-      onClickOutside: () => {},
-      onKeypressEscape: () => {}
+      willUnmount: () => { },
+      afterClose: () => { },
+      onClickOutside: () => { },
+      onKeypressEscape: () => { }
     };
     confirmAlert(options)
   };
@@ -137,7 +135,7 @@ const TabsPage = (props) => {
   return (
     <>
       <div className="themes-page">
-        <Nav/>
+        <Nav />
         <div className="row input-container">
           {/* <Nav className="nav-overly" /> */}
           <div className="input-area split-2">
@@ -145,33 +143,38 @@ const TabsPage = (props) => {
             <div className="shaker-form">
               {/* <div className="text-area-above-input"></div> */}
               <div class="wrapper-around">
-              <form className="shaker-form-size">
-                
-                <h2 className="smaller-text">Welcome to the customized shaker! <br></br>Please enter the title/theme of your <br></br> 
-                shaker below and customized your activites to the right.</h2>
+                <form className="shaker-form-size">
 
-                <h3 className="new-shaker-text">Create A New Shaker</h3>
-                <Input
-                  className="input-box-text"
-                  onChange={handleInputChange}
-                  name="theme"
-                  placeholder='What to make for dinner'
-                  value={formObject.name}
-                />
-                <Button variant="outline-secondary"
-                  disabled={!(formObject.theme)}
-                  onClick={handleNewShaker}
-                >
-                  Submit
+                  <h2>Welcome to the customized shaker!</h2>
+                  <p>Please enter the title/theme of your shaker below</p>
+
+                  <h3 className="new-shaker-text">Create A New Shaker</h3>
+                  <Input
+                    className="input-box-text"
+                    onChange={handleInputChange}
+                    name="theme"
+                    placeholder="ex. 'What's for Dinner'"
+                    value={formObject.name}
+                  />
+                  <div className="newShakerBtn">
+                  <Button variant="outline-secondary"
+                    disabled={!(formObject.theme)}
+                    onClick={handleNewShaker}
+                  >
+                    Submit
                 </Button>
-              </form>
+                </div>
+                  <p>Now add some ideas over here</p>
+                  <FaArrowRight />
+                </form>
+              </div>
             </div>
-           </div>
           </div>
           <div className="export-container split-2">
+            <h2 className="customizeShakerH2">customize your shaker</h2>
             <div className="tableResults tabsRoot tabs-container">
-              
-              <Tabs defaultIndex={0}>
+
+              <Tabs>
                 <TabList>
                   {themes.map((theme, index) => (
                     <>
@@ -200,31 +203,31 @@ const TabsPage = (props) => {
                       className="themeTable" striped bordered hover>
                       <tbody>
                         {theme.activities.map((activity, index) => (
-                          <> 
+                          <>
                             { //Check if seed data or custom
                               (themes.indexOf(theme) > 4 || index > 19)
                                 ?
                                 <>
                                   <tr>
-                                    
+
                                     <td value={editActivity.activity}>
                                       <>
-                                      <FaTrash onClick={() => handleDelete(activity.name)}/>
-                                      <Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name}/>
+                                        <FaTrash onClick={() => handleDelete(activity.name)} />
+                                        <Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name} />
                                       </>
-                                        </td> 
-                                      
+                                    </td>
+
                                   </tr>
                                 </>
                                 :
                                 <>
-                                
-                                  
+
+
                                   <tr>
-                                    <td><Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name}/></td> 
+                                    <td><Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name} /></td>
                                   </tr>
-                                  
-                                
+
+
                                 </>
                             }
                           </>
@@ -237,9 +240,11 @@ const TabsPage = (props) => {
                       name="activity"
                       onChange={handleInputChange}>
                     </Input>
-                    <Button variant="outline-secondary"
+                    <div className="newActivityBtn">
+                      <Button variant="outline-secondary"
                       disabled={!(formObject.activity)}
                       onClick={handleNewActivity}>Add A New Activity</Button>
+                    </div>
                   </TabPanel>
                 ))}
               </Tabs>
