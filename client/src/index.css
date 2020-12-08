@@ -6,14 +6,21 @@
   font-family: 'Architects Daughter', cursive;} */
 
 /* Main Shaker Page Sytling */
+
 .carousel{
-  margin-top: 10px;
+  margin-top: -40px;
   padding-top: 30px;
-  padding-bottom: 20px;
-  overflow: show;
-  width: 400px
-  
+  padding-bottom: 20px 
 }
+
+.logo-style{
+  fill: #fff
+}
+
+.carousel-item{
+  padding: 20px
+}
+
 .cls-1-label{fill:#fff;}.cls-2-label{stroke:#000;stroke-miterlimit:10;}
 
 .cls-1-wad1{opacity:.9;}.cls-2-wad1{fill:#fed20d;}.cls-3-wad1{fill:#f5f2a2;}
@@ -32,12 +39,12 @@
   display: block;
   margin: 0 auto;
 }
-.shake[wobble='1'] {
-  animation-name: wobble;
-  animation-duration: .5s;
-  animation-iteration-count: 5;
+.shake[shake='1'] {
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
 }
-@keyframes wobble {
+@keyframes shake {
   0% { transform: translate(1px, 5px) rotate(0deg); }
   10% { transform: translate(-1px, -5px) rotate(-20deg); }
   20% { transform: translate(-3px, 5px) rotate(20deg); }
@@ -50,24 +57,11 @@
   90% { transform: translate(1px, 5px) rotate(0deg); }
   100% { transform: translate(1px, -5px) rotate(-20deg); }
 }
-/* @keyframes wobble {
-  25% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-30deg);
-  }
-  75% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-} */
+
 #jar-text{
   text-shadow: 0 0 3px white,  grey;  
   font-family: 'Architects Daughter', cursive;
-  font-size: 24px;
+  font-size: 23px;
   cursor: pointer;
   word-spacing: -3px;
 }
@@ -78,15 +72,21 @@
  
 }
 
-/* 
-.wad-wobble{
-  display: block;
-  margin: 0 auto;
+.enter-page-wobble[wobble='1']{
+  animation-name: wobble;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
-.wad-wobble[wobble="1"]{
-animation: wobblw 1s infinite
-} */
 
+@keyframes wobble {
+  0% { transform: translateX(0%); } 
+  15% { transform: translateX(-25%) rotate(-10deg); } 
+  30% { transform: translateX(20%) rotate(8deg); } 
+  45% { transform: translateX(-15%) rotate(-8deg); } 
+  60% { transform: translateX(10%) rotate(3deg); }
+  75% { transform: translateX(-5%) rotate(-3deg); }
+  100% { transform: translateX(0%); } 
+} 
 
 .pick-again[wobble='1']{
   animation: wobble 1s 1;
@@ -101,7 +101,7 @@ animation: wobblw 1s infinite
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 */
   
-.contact-container {
+.container-contact {
   min-height: 692px;
   position: fixed;
   bottom: 0;
@@ -118,9 +118,8 @@ animation: wobblw 1s infinite
   
 }
 
-.signup{
-  height: 100%;
-  display: flex;
+.contactSection{
+  height: 6;
   flex-direction: column;
   justify-content: center;
 }
@@ -136,12 +135,13 @@ animation: wobblw 1s infinite
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: 80%;
-  margin-bottom: 100px;
+  height: auto;
+  /* margin-bottom: 100px;
   margin-top: -28px;
   width: 650px;
-  height: 850px;
+  height: 850px; */
 }
+
 .aboout-form{
   background: #F3EBE9;
   padding: 24px 24px;
@@ -211,14 +211,14 @@ animation: wobblw 1s infinite
 */
 
 h1 {
-  font-family: 'Cookie', cursive;
+  font-family: 'Architects Daughter', cursive;
   color: rgb(241, 240, 240);
   font-size: 100px;
   margin: 20px;
 }
 
 h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Architects Daughter', cursive;
   font-size: 40px;
   font-weight:bold;
   color: rgba(163, 133, 155, 0.685);
@@ -228,6 +228,7 @@ h2 {
   font-family: 'Lato', sans-serif;
   font-size: 30px;
   font-weight: 50;
+  padding-top: 10px
 }
 
 .infinityText {
@@ -235,11 +236,18 @@ h2 {
   font-size: 25px;
   font-style: italic;
 }
-
+#guest-jar{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 40px;
+}
+#login-jar{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 40px;
+}
 /* Split the screen in half */
 .split {
   height: 100%;
-  width: 50%;
+  width: 75%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -250,8 +258,24 @@ h2 {
   padding-bottom: 20px;
 }
 
+.login-btn{
+  cursor: pointer;
+  position: absolute;
+  margin-left: -60px;
+  /* margin-top: -80px; */
+  
+}
+.guest-btn{
+  cursor: pointer;
+  position: absolute;
+  margin-left: -60px;
+  /* margin-top: 20px */
+ 
+}
 /* Control the left side */
 .left {
+  position: absolute;
+  width: 65%;
   left: 0;
   background: linear-gradient(
     108deg,
@@ -262,6 +286,8 @@ h2 {
 
 /* Control the right side */
 .right {
+  position: absolute;
+  width: 35%;
   right: 0;
   background-color: rgb(241, 240, 240);
 }
@@ -279,6 +305,14 @@ h2 {
 .centered-img {
   width: 150px;
   border-radius: 50%;  
+}
+
+.centered-right{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* React Tabs Comp Styling */
@@ -306,30 +340,13 @@ h2 {
   color: black;
   border-radius: 5px 5px 0 0;
 }
-.react-tabs__tab--disabled {
-  color: GrayText;
-  cursor: default;
-}
-.react-tabs__tab:focus {
-  box-shadow: 0 0 5px hsl(208, 99%, 50%);
-  border-color: hsl(208, 99%, 50%);
-  outline: none;
-}
-.react-tabs__tab:focus:after {
-  content: "";
-  position: absolute;
-  height: 5px;
-  left: -4px;
-  right: -4px;
-  bottom: -5px;
-  background: #fff;
-}
-.react-tabs__tab-panel {
-  display: none;
-}
+
+/* Displays the list of activites for each shaker */
 .react-tabs__tab-panel--selected {
   display: block;
 }
+
+/* Log in / Log Out Buttons////////////////////////////////// */
 .themeTable{
   width: 50%
 }
@@ -403,20 +420,6 @@ div.modal-content {
 /* NavBar Styling 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 */
-/* 
-.mainNav {
-  font-family: 'Cookie', cursive;
-  color: rgb(241, 240, 240);
-  font-size: 50px;
- 
-  padding-right:10px;
-}
-
-.nav-link {
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
-  padding-right: 20px; 
-} */
 
 .mainNav{
   text-shadow: 0 0 3px white, 0 0 5px grey;
@@ -441,169 +444,167 @@ div.modal-content {
   
 }
 
+/* Styling for the themes page 
+///////////////////////////////////////////////////////////////////////////////////////////////////  
+*/
 
+@media only screen and ( max-width: 800px) {
+  
+  .tabs-container  {
+    width: 22rem !important;
+  }
 
+  .wrapper-around{
+    width: 20px;
+  }
 
-/* .wrapper {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  .form-container-backdrop:hover{
+    transform: scale(1);
+  }
+
 }
 
-.slideshow {
-  position: absolute;
+/* .themes-page{
+  background: #fbf7f5;
 
-  left: 100%;
-  width: 100%;
+} */
+
+/* Split the screen in half */
+.split-2 {
   height: 100%;
-  transform: translateX(1%);
-}
-  */
-    /* .slides {
-      position: absolute;
-      left: 0;
-      top: -10%;
-      width: 100vw;
-      height: 100vh;
-      animation: 11s slideshow-hero-mobile -3s infinite;
-    } */
-
-
-      /* .slides {
-        top: 0;
-        left: -25%;
-        height: 100%;
-        animation: 5s slideshow-hero -3s infinite;
-      }
-
-
-      .slides {
-        width: 100vw;
-        left: auto;
-        right: 0;
-      }
-    
-
-  
-  
-      .slides {
-        animation: 3s slideshow-contrast -3s infinite;
-      }
-      */
-    
-
-   
-
-/* .slides,
-.slide {
-  position: absolute;
+  width: 75%;
+  position: fixed;
+  z-index: 0;
   top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-right:20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.smaller-text{
+  font-size: 10px;
+  padding-top: 20px;
+}
+
+.input-area {
+  position: absolute;
+  width: 40%;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: rgb(241, 240, 240);
+}  
+
+/* Control the right side */
+.export-container {
+  position: absolute;
+  width: 60%;
+  right: 0;
+  height:100%;
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  );
+}
+
+.navStyle{
+  z-index: 10;
+}
+  
+
+
+
+
+/* This creates a container for the input section of the page snd splits it in half  */
+/* .input-container{
+  left: 0;
+  z-index: 1;
+  align-content: center;
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  ); 
+
+} */
+/* This creates a container for the export and DB section of the page snd splits it in half  */
+/* .export-container{
+  right: 0;
+  z-index: 1;
+  align-content: center; 
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  );
+
 } */
 
-/* @keyframes slideshow-hero-mobile {
-  0% {
-    transform: scale(-10) skewY(30deg);
-  }
-  50% {
-    transform: scale(3) skewY(30deg);
-  }
-  100% {
-    transform: scale(-1) skewY(30deg);
-  }
-} */
 
-
- @keyframes slideshows {
-  0% {
-    transform: scale(0) skewX(30deg);
-  }
-  50% {
-    transform: scale(5) skewX(30deg);
-  }
-  100% {
-    transform: scale(0) skewX(30deg);
-  }
+/* This is a container that displays the tabs and DB information */
+.tabs-container{
+  background: #fbf7f5;
+  padding: 24px 24px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 80%; 
+  width: 500px;
+  margin-top: 100px; 
+  margin-bottom: 70px;  
+  overflow-y: scroll;
 } 
 
-@keyframes slideshow-contrast {
-  0% {
-    transform: scale(0.5);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.5);
-  }
+/* This is the form for adding a new shaker */
+.input-area{
+  height: 100%;
+  width: 600px;
+  background: #fbf7f5;
+  align-content: center;
+  padding: 24px 24px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  
+  
 }
 
-/* @keyframes slides-set-1 {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-  31% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-  34% {
-    opacity: 0;
-    transform: translateY(100px);
-    transform: scale(1.05);
-  }
-  97% {
-    opacity: 0;
-    transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-} */
-
-@keyframes slides-set-2 {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  31% {
-    opacity: 0;
-    transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  34% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-  64% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-  67% {
-    opacity: 0;
-    transform: translateY(100px);
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(100px);
-    transform: scale(1.05);
-  }
+.text-area-above-input{
+  background: #fbf7f5;
+  height: 200px;
+  width: 200px;
 }
+
+/* This is the form itself  */
+.shaker-form-size{
+  width: 500px;
+  height: 100px;
+  margin-left: 30px;
+  margin-top: 300px;
+  align-content: center;
+  
+
+}
+
+.wrapper-around{
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 400px;
+
+
+}
+
+/* This is for the input box size  */
+.input-box-text{
+  width: 300px;
+}
+
+/* Create a new shaker text */
+.new-shaker-text{
+  font-size: 20px;
+}
+
 
 .customizeShaker, .contactShaker{
   background-color: rgb(193, 153, 161);
@@ -638,3 +639,58 @@ box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2)
   padding-left: 20%;
 }
 
+<<<<<<< HEAD
+=======
+
+@media only screen and ( max-width: 800px) {
+  
+  .developer-card  {
+    width: 22rem !important;
+  }
+
+  .form-container-backdrop{
+    max-width: auto;
+    margin: 10px auto;
+    height: auto;
+  }
+
+  .form-container-backdrop:hover{
+    transform: scale(1);
+  }
+
+}
+/* Styling Profile Page
+///////////////////////////////////////////////////////////////////////////////////////////////////  
+*/
+
+.profile-container {
+  background-color: #C199A1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+} 
+
+.user-info {
+  font-size: 30px;
+  color: #2f0909;
+}
+
+.profile-title {
+  color: #2f0909;
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.acount-container {
+  padding-left:20px;
+  padding-bottom: 105px;
+}
+
+.user-name {
+  color: #2f0909;
+}
+>>>>>>> main

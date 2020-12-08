@@ -27,6 +27,7 @@
     "mongoose": "^5.3.16",
     "nodemailer": "^6.4.16",
     "react-icons": "^4.1.0",
+    "react-responsive-carousel": "^3.2.11",
     "react-slick": "^0.27.13",
     "react-web-tabs": "^1.0.1"
   }

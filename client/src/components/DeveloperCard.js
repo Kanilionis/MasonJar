@@ -7,8 +7,8 @@ import logo from "../images/NewFavicon.svg"
 function DeveloperCard(props) {
     
     return (
-        <Card className="developer-card" style={{ width: '25rem' }}>
-            <Row>
+        <Card className="developer-card" style={{ width: '20rem', height: '12rem', padding: '10px', margin: '10px auto'}}>
+            <Row className="developerRow">
                 <Col className="col-6">
                     <Card.Img  className="developer-card-img"  src={props.image} alt={props.name}/> 
                 </Col>

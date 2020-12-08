@@ -21,11 +21,20 @@ const ShakerBottom = () => {
                 <li>Delete Activities</li>
                 <li>Update Activities</li>
 
+<<<<<<< HEAD
             
             </div>
             <Button className="extras" variant="outline-dark" href="/viewthemes">Try It</Button> 
           </div>
           <div className="col-4 contactShaker">
+=======
+            </ul>
+            
+            <Button variant="outline-secondary" href="/viewthemes">Start Customizing</Button> 
+          </div>
+         
+          <div className="col-5 contactShaker">
+>>>>>>> main
             <h3>See ways we can improve?</h3>
             <p>contact us to tell us more!</p>
             <Button className="extras" variant="outline-dark" href="/contact">Contact Us</Button>
