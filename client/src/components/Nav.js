@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as RBS from "react-bootstrap";
 import LogoutButton from "./LogoutButton";
-import logo from "../images/New_Jar.svg";
+import logo from "../images/NewFaviconNoWriting.svg";
 import { useAuth0 } from "../react-auth0-spa";
 import Authenticated from "../components/Authenticated";
 
