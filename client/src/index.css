@@ -101,7 +101,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 */
   
-.contact-container {
+.container-contact {
   min-height: 692px;
   position: fixed;
   bottom: 0;
@@ -431,12 +431,33 @@ div.modal-content {
 ///////////////////////////////////////////////////////////////////////////////////////////////////  
 */
 
+@media only screen and ( max-width: 800px) {
+  
+  .tabs-container  {
+    width: 22rem !important;
+  }
+
+  .wrapper-around{
+    width: 20px;
+  }
+
+  .form-container-backdrop:hover{
+    transform: scale(1);
+  }
+
+}
+
+/* .themes-page{
+  background: #fbf7f5;
+
+} */
+
 /* Split the screen in half */
 .split-2 {
   height: 100%;
-  width: 50%;
+  width: 75%;
   position: fixed;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
@@ -445,15 +466,41 @@ div.modal-content {
   padding-bottom: 20px;
 }
 
-.nav-overly{
-  padding-top: -40px;
-  margin-top: -50;
-  position: absolute;
-  top: left; 
+.smaller-text{
+  font-size: 10px;
+  padding-top: 20px;
 }
 
+.input-area {
+  position: absolute;
+  width: 40%;
+  left: 0;
+  background-color: rgb(241, 240, 240);
+}  
+
+/* Control the right side */
+.export-container {
+  position: absolute;
+  width: 60%;
+  right: 0;
+  height:100%;
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  );
+}
+
+.navStyle{
+  z-index: 10;
+}
+  
+
+
+
+
 /* This creates a container for the input section of the page snd splits it in half  */
-.input-container{
+/* .input-container{
   left: 0;
   z-index: 1;
   align-content: center;
@@ -463,9 +510,9 @@ div.modal-content {
     rgb(241, 211, 211) 100%
   ); 
 
-}
+} */
 /* This creates a container for the export and DB section of the page snd splits it in half  */
-.export-container{
+/* .export-container{
   right: 0;
   z-index: 1;
   align-content: center; 
@@ -475,7 +522,7 @@ div.modal-content {
     rgb(241, 211, 211) 100%
   );
 
-}
+} */
 
 
 /* This is a container that displays the tabs and DB information */
@@ -484,25 +531,25 @@ div.modal-content {
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: 80%;
+  height: 80%; 
   width: 500px;
-  margin-top: 100px;
-  /* margin-bottom: 70px;  */
+  margin-top: 100px; 
+  margin-bottom: 70px;  
   overflow-y: scroll;
 } 
 
 /* This is the form for adding a new shaker */
 .input-area{
-  height: 50%;
-  width: 500px;
+  height: 100%;
+  width: 600px;
   background: #fbf7f5;
   align-content: center;
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   display: flex;
-  margin-top: 0px;
-  margin-left: 60px;
+  
+  
 }
 
 .text-area-above-input{
@@ -516,7 +563,18 @@ div.modal-content {
   width: 500px;
   height: 100px;
   margin-left: 30px;
+  margin-top: 300px;
   align-content: center;
+  
+
+}
+
+.wrapper-around{
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 400px;
+
 
 }
 

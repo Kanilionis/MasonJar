@@ -136,15 +136,19 @@ const TabsPage = (props) => {
 
   return (
     <>
-      <div className="container-fluid">
-        {/* <Nav className="nav-overly" /> */}
-        <div className="row input-container split-2">
+      <div className="themes-page">
+        <Nav/>
+        <div className="row input-container">
           {/* <Nav className="nav-overly" /> */}
-          <div className="input-area">
+          <div className="input-area split-2">
 
             <div className="shaker-form">
               {/* <div className="text-area-above-input"></div> */}
+              <div class="wrapper-around">
               <form className="shaker-form-size">
+                
+                <h2 className="smaller-text">Welcome to the customized shaker! <br></br>Please enter the title/theme of your <br></br> 
+                shaker below and customized your activites to the right.</h2>
 
                 <h3 className="new-shaker-text">Create A New Shaker</h3>
                 <Input
@@ -159,12 +163,14 @@ const TabsPage = (props) => {
                   onClick={handleNewShaker}
                 >
                   Submit
-              </Button>
+                </Button>
               </form>
             </div>
+           </div>
           </div>
           <div className="export-container split-2">
             <div className="tableResults tabsRoot tabs-container">
+              
               <Tabs defaultIndex={0}>
                 <TabList>
                   {themes.map((theme, index) => (
