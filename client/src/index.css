@@ -100,6 +100,10 @@
 /* styling for contact page 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 */
+
+.container.col-12.col-md-5.home-container.form-container-backdrop {
+  height: 960px;
+}
   
 .container-contact {
   min-height: 692px;
@@ -136,10 +140,6 @@
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: auto;
-  /* margin-bottom: 100px;
-  margin-top: -28px;
-  width: 650px;
-  height: 850px; */
 }
 
 .aboout-form{
@@ -152,8 +152,7 @@
   margin-bottom:50px;
   text-align: center;
   width: 650px;
-  height: 850px;
-  
+  height: 850px; 
 }
 
 .form-container-backdrop:hover{
@@ -188,21 +187,18 @@
   margin: 12px;
 }
 
-.developer-card {
-  width: 200px;
-  display: block;
-  margin: 0 auto;
-  
-}
-
 .developer-name {
   color: #8687A3;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 25px;
 }
 
 .developer-col {
-  padding-top:30px;
+  padding-top:30px;  
+}
+
+.col-6.developer-col.col {
+  text-align: center;
 }
 
 
