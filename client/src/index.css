@@ -7,6 +7,12 @@
 
 /* Main Shaker Page Sytling */
 
+
+
+
+
+
+
 .carousel{
   margin-top: -40px;
   padding-top: 30px;
@@ -215,6 +221,26 @@
 /* Styling for landing/home page
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 */
+
+@media only screen and (max-width: 600px) {
+  .login-btn {
+    width: 80px;
+    height:  80px;
+
+  }
+}
+@media only screen and (max-width: 600px) {
+  .enterBtn {
+    display: inline-block;
+    width: 28%;
+
+    
+
+  }
+}
+
+
+
 
 h1 {
   font-family: 'Architects Daughter', cursive;
@@ -566,7 +592,7 @@ div.modal-content {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 80%; 
-  width: 500px;
+  width: 700px;
   margin-top: 100px; 
   margin-bottom: 70px;  
   overflow-y: scroll;
