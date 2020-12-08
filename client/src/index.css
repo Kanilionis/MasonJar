@@ -6,14 +6,25 @@
   font-family: 'Architects Daughter', cursive;} */
 
 /* Main Shaker Page Sytling */
+
 .carousel{
   margin-top: 10px;
   padding-top: 30px;
   padding-bottom: 20px;
-  overflow: show;
-  width: 400px
-  
+  transition: 2s ease-out;
+  /* width: 900px; */
+  position: relative;
+  border-radius: 10px;
+  visibility: visible;
+  overflow: auto
 }
+
+
+
+.carousel-item{
+  padding: 20px
+}
+
 .cls-1-label{fill:#fff;}.cls-2-label{stroke:#000;stroke-miterlimit:10;}
 
 .cls-1-wad1{opacity:.9;}.cls-2-wad1{fill:#fed20d;}.cls-3-wad1{fill:#f5f2a2;}
@@ -50,24 +61,11 @@
   90% { transform: translate(1px, 5px) rotate(0deg); }
   100% { transform: translate(1px, -5px) rotate(-20deg); }
 }
-/* @keyframes wobble {
-  25% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-30deg);
-  }
-  75% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-} */
+
 #jar-text{
   text-shadow: 0 0 3px white, 0 0 5px grey;  
   font-family: 'Architects Daughter', cursive;
-  font-size: 24px;
+  font-size: 23px;
   cursor: pointer;
   word-spacing: -3px;
 }
@@ -78,14 +76,6 @@
  
 }
 
-/* 
-.wad-wobble{
-  display: block;
-  margin: 0 auto;
-}
-.wad-wobble[wobble="1"]{
-animation: wobblw 1s infinite
-} */
 
 
 .pick-again[wobble='1']{
@@ -387,22 +377,8 @@ div.modal-content {
 
 
 /* NavBar Styling 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-*/
-/* 
-.mainNav {
-  font-family: 'Cookie', cursive;
-  color: rgb(241, 240, 240);
-  font-size: 50px;
- 
-  padding-right:10px;
-}
+///////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-.nav-link {
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
-  padding-right: 20px; 
-} */
 
 .mainNav{
   text-shadow: 0 0 3px white, 0 0 5px grey;
@@ -430,81 +406,6 @@ div.modal-content {
 
 
 
-/* .wrapper {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
-
-.slideshow {
-  position: absolute;
-
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  transform: translateX(1%);
-}
-  */
-    /* .slides {
-      position: absolute;
-      left: 0;
-      top: -10%;
-      width: 100vw;
-      height: 100vh;
-      animation: 11s slideshow-hero-mobile -3s infinite;
-    } */
-
-
-      /* .slides {
-        top: 0;
-        left: -25%;
-        height: 100%;
-        animation: 5s slideshow-hero -3s infinite;
-      }
-
-
-      .slides {
-        width: 100vw;
-        left: auto;
-        right: 0;
-      }
-    
-
-  
-  
-      .slides {
-        animation: 3s slideshow-contrast -3s infinite;
-      }
-      */
-    
-
-   
-
-/* .slides,
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
-
-/* @keyframes slideshow-hero-mobile {
-  0% {
-    transform: scale(-10) skewY(30deg);
-  }
-  50% {
-    transform: scale(3) skewY(30deg);
-  }
-  100% {
-    transform: scale(-1) skewY(30deg);
-  }
-} */
-
 
  @keyframes slideshows {
   0% {
@@ -530,68 +431,3 @@ div.modal-content {
   }
 }
 
-/* @keyframes slides-set-1 {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-  31% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-  34% {
-    opacity: 0;
-    transform: translateY(100px);
-    transform: scale(1.05);
-  }
-  97% {
-    opacity: 0;
-    transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-} */
-/* @keyframes slides-set-2 {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  31% {
-    opacity: 0;
-    transform: translateY(-100px);
-    transform: scale(1.05);
-  }
-  34% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-  64% {
-    opacity: 1;
-    transform: translateY(0);
-    transform: scale(1);
-  }
-  67% {
-    opacity: 0;
-    transform: translateY(100px);
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(100px);
-    transform: scale(1.05);
-  }
-}
-
-.customizeShaker, .contactShaker{
-  background-color: rgb(241, 240, 240);
-  padding: 20px;
-  margin: 10px
-}

@@ -31,31 +31,6 @@ const [modalOpen, setModalOpen] = useState({
   isOpen: false
 })
 
-const settings ={
-  centerMode: true,
-  centerPadding: '60px',
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
-    }
-  ]
-}
 
 useEffect(() => {
   loadThemes()
@@ -110,9 +85,11 @@ return(
     <center> 
       <br></br>
       <ShakerTop />
+      <br></br>
+      <br></br>
       {shakers.length ? (
      
-        <Carousel indicators={false} fade={true} className="carousel" >
+        <Carousel className="center carousel col-md-3" indicators={false} fade={true} >
         {shakers.map(shaker => (
           
           
