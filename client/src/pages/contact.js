@@ -48,7 +48,7 @@ class Contact extends React.Component {
     return (
       <>
 
-        <div className="contact-container">
+        <div className="container-contact">
 
           <Nav />
           
