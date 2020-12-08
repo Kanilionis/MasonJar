@@ -7,6 +7,12 @@
 
 /* Main Shaker Page Sytling */
 
+
+
+
+
+
+
 .carousel{
   margin-top: -40px;
   padding-top: 30px;
@@ -204,6 +210,26 @@
 /* Styling for landing/home page
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 */
+
+@media only screen and (max-width: 600px) {
+  .login-btn {
+    width: 80px;
+    height:  80px;
+
+  }
+}
+@media only screen and (max-width: 600px) {
+  .enterBtn {
+    display: inline-block;
+    width: 28%;
+
+    
+
+  }
+}
+
+
+
 
 h1 {
   font-family: 'Architects Daughter', cursive;
