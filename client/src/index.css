@@ -5,6 +5,29 @@
   font-family: 'Architects Daughter', cursive;} */
 
 /* Main Shaker Page Sytling */
+
+@media only screen and (max-width: 600px) {
+  .imgNav {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .customizeShaker {
+   align-content: center;
+   margin-right: 20px;
+   width: 80%;
+
+}
+}
+@media only screen and (max-width: 600px) {
+  .contactShaker {
+    align-content: center;
+    width: 80%;
+  }
+}
+
+
 p {
   font-family: "Montserrat", sans-serif;
 }
@@ -680,6 +703,20 @@ img.modal-img {
   margin-bottom: 70px;
   overflow-y: scroll;
 }
+
+@media only screen and (max-width: 600px) {
+  .input-area {
+    display: none;
+    /* width: 28%; */
+  }
+}
+@media only screen and (max-width: 600px) {
+  .tabs-container {
+    height: 100%;
+    /* width: 28%; */
+  }
+}
+
 
 /* This is the form for adding a new shaker */
 .input-area{
