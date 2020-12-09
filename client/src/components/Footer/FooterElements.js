@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
     background-color: #101522;
-    position: fixed;
+    position: static;
     width: 100%;
     bottom: 0;
+    margin-top: auto;
+
 `
 export const FooterWrap = styled.div`
     padding: 48px 24px;

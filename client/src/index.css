@@ -343,6 +343,13 @@ li {
     width: 28%;
   }
 }
+@media only screen and (max-width: 600px) {
+  .logout-btn {
+    display: inline-block;
+    width: 28%;
+  }
+}
+
 
 h1 {
   font-family: "Architects Daughter", cursive;
@@ -625,14 +632,18 @@ img.modal-img {
   }
 }
 
-/* .themes-page{
-  background: #fbf7f5;
+.themes-page{
+  background: linear-gradient(
+    108deg,
+    rgb(163, 133, 155) 0%,
+    rgb(241, 211, 211) 100%
+  );
 
-} */
+}
 
 /* Split the screen in half */
-.split-2 {
-  /* height: 100%; */
+/* .split-2 {
+  height: 100%;
   width: 100%;
   position: fixed;
   z-index: 0;
@@ -642,7 +653,7 @@ img.modal-img {
   padding-right:20px;
   padding-bottom: 20px;
   flex-wrap: wrap;
-}
+} */
 
 .smaller-text {
   font-size: 10px;
@@ -650,16 +661,14 @@ img.modal-img {
 }
 
 /* Control the right side */
+
+
 .export-container {
-  position: absolute;
+  /* position: absolute; */
   width: 75%;
   right: 0;
   height: 100%;
-  background: linear-gradient(
-    108deg,
-    rgb(163, 133, 155) 0%,
-    rgb(241, 211, 211) 100%
-  );
+  
 }
 
 .navStyle {
@@ -667,27 +676,8 @@ img.modal-img {
   width: 50%;
 }
 
-/* This creates a container for the input section of the page snd splits it in half  */
 
-/* This creates a container for the export and DB section of the page snd splits it in half  */
-/* .export-container{
-  right: 0;
-  z-index: 1;
-  align-content: center; 
-  background: linear-gradient(
-    108deg,
-    rgb(163, 133, 155) 0%,
-    rgb(241, 211, 211) 100%
-  );
 
-} */
-
-/* This is a container that displays the tabs and DB information */
-
-.new-act-text {
-  font-family: "Architects Daughter", cursive;
-  font-size: 34px;
-}
 
 /* THEMES PAGE DONT TOUCH ME DAMMIT */
 
@@ -698,18 +688,13 @@ img.modal-img {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 75%;
-  width: 75rem;
+  width: 50rem; 
   margin-top: 50px;
   margin-bottom: 70px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
-@media only screen and (max-width: 600px) {
-  .input-area {
-    display: none;
-    /* width: 28%; */
-  }
-}
+
 @media only screen and (max-width: 600px) {
   .tabs-container {
     height: 100%;
@@ -723,10 +708,10 @@ img.modal-img {
   font-family: 'Montserrat', sans-serif;
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-  overflow: scroll;
+  left: 0; 
+  right: 0; 
+  z-index: 0; 
+  overflow: scroll; 
   background-color: rgb(241, 240, 240);
 }
 
@@ -803,11 +788,18 @@ img.modal-img {
     font-family: "Montserrat", sans-serif;
     width: 17rem !important;
   }
+  
 
   .form-container-backdrop {
     max-width: auto;
     margin: 10px auto;
     height: auto;
+  }
+  @media only screen and (max-width: 800px) {
+    .form-container-backdrop {
+      margin-top: 15%;
+  
+    }
   }
 
   .form-container-backdrop:hover {
@@ -853,8 +845,12 @@ img.modal-img {
 .profile-container {
  padding-top: 300px;
  padding-left: 100px;
+ 
 }
 
 .shake-it-up{
   font-weight: bold;
 }
+
+
+

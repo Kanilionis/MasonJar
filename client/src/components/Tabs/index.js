@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button"
 import Nav from '../Nav'
 import Table from "react-bootstrap/Table"
 import Edit from '../EditableText/EditableText'
+import Container from 'react-bootstrap/Container'
 import {
   FaEdit,
   FaTrash,
@@ -16,7 +17,8 @@ import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
 import "../../../src/index.css"
 import API from '../../utils/API'
 import Footer from '../../components/Footer'
-
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col'
 const TabsPage = (props) => {
   //Setting comps initail state
   const [themes, setThemes] = useState([])
@@ -116,10 +118,10 @@ const TabsPage = (props) => {
   };
   return (
     <>
-      <div className="themes-page">
+      <div as={Container}className="themes-page">
         <Nav />
-        <div className="row input-container">
-          <div className="input-area split-2">
+        <div as={Row} className="row input-container">
+          <Col xs={12} md={3}className="col-md-1-col-sm-12 input-area split-2">
             <div className="shaker-form">
               <div class="wrapper-around">
                 <form className="shaker-form-size">
@@ -141,8 +143,11 @@ const TabsPage = (props) => {
                 </form>
               </div>
             </div>
-          </div>
-          <div className="export-container split-2">
+          </Col>
+        
+        
+
+        <Col xs={12} md={9}      className="col-md-4-col-sm-12 export-container split-2">
             <h2 className="customizeShakerH2">customize your shaker</h2>
             <div className="tableResults tabsRoot tabs-container">
               <Tabs selectedIndex={currentTab.index}  >
@@ -211,10 +216,11 @@ const TabsPage = (props) => {
                 ))}
               </Tabs>
             </div>
-          </div>
+          </Col>
         </div>
-        
+       
       </div>
+      <Footer/>
     </>
   )
 }
