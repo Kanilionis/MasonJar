@@ -5,6 +5,15 @@
   font-family: 'Architects Daughter', cursive;} */
 
 /* Main Shaker Page Sytling */
+
+@media only screen and (max-width: 600px) {
+  .imgNav {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
 p {
   font-family: "Montserrat", sans-serif;
 }
