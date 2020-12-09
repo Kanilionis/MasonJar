@@ -673,6 +673,20 @@ img.modal-img {
   overflow-y: scroll;
 }
 
+@media only screen and (max-width: 600px) {
+  .input-area {
+    display: none;
+    /* width: 28%; */
+  }
+}
+@media only screen and (max-width: 600px) {
+  .tabs-container {
+    height: 100%;
+    /* width: 28%; */
+  }
+}
+
+
 /* This is the form for adding a new shaker */
 .input-area{
   font-family: 'Montserrat', sans-serif;
