@@ -23,13 +23,9 @@ const Enter = () => {
 
 
         {isAuthenticated ? (
-             
-            
              <div>
                <Nav/>
              </div>
-             
- 
              ): (
                
                <>
