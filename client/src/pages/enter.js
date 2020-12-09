@@ -39,22 +39,23 @@ const Enter = () => {
             />
 
             {isAuthenticated ? (
-              
+            
             <div className="row">
-            <div className="col-md-3">
-              <LoginButton />
-            </div>
-            <div className="col-md-6">
-            </div>
-            <div className="col-md-3">
-              <GuestButton />
+            <div className="col-md-12">
+              <EnterButton />
             </div>
           </div>
+
             ): (
               
-            <div className="row">
-              <div className="col-md-12">
-                <EnterButton />
+              <div className="row">
+              <div className="col-md-3">
+                <LoginButton />
+              </div>
+              <div className="col-md-6">
+              </div>
+              <div className="col-md-3">
+                <GuestButton />
               </div>
             </div>
 
