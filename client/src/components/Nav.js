@@ -4,7 +4,7 @@ import * as RBS from "react-bootstrap";
 import LogoutButton from "./LogoutButton";
 import logo from "../images/NewFaviconNoWriting.svg";
 import { useAuth0 } from "../react-auth0-spa";
-import Authenticated from "../components/Authenticated";
+// import Authenticated from "../components/Authenticated";
 
 
 function Nav() {
@@ -19,14 +19,14 @@ function Nav() {
       <RBS.Navbar.Collapse id="basic-navbar-nav">
         <RBS.Nav className="mr-auto">
           <RBS.Nav>
-          <RBS.Nav.Link as={Link} to="/shaker">shake it</RBS.Nav.Link>
+          <RBS.Nav.Link as={Link} to="/shaker">Shake It Up</RBS.Nav.Link>
             <RBS.Nav.Link as={Link} to="/contact">contact</RBS.Nav.Link>
             <RBS.Nav.Link as={Link} to="/viewthemes">themes</RBS.Nav.Link> 
             <RBS.Nav.Link as={Link} to="/profile">profile</RBS.Nav.Link>            
           </RBS.Nav>
         </RBS.Nav>
       </RBS.Navbar.Collapse>
-      <Authenticated />
+      {/* <Authenticated /> */}
 
     </RBS.Navbar>
   ) : (
@@ -38,13 +38,13 @@ function Nav() {
       <RBS.Navbar.Collapse id="basic-navbar-nav">
         <RBS.Nav className="mr-auto">
           <RBS.Nav>
-          <RBS.Nav.Link as={Link} to="/shaker">shake it</RBS.Nav.Link>
-            <RBS.Nav.Link as={Link} to="/contact">contact</RBS.Nav.Link>
-            <RBS.Nav.Link as={Link} to="/viewthemes">themes</RBS.Nav.Link> 
+          <RBS.Nav.Link as={Link} to="/shaker">Shake It Up</RBS.Nav.Link>
+            <RBS.Nav.Link as={Link} to="/contact">Contact</RBS.Nav.Link>
+            <RBS.Nav.Link as={Link} to="/viewthemes">Themes</RBS.Nav.Link> 
           </RBS.Nav>
         </RBS.Nav>
       </RBS.Navbar.Collapse>
-      <Authenticated />
+      {/* <Authenticated /> */}
 
     </RBS.Navbar>
 

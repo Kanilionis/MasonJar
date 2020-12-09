@@ -9,6 +9,7 @@ import Logo from "../components/Logo"
 // import GuestButton from '../components/GuestButton.js';
 import Nav from "../components/Nav";
 import { useAuth0 } from "../react-auth0-spa";
+import LogoutButton from "../components/LogoutButton";
 
 
 const Enter = () => {
@@ -18,7 +19,21 @@ const Enter = () => {
     <>
       <div className="enter-container">
         <div className="split left">
-          <Nav />
+
+
+
+        {isAuthenticated ? (
+             <div>
+               <Nav/>
+             </div>
+             ): (
+               
+               <>
+               </>
+ 
+               )}
+        
+
           <div className="centered">
             <Logo />
             {/* <img src={logo} alt="shaker" height="400px" /> */}
@@ -39,24 +54,33 @@ const Enter = () => {
             />
 
             {isAuthenticated ? (
-              
+             
+            
             <div className="row">
             <div className="col-md-3">
-              <LoginButton />
+              <EnterButton />
+              
             </div>
             <div className="col-md-6">
             </div>
             <div className="col-md-3">
-              <GuestButton />
+              <LogoutButton />
             </div>
-          </div>
+            </div>
+            
+            
+
             ): (
               
-            <div className="row">
-              <div className="col-md-4"></div>
-
-              <div className="col-md-4">
-                <EnterButton />
+              <div className="row">
+              <div className="col-md-3">
+                <LoginButton />
+                
+              </div>
+              <div className="col-md-6">
+              </div>
+              <div className="col-md-3">
+                <GuestButton />
               </div>
               <div className="col-md-4"></div>
             </div>

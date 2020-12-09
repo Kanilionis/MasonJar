@@ -29,7 +29,10 @@ const TabsPage = (props) => {
     activities: [],
     currentActivity: ""
   })
-  const [currentTab, setCurrentTab] = useState({})
+  const [currentTab, setCurrentTab] = useState({
+    theme: "",
+    index: 0
+  })
   const [editActivity, setEditActivity] = useState({})
   //loading all themes and storing them within setThemes
   useEffect(() => {
@@ -67,8 +70,8 @@ const TabsPage = (props) => {
       .then(res => loadThemes())
       .catch(err => console.log(err));
   }
-  function handleTabChange(theme) {
-    setCurrentTab({ theme: [theme] })
+  function handleTabChange(theme, index) {
+    setCurrentTab({ theme: [theme] , index: parseInt(index)})
   }
   function handleDelete(activity) {
     API.deleteActivity(currentTab.theme, activity)
@@ -142,7 +145,7 @@ const TabsPage = (props) => {
           <div className="export-container split-2">
             <h2 className="customizeShakerH2">customize your shaker</h2>
             <div className="tableResults tabsRoot tabs-container">
-              <Tabs>
+              <Tabs selectedIndex={currentTab.index}  >
                 <TabList>
                   {themes.map((theme, index) => (
                     <>
@@ -150,13 +153,13 @@ const TabsPage = (props) => {
                         (index < 5)
                           ?
                           <>
-                            <Tab onClick={() => handleTabChange(theme.theme)}>
+                            <Tab onClick={() => handleTabChange(theme.theme, index)}>
                               {theme.theme}
                             </Tab>
                           </>
                           :
                           <>
-                            <Tab onClick={() => handleTabChange(theme.theme)}>
+                            <Tab onClick={() => handleTabChange(theme.theme, index)}>
                               {theme.theme} <FaTrash onClick={() => confirmDelete(theme.theme)} />
                             </Tab>
                           </>
@@ -210,7 +213,7 @@ const TabsPage = (props) => {
             </div>
           </div>
         </div>
-        <Footer />
+        
       </div>
     </>
   )
