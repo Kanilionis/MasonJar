@@ -800,12 +800,21 @@ img.modal-img {
   .developer-card {
     font-family: "Montserrat", sans-serif;
     width: 22rem !important;
+    height: 80%;
+
   }
+  
 
   .form-container-backdrop {
     max-width: auto;
     margin: 10px auto;
     height: auto;
+  }
+  @media only screen and (max-width: 800px) {
+    .form-container-backdrop {
+      margin-top: 15%;
+  
+    }
   }
 
   .form-container-backdrop:hover {
