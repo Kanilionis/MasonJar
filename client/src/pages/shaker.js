@@ -7,6 +7,7 @@ import ModalShow from "../components/Modal";
 import { Carousel } from "react-bootstrap";
 import ShakerTop from "../components/ShakerTop"
 import ShakerBottom from "../components/ShakerBottom"
+import Footer from "../components/Footer"
 
 const Shaker = () => {
 
@@ -105,6 +106,7 @@ return(
       <ShakerBottom />
     </center>
   </div>
+  <Footer />
 
   </>
 )

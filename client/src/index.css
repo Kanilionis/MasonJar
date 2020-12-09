@@ -242,6 +242,7 @@ li {
     rgb(241, 211, 211) 100%
   );
   min-height: 1370px;
+  overflow: hidden;
 }
 
 .contact-btn {
@@ -643,7 +644,7 @@ img.modal-img {
     rgb(163, 133, 155) 0%,
     rgb(241, 211, 211) 100%
   );
-
+  overflow: hidden;
 }
 
 /* Split the screen in half */
@@ -754,6 +755,7 @@ img.modal-img {
   margin: 10px;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
   font-family: "Montserrat", sans-serif;
+  width: 40%;
 
 }
 .customizeShaker:hover {
@@ -872,4 +874,6 @@ img.modal-img {
 }
 
 
-
+.confirmHeader {
+  color: black;
+}
