@@ -16,12 +16,14 @@
   .customizeShaker {
    align-content: center;
    margin-right: 20px;
-   
+   width: 80%;
+
 }
 }
 @media only screen and (max-width: 600px) {
   .contactShaker {
     align-content: center;
+    width: 80%;
   }
 }
 
