@@ -422,6 +422,13 @@ h2 {
   margin-left: -60px;
   /* margin-top: 20px */
 }
+
+.logout-btn {
+  cursor: pointer;
+  position: absolute;
+  margin-left: -60px;
+  /* margin-top: 20px */
+}
 /* Control the left side */
 .left {
   position: absolute;
@@ -533,6 +540,7 @@ input::-webkit-input-placeholder {
 .enterBtn {
   margin-bottom: 10px;
 }
+
 
 /* Modal Styling 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -731,12 +739,13 @@ img.modal-img {
 
 .customizeShaker,
 .contactShaker {
+
   background-color: rgb(241, 240, 240);
   padding: 20px;
-  margin-left: 10%;
   margin: 10px;
-  border-radius: 20px;
-  font-family: "Architects Daughter", cursive;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  font-family: "Montserrat", sans-serif;
+
 }
 .customizeShaker:hover {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
@@ -771,14 +780,13 @@ img.modal-img {
 }
 
 .enter-cards {
-  padding-left: 20%;
+  padding-left: 11%;
 }
 
 @media only screen and (max-width: 800px) {
   .developer-card {
     font-family: "Montserrat", sans-serif;
     width: 17rem !important;
-    
   }
   
 
@@ -839,3 +847,10 @@ img.modal-img {
  padding-left: 100px;
  
 }
+
+.shake-it-up{
+  font-weight: bold;
+}
+
+
+
