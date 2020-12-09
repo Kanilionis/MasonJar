@@ -801,7 +801,7 @@ img.modal-img {
 @media only screen and (max-width: 800px) {
   .developer-card {
     font-family: "Montserrat", sans-serif;
-    width: 22rem !important;
+    width: 17rem !important;
   }
 
   .form-container-backdrop {
