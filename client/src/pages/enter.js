@@ -19,7 +19,25 @@ const Enter = () => {
     <>
       <div className="enter-container">
         <div className="split left">
-          <Nav />
+
+
+
+        {isAuthenticated ? (
+             
+            
+             <div>
+               <Nav/>
+             </div>
+             
+ 
+             ): (
+               
+               <>
+               </>
+ 
+               )}
+        
+
           <div className="centered">
             <Logo />
             {/* <img src={logo} alt="shaker" height="400px" /> */}
@@ -40,6 +58,7 @@ const Enter = () => {
             />
 
             {isAuthenticated ? (
+             
             
             <div className="row">
             <div className="col-md-3">
@@ -52,6 +71,8 @@ const Enter = () => {
               <LogoutButton />
             </div>
             </div>
+            
+            
 
             ): (
               
