@@ -415,6 +415,13 @@ h2 {
   margin-left: -60px;
   /* margin-top: 20px */
 }
+
+.logout-btn {
+  cursor: pointer;
+  position: absolute;
+  margin-left: -60px;
+  /* margin-top: 20px */
+}
 /* Control the left side */
 .left {
   position: absolute;
@@ -526,6 +533,7 @@ input::-webkit-input-placeholder {
 .enterBtn {
   margin-bottom: 10px;
 }
+
 
 /* Modal Styling 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -844,5 +852,4 @@ img.modal-img {
 .profile-container {
  padding-top: 300px;
  padding-left: 100px;
- 
 }
