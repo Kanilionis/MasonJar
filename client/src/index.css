@@ -5,6 +5,7 @@
   font-family: 'Architects Daughter', cursive;} */
 
 /* Main Shaker Page Sytling */
+
 p {
   font-family: "Montserrat", sans-serif;
 }
@@ -29,8 +30,13 @@ li {
 }
 
 .carousel-item {
-  padding: 20px;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px
 }
+
+
 
 .cls-1-label {
   fill: #fff;
@@ -731,9 +737,16 @@ img.modal-img {
 }
 
 .shaker-pg-btn-1 {
-  margin-top: -33px;
-  margin-bottom: -50px;
+  
+    
+    cursor: pointer;
+  
+
 }
+.theme-btn{
+  margin: -10px
+}
+
 #try-it {
   font-size: 36px;
 }
@@ -741,6 +754,9 @@ img.modal-img {
   font-size: 36px;
 }
 .shaker-pg-btn-2 {
+
+ 
+  cursor: pointer;
   margin-top: -33px;
   margin-bottom: -50px;
 }

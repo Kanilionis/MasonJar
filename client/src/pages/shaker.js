@@ -86,7 +86,7 @@ return(
      
       {shakers.length ? (
      
-        <Carousel className="center carousel col-md-3" indicators={true} fade={true} >
+        <Carousel className=" carousel col-md-6" indicators={true} fade={true} >
         {shakers.map(shaker => (
           
           
