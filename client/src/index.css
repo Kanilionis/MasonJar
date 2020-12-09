@@ -641,6 +641,12 @@ img.modal-img {
 
 }
 
+.h2-text{
+  color: black;
+  padding-top: 20px;
+
+}
+
 /* Split the screen in half */
 /* .split-2 {
   height: 100%;
@@ -653,6 +659,10 @@ img.modal-img {
   padding-right:20px;
   padding-bottom: 20px;
   flex-wrap: wrap;
+}  */
+
+/* .split-2{
+  border: solid
 } */
 
 .smaller-text {
@@ -691,7 +701,7 @@ img.modal-img {
   width: 50rem; 
   margin-top: 50px;
   margin-bottom: 70px;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
 }
 
 
@@ -706,21 +716,35 @@ img.modal-img {
 /* This is the form for adding a new shaker */
 .input-area{
   font-family: 'Montserrat', sans-serif;
-  position: fixed;
-  bottom: 0;
-  left: 0; 
-  right: 0; 
+  /* position: fixed; */
+  /* bottom: 0; 
+  /* left: 0;  */
+  /* right: 0;  */
   z-index: 0; 
-  overflow: scroll; 
-  background-color: rgb(241, 240, 240);
+  overflow: scroll;  
+  /* background-color: rgb(241, 240, 240); */
+  /* height: 800px; */
+
+}
+
+@media only screen and (max-width: 600px) {
+  .shaker-form {
+    align-content: center;
+    padding-left: 40px;
+    
+  }
 }
 
 /* Div section around form element */
 .shaker-form {
-  width: 25%;
-  position: absolute;
-  transform: translate(0%, 50%);
+  /* width: 25%; */
+  /* position: absolute; */
+  /* transform: translate(0%, 50%); */
   text-align: center;
+  
+
+  
+
 }
 
 /* Header for customize */

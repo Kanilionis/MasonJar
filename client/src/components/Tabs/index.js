@@ -120,12 +120,12 @@ const TabsPage = (props) => {
     <>
       <div as={Container}className="themes-page">
         <Nav />
-        <div as={Row} className="row input-container">
-          <Col xs={12} md={3}className="col-md-1-col-sm-12 input-area split-2">
+        <Row as={Row} className="row input-container">
+          <Col xs={12} md={6} lg={4} className="input-area split-2">
             <div className="shaker-form">
               <div class="wrapper-around">
                 <form className="shaker-form-size">
-                  <h2>Welcome to the customized shaker!</h2>
+                  <h2 className="h2-text">Welcome to the customized shaker!</h2>
                   <p>Please enter the title/theme of your shaker below</p>
                   <h3 className="new-shaker-text">Create A New Shaker</h3>
                   <Input
@@ -145,9 +145,8 @@ const TabsPage = (props) => {
             </div>
           </Col>
         
-        
-
-        <Col xs={12} md={9}      className="col-md-4-col-sm-12 export-container split-2">
+      
+          <Col xs={12} md={6} lg={8}className="export-container split-2">
             <h2 className="customizeShakerH2">customize your shaker</h2>
             <div className="tableResults tabsRoot tabs-container">
               <Tabs selectedIndex={currentTab.index}  >
@@ -217,8 +216,8 @@ const TabsPage = (props) => {
               </Tabs>
             </div>
           </Col>
-        </div>
-       
+      
+       </Row>
       </div>
       <Footer/>
     </>
