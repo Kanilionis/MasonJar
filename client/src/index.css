@@ -790,9 +790,7 @@ img.modal-img {
 .profile-title {
   color: #2f0909;
   font-family: "Architects Daughter", cursive;
-
-  font-size: 40px;
-
+  font-size: 50px;
   font-weight: bold;
 }
 
@@ -803,7 +801,11 @@ img.modal-img {
 
 .user-name {
   font-family: "Architects Daughter", cursive;
-
   color: #2f0909;
 }
 
+.profile-container {
+ padding-top: 300px;
+ padding-left: 100px;
+ 
+}
