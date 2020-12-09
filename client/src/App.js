@@ -1,3 +1,4 @@
+  
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Shaker from "./pages/shaker";
@@ -15,13 +16,14 @@ const App = () => {
         <Router>
         <div id="app" className="d-flex flex-column h-100">
             <Switch>
+              <Route exact path= {["/","/home"]} component={Enter} />
               <Route exact path="/shaker" component={Shaker} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/viewthemes" component={View} />
-              <Route path="/profile" component={Profile} />
-              <Route path="/" component={Enter} />
+              <Route exact path="/contact" component={Contact} />
+              <Route exact path="/viewthemes" component={View} />
+              <Route exact path="/profile" component={Profile} />
             </Switch>
           </div>
+
         </Router>
         </>
     
@@ -29,6 +31,3 @@ const App = () => {
 }
   
 export default App;
-
-
-

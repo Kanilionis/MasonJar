@@ -10,28 +10,22 @@ import Authenticated from "../components/Authenticated";
 function Nav() {
 
   const { isAuthenticated } = useAuth0();
-  function enterSite(){
-    window.location = "/shaker"
-  }
   return (
     <>
     {isAuthenticated ? (
     <RBS.Navbar className="navStyle" bg="transparent" expand="lg">
-      <div>
-      <img className="imgNav" src={logo} onClick={enterSite} alt="Shaker Mason Jar"/>
-      </div>
+      <img className="imgNav" src={logo}  alt="Shaker Mason Jar"/>
       {/* <RBS.Nav.Link as={Link} to="/shaker"> <span className="mainNav">Shake It Up</span></RBS.Nav.Link>  */}
       <RBS.Navbar.Collapse id="basic-navbar-nav">
         <RBS.Nav className="mr-auto">
           <RBS.Nav>
+          <RBS.Nav.Link as={Link} to="/shaker">shake it</RBS.Nav.Link>
             <RBS.Nav.Link as={Link} to="/contact">contact</RBS.Nav.Link>
             <RBS.Nav.Link as={Link} to="/viewthemes">themes</RBS.Nav.Link> 
             <RBS.Nav.Link as={Link} to="/profile">profile</RBS.Nav.Link>            
           </RBS.Nav>
         </RBS.Nav>
       </RBS.Navbar.Collapse>
-
-      {/* <LogoutButton /> */}
       <Authenticated />
 
     </RBS.Navbar>
@@ -39,18 +33,17 @@ function Nav() {
 
     <RBS.Navbar className="navStyle" bg="transparent" expand="lg">
 
-      <img className="imgNav" onClick={enterSite} src={logo} alt="Shaker Mason Jar"/>
+      <img className="imgNav"  src={logo} alt="Shaker Mason Jar"/>
       {/* <RBS.Nav.Link as={Link} to="/shaker"> <span className="mainNav">Shake It Up</span></RBS.Nav.Link>  */}
       <RBS.Navbar.Collapse id="basic-navbar-nav">
         <RBS.Nav className="mr-auto">
           <RBS.Nav>
+          <RBS.Nav.Link as={Link} to="/shaker">shake it</RBS.Nav.Link>
             <RBS.Nav.Link as={Link} to="/contact">contact</RBS.Nav.Link>
             <RBS.Nav.Link as={Link} to="/viewthemes">themes</RBS.Nav.Link> 
           </RBS.Nav>
         </RBS.Nav>
       </RBS.Navbar.Collapse>
-
-      {/* <LogoutButton /> */}
       <Authenticated />
 
     </RBS.Navbar>

@@ -2,20 +2,23 @@ import React from "react";
 import logo from "../images/NewFavicon.svg";
 import "../index.css";
 import Typical from 'react-typical';
+import EnterButton from '../components/EnterButton';
 import LoginButton from '../components/LoginButton';
 import GuestButton from '../components/GuestButton.js';
 import Logo from "../components/Logo"
 // import GuestButton from '../components/GuestButton.js';
 import Nav from "../components/Nav";
+import { useAuth0 } from "../react-auth0-spa";
 
 
 const Enter = () => {
-  
+  const { isAuthenticated } = useAuth0();
+
   return (
     <>
       <div className="enter-container">
         <div className="split left">
-          {/* <Nav /> */}
+          <Nav />
           <div className="centered">
             <Logo />
             {/* <img src={logo} alt="shaker" height="400px" /> */}
@@ -34,20 +37,29 @@ const Enter = () => {
               loop={Infinity}
               wrapper="p"
             />
-           
-              <div className="row">
-              <div className="col-md-3">
-              <LoginButton/>
-              </div>
-              <div className="col-md-6"></div>
-              <div className="col-md-3">
-              <GuestButton/>
-              </div>
+
+            {isAuthenticated ? (
               
+            <div className="row">
+            <div className="col-md-3">
+              <LoginButton />
+            </div>
+            <div className="col-md-6">
+            </div>
+            <div className="col-md-3">
+              <GuestButton />
+            </div>
+          </div>
+            ): (
+              
+            <div className="row">
+              <div className="col-md-12">
+                <EnterButton />
               </div>
-            
-            
-            
+            </div>
+
+              )}
+
             <div>
             </div>
           </div>

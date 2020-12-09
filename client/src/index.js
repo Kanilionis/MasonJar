@@ -13,14 +13,16 @@ const onRedirectCallback = appState => {
       ? appState.targetUrl
       : window.location.pathname
   );
+  
 };
+
 
 ReactDOM.render(
   <Router>
   <Auth0Provider
     domain={config.domain}
     client_id={config.clientId}
-    redirect_uri={window.location.shaker}
+    redirectUri={window.location.origin}
     onRedirectCallback={onRedirectCallback}
   >
     <App />

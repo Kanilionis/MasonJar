@@ -573,10 +573,7 @@ img.modal-img {
 }
 
 .imgNav {
-  width: 7%;
-  height: auto;
-  padding: 15px;
-  cursor: pointer;
+  padding: -15px;
 }
 
 /* Styling for the themes page 
