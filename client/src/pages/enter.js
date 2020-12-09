@@ -82,6 +82,7 @@ const Enter = () => {
               <div className="col-md-3">
                 <GuestButton />
               </div>
+              <div className="col-md-4"></div>
             </div>
 
               )}
