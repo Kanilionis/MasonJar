@@ -52,8 +52,13 @@ li {
 }
 
 .carousel-item {
-  padding: 20px;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px
 }
+
+
 
 .cls-1-label {
   fill: #fff;
@@ -237,6 +242,7 @@ li {
     rgb(241, 211, 211) 100%
   );
   min-height: 1370px;
+  overflow: hidden;
 }
 
 .contact-btn {
@@ -645,7 +651,7 @@ img.modal-img {
     rgb(163, 133, 155) 0%,
     rgb(241, 211, 211) 100%
   );
-
+  overflow: hidden;
 }
 
 .h2-text{
@@ -769,6 +775,10 @@ img.modal-img {
   font-size: 20px;
 }
 
+.improve{
+  font-family: "Architects Daughter", cursive;
+}
+
 .customizeShaker,
 .contactShaker {
 
@@ -777,6 +787,7 @@ img.modal-img {
   margin: 10px;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
   font-family: "Montserrat", sans-serif;
+  width: 40%;
 
 }
 .customizeShaker:hover {
@@ -794,9 +805,16 @@ img.modal-img {
 }
 
 .shaker-pg-btn-1 {
-  margin-top: -33px;
-  margin-bottom: -50px;
+  
+    
+    cursor: pointer;
+  
+
 }
+.theme-btn{
+  margin: -10px
+}
+
 #try-it {
   font-size: 36px;
 }
@@ -804,6 +822,9 @@ img.modal-img {
   font-size: 36px;
 }
 .shaker-pg-btn-2 {
+
+ 
+  cursor: pointer;
   margin-top: -33px;
   margin-bottom: -50px;
 }
@@ -885,4 +906,6 @@ img.modal-img {
 }
 
 
-
+.confirmHeader {
+  color: black;
+}

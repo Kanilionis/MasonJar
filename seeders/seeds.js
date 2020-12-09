@@ -82,7 +82,7 @@ let shakeItSeed = [
         submittedBy: "Admin"
       },
       {
-        name: "Uncut Gem",
+        name: "Uncut Gems",
         submittedBy: "Admin"
       },
       {
