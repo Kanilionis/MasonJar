@@ -4,7 +4,7 @@ import * as RBS from "react-bootstrap";
 import LogoutButton from "./LogoutButton";
 import logo from "../images/NewFaviconNoWriting.svg";
 import { useAuth0 } from "../react-auth0-spa";
-import Authenticated from "../components/Authenticated";
+// import Authenticated from "../components/Authenticated";
 
 
 function Nav() {
@@ -26,7 +26,7 @@ function Nav() {
           </RBS.Nav>
         </RBS.Nav>
       </RBS.Navbar.Collapse>
-      <Authenticated />
+      {/* <Authenticated /> */}
 
     </RBS.Navbar>
   ) : (
@@ -44,7 +44,7 @@ function Nav() {
           </RBS.Nav>
         </RBS.Nav>
       </RBS.Navbar.Collapse>
-      <Authenticated />
+      {/* <Authenticated /> */}
 
     </RBS.Navbar>
 
