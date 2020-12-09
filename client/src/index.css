@@ -5,6 +5,29 @@
   font-family: 'Architects Daughter', cursive;} */
 
 /* Main Shaker Page Sytling */
+
+@media only screen and (max-width: 600px) {
+  .imgNav {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .customizeShaker {
+   align-content: center;
+   margin-right: 20px;
+   width: 80%;
+
+}
+}
+@media only screen and (max-width: 600px) {
+  .contactShaker {
+    align-content: center;
+    width: 80%;
+  }
+}
+
+
 p {
   font-family: "Montserrat", sans-serif;
 }
@@ -392,6 +415,13 @@ h2 {
   margin-left: -60px;
   /* margin-top: 20px */
 }
+
+.logout-btn {
+  cursor: pointer;
+  position: absolute;
+  margin-left: -60px;
+  /* margin-top: 20px */
+}
 /* Control the left side */
 .left {
   position: absolute;
@@ -503,6 +533,7 @@ input::-webkit-input-placeholder {
 .enterBtn {
   margin-bottom: 10px;
 }
+
 
 /* Modal Styling 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -673,6 +704,20 @@ img.modal-img {
   overflow-y: scroll;
 }
 
+@media only screen and (max-width: 600px) {
+  .input-area {
+    display: none;
+    /* width: 28%; */
+  }
+}
+@media only screen and (max-width: 600px) {
+  .tabs-container {
+    height: 100%;
+    /* width: 28%; */
+  }
+}
+
+
 /* This is the form for adding a new shaker */
 .input-area{
   font-family: 'Montserrat', sans-serif;
@@ -709,12 +754,13 @@ img.modal-img {
 
 .customizeShaker,
 .contactShaker {
+
   background-color: rgb(241, 240, 240);
   padding: 20px;
-  margin-left: 10%;
   margin: 10px;
-  border-radius: 20px;
-  font-family: "Architects Daughter", cursive;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  font-family: "Montserrat", sans-serif;
+
 }
 .customizeShaker:hover {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
@@ -749,7 +795,7 @@ img.modal-img {
 }
 
 .enter-cards {
-  padding-left: 20%;
+  padding-left: 11%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -790,9 +836,7 @@ img.modal-img {
 .profile-title {
   color: #2f0909;
   font-family: "Architects Daughter", cursive;
-
-  font-size: 40px;
-
+  font-size: 50px;
   font-weight: bold;
 }
 
@@ -803,6 +847,14 @@ img.modal-img {
 
 .user-name {
   font-family: "Architects Daughter", cursive;
-
   color: #2f0909;
+}
+
+.profile-container {
+ padding-top: 300px;
+ padding-left: 100px;
+}
+
+.shake-it-up{
+  font-weight: bold;
 }

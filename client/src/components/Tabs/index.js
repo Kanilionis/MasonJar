@@ -213,7 +213,7 @@ const TabsPage = (props) => {
             </div>
           </div>
         </div>
-        <Footer />
+        
       </div>
     </>
   )
