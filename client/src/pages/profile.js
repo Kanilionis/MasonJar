@@ -6,10 +6,11 @@ import "../index.css";
 //this destructures useAuth0 into useable variables
 const Profile = () => {
   const { user } = useAuth0();
-  const { name, picture, email } = user;
+  const { name, picture, email, nickname } = user;
   return (
     <div>
       <Nav/>
+      <div className="test">
       <div className="profile-container">
         <div className="profile-title col-md-2 mb-3">
           <img
@@ -22,8 +23,9 @@ const Profile = () => {
           <h2 className="user-name">{name}</h2>
             <br></br>
             <p className="user-info ">Email: {email}</p> 
-            <p className="lead text-muted">{email}</p>
+            <p className="user-info">Username: {nickname}</p>
         </div>
+      </div>
       </div>
       <Footer/>
     </div>
