@@ -32,9 +32,9 @@ const Footer = () => {
                         <FooterLinksWrapper>
                             <FooterLinkItems>
                                 <FooterLinkTitle> Meet the Developers</FooterLinkTitle>
-                                <FooterLink to="/">Katie Anilionis</FooterLink>
-                                <FooterLink to="/">Nora Curcio</FooterLink>
-                                <FooterLink to="/">Dana Kuglin </FooterLink>
+                                <FooterLink to="/https://www.linkedin.com/in/katie-anilionis-4720258a/">Katie Anilionis</FooterLink>
+                                <FooterLink to="/https://www.linkedin.com/in/nora-curcio-578b21184/">Nora Curcio</FooterLink>
+                                <FooterLink to="/https://www.linkedin.com/in/danakuglin/">Dana Kuglin </FooterLink>
                                 
                             </FooterLinkItems>
                         </FooterLinksWrapper>
@@ -46,7 +46,7 @@ const Footer = () => {
                         <WebsiteRights>Shake It © 2020 </WebsiteRights>
                         <SocialIcons>
                             
-                            <SocialIconLink href='/' target='_blank' aria-label='Github'>
+                            <SocialIconLink href='/https://github.com/Kanilionis/MasonJar' target='_blank' aria-label='Github'>
                                 <FaGithub />
                             </SocialIconLink>
                             
@@ -59,8 +59,8 @@ const Footer = () => {
                             <FooterLinkItems>
                                 <FooterLinkTitle> Meet the Developers</FooterLinkTitle>
                                 <FooterLink to="/">Tessa Pierce</FooterLink>
-                                <FooterLink to="/">Claire Bohlen</FooterLink>
-                                <FooterLink to="/"></FooterLink>
+                                <FooterLink to="/https://www.linkedin.com/in/tesssapierce/">Claire Bohlen</FooterLink>
+                                <FooterLink to="/https://www.linkedin.com/in/claire-bohlen-63a4b5119/"></FooterLink>
                                 
                                 
                             </FooterLinkItems>

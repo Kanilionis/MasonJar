@@ -60,9 +60,10 @@ export const FooterLink = styled.div`
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;
+    cursor: pointer;
 
     &:hover{
-        color: red;
+        color:#c199a1;
         transition: 0.3s ease-out;
 
     }
@@ -105,7 +106,7 @@ export const SocialIcons = styled.div`
   align-items: center;
   width: 240px;
   margin-left: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 
 
   
@@ -115,7 +116,7 @@ export const SocialIconLink = styled.a`
   color: #fff;
   font-size: 40px;
   &:hover{
-        color: #F9A826;
+        color: #c199a1;
         transition: 0.3s ease-out;
 
     }
@@ -128,7 +129,7 @@ export const NavLogoImg = styled.img `
     width: 60px;
     padding-right: 5px;
     &:hover{
-        color: #F9A826;
+        color: #c199a1;
         transition: 0.3s ease-out;
 
     }

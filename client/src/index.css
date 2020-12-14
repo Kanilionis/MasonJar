@@ -337,22 +337,23 @@ li {
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .login-btn {
     width: 80px;
     height: 80px;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .enterBtn {
     display: inline-block;
-    width: 28%;
+    width: 54%;
+    margin-right: 11px;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .logout-btn {
     display: inline-block;
-    width: 40%;
+    width: 60%;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -850,10 +851,16 @@ img.modal-img {
   }
   @media only screen and (max-width: 800px) {
     .form-container-backdrop {
-      margin-top: 15%;
-  
+      /* margin-top: 15; */
+      background-color: transparent;
     }
   }
+  /* @media only screen and (max-width: 00px) {
+    .form-container-backdrop {
+      padding-top: 20px;
+  
+    }
+  } */
 
   .form-container-backdrop:hover {
     transform: scale(1);
