@@ -37,25 +37,23 @@ const Footer = () => {
                                 <FooterLink to="/https://www.linkedin.com/in/danakuglin/">Dana Kuglin </FooterLink>
                                 
                             </FooterLinkItems>
-                        </FooterLinksWrapper>
-                    </FooterLinksContainer>
-                    <SocailMediaWrap>
-                        <SocialLogo to='/' onClick={toggleHome}>
-                        {/* <NavLogoImg src={Logo} alt="bear-logo"/> */}
-                        </SocialLogo>
-                        <WebsiteRights>Shake It © 2020 </WebsiteRights>
-                        <SocialIcons>
+                      
+                            <SocailMediaWrap>
+                            <SocialLogo to='/' onClick={toggleHome}>
+                            {/* <NavLogoImg src={Logo} alt="bear-logo"/> */}
+                            </SocialLogo>
+                            <WebsiteRights>Shake It © 2020 </WebsiteRights>
+                            <SocialIcons>
                             
                             <SocialIconLink href='/https://github.com/Kanilionis/MasonJar' target='_blank' aria-label='Github'>
                                 <FaGithub />
                             </SocialIconLink>
                             
-                        </SocialIcons>
+                            </SocialIcons>
                         
 
-                    </SocailMediaWrap>
-                    <FooterLinksContainer>
-                        <FooterLinksWrapper>
+                            </SocailMediaWrap>
+                    
                             <FooterLinkItems>
                                 <FooterLinkTitle> Meet the Developers</FooterLinkTitle>
                                 <FooterLink to="/">Tessa Pierce</FooterLink>
@@ -64,7 +62,7 @@ const Footer = () => {
                                 
                                 
                             </FooterLinkItems>
-                        </FooterLinksWrapper>
+                            </FooterLinksWrapper>
                     </FooterLinksContainer>
                 </FooterWrap>
                             
