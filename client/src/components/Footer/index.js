@@ -42,7 +42,7 @@ const Footer = () => {
                             <SocialLogo to='/' onClick={toggleHome}>
                             {/* <NavLogoImg src={Logo} alt="bear-logo"/> */}
                             </SocialLogo>
-                            <WebsiteRights>Shake It © 2020 </WebsiteRights>
+                            <WebsiteRights>Shake It Up © 2020 </WebsiteRights>
                             <SocialIcons>
                             
                             <SocialIconLink href='/https://github.com/Kanilionis/MasonJar' target='_blank' aria-label='Github'>
