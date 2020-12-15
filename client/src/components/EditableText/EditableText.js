@@ -28,6 +28,10 @@ const EditableText = (props) => {
           };
     });
 
+    useEffect(() =>{
+      setText(props.text)
+    }, [props.text])
+
 
     return (
         <div>
