@@ -118,7 +118,7 @@ const TabsPage = (props) => {
       <div as={Container} className="themes-page">
         <Nav />
         <Row as={Row} className="row input-container">
-          <Col xs={12} md={6} lg={4} className="input-area split-2">
+          <Col xs={12} md={6} lg={4} className="input-area">
             <div className="shaker-form">
                 <form className="shaker-form-size">
                   <h2 className="h2-text">Welcome to the customized shaker!</h2>
@@ -143,13 +143,13 @@ const TabsPage = (props) => {
                     </svg>
                   </div>
                   <p>Now add some ideas over here</p>
-                  <FaArrowRight />
+                  <FaArrowRight className="themesArrow"/>
                 </form>
             </div>
           </Col>
 
 
-          <Col xs={12} md={6} lg={8} className="export-container split-2">
+          <Col xs={12} md={6} lg={8} className="export-container">
             <h2 className="customizeShakerH2">customize your shaker</h2>
             <div className="tableResults tabsRoot tabs-container">
               <Tabs selectedIndex={currentTab.index}  >
