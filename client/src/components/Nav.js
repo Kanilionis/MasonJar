@@ -29,7 +29,8 @@ function Nav() {
       <RBS.Navbar className="navStyle" bg="transparent" expand="lg">
       <img className="imgNav" src={logo}  alt="Shaker Mason Jar"/>
       <RBS.Navbar.Toggle aria-controls="basic-navbar-nav"/>
-      <RBS.Navbar.Collapse id="basic-navbar-nav">
+      <RBS.Navbar.Collapse id="basic-navbar-nav"
+>
         <RBS.Nav className="mr-auto">
           <RBS.Nav.Link as={Link} to="/shaker">Shake It Up</RBS.Nav.Link>
             <RBS.Nav.Link as={Link} to="/contact">contact</RBS.Nav.Link>
