@@ -211,7 +211,7 @@ const TabsPage = (props) => {
                       </tbody>
                     </Table>
                     <Input
-                      placeholder="activity name"
+                      placeholder="add an idea here"
                       value={formObject.name}
                       name="activity"
                       onChange={handleInputChange}>

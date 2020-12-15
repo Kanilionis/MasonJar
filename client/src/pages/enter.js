@@ -7,9 +7,8 @@ import EnterButton from '../components/EnterButton';
 import LoginButton from '../components/LoginButton';
 import GuestButton from '../components/GuestButton.js';
 import Logo from "../components/Logo"
-// import GuestButton from '../components/GuestButton.js';
 import Nav from "../components/Nav";
-import { useAuth0 } from "../react-auth0-spa";
+import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "../components/LogoutButton";
 import TextEnterPage from "../components/TextEnterPage"
 
@@ -28,12 +27,9 @@ const Enter = () => {
       <div className="enter-container">
         <div className="split left">
 
-
-
         {isAuthenticated ? (
              <div>
-               {/* <Link to="/shaker"className={location.pathname === "/shaker" ? "nav-link active" : "nav-link"}>
-            </Link> */}
+               
                <Nav/>
              </div>
              ): (
@@ -43,11 +39,8 @@ const Enter = () => {
  
                )}
         
-
           <div className="centered">
             <Logo />
-            {/* <img src={logo} alt="shaker" height="400px" /> */}
-            {/* <h1>Welcome To Shake It Up! </h1> */}
             <p className="enterText">new ideas...no decisions</p>
           </div>
         </div>
@@ -68,23 +61,20 @@ const Enter = () => {
               wrapper="p"
             /> */}
 
-            {isAuthenticated ? (
+            {/* {isAuthenticated ? (
              
-            
             <div className="row">
             <div className="col-md-12">
               <EnterButton />
-              
+            
             </div>
             
             <div className="col-md-12">
               <LogoutButton />
             </div>
             </div>
-            
-            
-
-            ): (
+          
+            ): ( */}
               
               <div className="row">
               <div className="col-md-12">
@@ -98,13 +88,14 @@ const Enter = () => {
               
             </div>
 
-              )}
+              {/* )} */}
 
             <div>
             </div>
           </div>
         </div>
       </div>
+     
     </>
   )
 }

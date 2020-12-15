@@ -1,11 +1,9 @@
 import React from "react";
-import { useAuth0 } from "../react-auth0-spa";
-import Button from 'react-bootstrap/Button';
-import logo from "../images/New_Jar.svg";
-import AuthRedirect from "./AuthRedirect"
+import { useAuth0 } from "@auth0/auth0-react";
 
 const LoginButton = () => {
-  const { loginWithRedirect } = useAuth0();
+
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
   
   return(
       <>
