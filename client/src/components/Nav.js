@@ -34,7 +34,7 @@ function Nav() {
           <RBS.Nav.Link as={Link} to="/shaker">Shake It Up</RBS.Nav.Link>
             <RBS.Nav.Link as={Link} to="/contact">contact</RBS.Nav.Link>
             <RBS.Nav.Link as={Link} to="/viewthemes">themes</RBS.Nav.Link> 
-            <RBS.Nav.Link as={Link} to="/profile">profile</RBS.Nav.Link>
+            {/* <RBS.Nav.Link as={Link} to="/profile">profile</RBS.Nav.Link> */}
             <RBS.Nav.Link as={Link} to="/">login</RBS.Nav.Link>  
           </RBS.Nav>
       </RBS.Navbar.Collapse>

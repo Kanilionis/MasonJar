@@ -29,9 +29,9 @@ render(){
 
   return(
     <>
-    <Carousel controls={false} fade={true} indicators={false} interval={2500} >
+    <Carousel controls={false} fade={true} indicators={false} >
     {this.state.textArray.map(text => (
-      <Carousel.Item >
+      <Carousel.Item interval={2700}>
         <div className="text-animation">{text.text}</div>
       </Carousel.Item>
     ))}
