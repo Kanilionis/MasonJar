@@ -32,14 +32,14 @@ const TabsPage = (props) => {
     currentActivity: ""
   })
   const [currentTab, setCurrentTab] = useState({
-    theme: "Netflix & Chill",
+    theme: "",
     index: 0
   })
   const [editActivity, setEditActivity] = useState({})
   //loading all themes and storing them within setThemes
   useEffect(() => {
     loadThemes()
-  }, [currentTab])
+  }, [])
   //Loads a single theme and its activities based on a click
   //loading all themes and sets them to themes 
   function loadThemes() {
@@ -75,8 +75,8 @@ const TabsPage = (props) => {
   function handleTabChange(theme, index) {
     setCurrentTab({ theme: [theme] , index: parseInt(index)})
   }
-  function handleDelete(id) {
-    API.deleteActivity(currentTab.theme, id)
+  function handleDelete(activity) {
+    API.deleteActivity(formObject.theme, activity)
       .then(res => loadThemes())
       .catch(err => console.log(err));
   }
@@ -135,9 +135,9 @@ const TabsPage = (props) => {
                     placeholder="ex. 'What's for Dinner'"
                     value={formObject.name}
                   />
-                  <div className="newActivityBtn">
+                  <div >
                       {/* <svg className="" disabled={!(formObject.theme)} onClick={handleNewShaker} height="250px" width="100%" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231.08 373.45"><defs></defs><path d="M214.68,385.93c6.72,0,13.33.19,19.93-.12a8.13,8.13,0,0,0,5.33-2.56c29.53-35.86,88.6-35.83,118.22.06a8.24,8.24,0,0,0,5.34,2.51c5.63.32,11.28.11,17.68.11v56c-5.45,0-11.54-.19-17.6.12a8.25,8.25,0,0,0-5.44,2.46c-16.5,20-38.23,27.61-63.35,26.52-22.14-1-41-9.23-55.19-26.89-1-1.28-3.34-2-5.09-2.11-6.47-.25-13-.1-19.83-.1Z" transform="translate(-181.79 -224.01)" /><rect className="cls-2" x="16" y="160.88" width="200.2" height="57.05" /><text id="newshaker-jar" x="50%" y="53%" textAnchor="middle" fill="white">create new shaker</text></svg> */}
-  <svg className="create-shaker-btn" disabled={!(formObject.theme)} onClick={handleNewShaker} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" height="50"
+  <svg className="create-shaker-btn" disabled={!(formObject.theme)} onClick={handleNewShaker} cursor="pointer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" height="50"
 	viewBox="0 0 53.608 30.729" enableBackground="new 0 0 53.608 30.729" space="preserve">
   <path d="M3.931,7.915c1.799,0,3.569,0.051,5.336-0.032c0.545-0.041,1.055-0.286,1.427-0.686c7.908-9.602,23.725-9.594,31.657,0.016
 	c0.377,0.393,0.887,0.632,1.43,0.672c1.508,0.085,3.021,0.029,4.734,0.029V22.91c-1.459,0-3.09-0.051-4.713,0.031
@@ -193,7 +193,7 @@ const TabsPage = (props) => {
                                   <tr>
                                     <td value={editActivity.activity}>
                                       <>
-                                        <FaTrash onClick={() => handleDelete(activity._id)} />
+                                        <FaTrash onClick={() => handleDelete(formObject.name)} />
                                         <Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name} />
                                       </>
                                     </td>
@@ -211,14 +211,14 @@ const TabsPage = (props) => {
                       </tbody>
                     </Table>
                     <Input
-                      placeholder="add an idea here"
+                      placeholder="activity name"
                       value={formObject.name}
                       name="activity"
                       onChange={handleInputChange}>
                     </Input>
-                    <div className="newActivityBtn">
+                    <div >
                       {/* <svg className="" disabled={!(formObject.activity)} onClick={handleNewActivity} height="250px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231.08 373.45"><defs></defs><path d="M214.68,385.93c6.72,0,13.33.19,19.93-.12a8.13,8.13,0,0,0,5.33-2.56c29.53-35.86,88.6-35.83,118.22.06a8.24,8.24,0,0,0,5.34,2.51c5.63.32,11.28.11,17.68.11v56c-5.45,0-11.54-.19-17.6.12a8.25,8.25,0,0,0-5.44,2.46c-16.5,20-38.23,27.61-63.35,26.52-22.14-1-41-9.23-55.19-26.89-1-1.28-3.34-2-5.09-2.11-6.47-.25-13-.1-19.83-.1Z" transform="translate(-181.79 -224.01)" /><rect className="cls-2" x="16" y="160.88" width="200.2" height="57.05" /><text id="themes-jar" x="50%" y="53%" textAnchor="middle" fill="white">add new activity</text></svg> */}
-  <svg className="create-shaker-btn" disabled={!(formObject.activity)} onClick={handleNewActivity} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" height="50"
+  <svg className="add-new-btn" disabled={!(formObject.activity)} onClick={handleNewActivity} cursor="pointer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" height="50"
 	viewBox="0 0 53.608 30.729" enableBackground="new 0 0 53.608 30.729" space="preserve">
   <path d="M3.931,7.915c1.799,0,3.569,0.051,5.336-0.032c0.545-0.041,1.055-0.286,1.427-0.686c7.908-9.602,23.725-9.594,31.657,0.016
 	c0.377,0.393,0.887,0.632,1.43,0.672c1.508,0.085,3.021,0.029,4.734,0.029V22.91c-1.459,0-3.09-0.051-4.713,0.031
