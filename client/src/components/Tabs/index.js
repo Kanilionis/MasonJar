@@ -120,7 +120,6 @@ const TabsPage = (props) => {
         <Row as={Row} className="row input-container">
           <Col xs={12} md={6} lg={4} className="input-area split-2">
             <div className="shaker-form">
-              <div class="wrapper-around">
                 <form className="shaker-form-size">
                   <h2 className="h2-text">Welcome to the customized shaker!</h2>
                   <p>Please enter the title/theme of your shaker below</p>
@@ -146,7 +145,6 @@ const TabsPage = (props) => {
                   <p>Now add some ideas over here</p>
                   <FaArrowRight />
                 </form>
-              </div>
             </div>
           </Col>
 
@@ -188,10 +186,10 @@ const TabsPage = (props) => {
                                 ?
                                 <>
                                   <tr>
-                                    <td value={editActivity.activity}>
+                                    <td value={activity.name}>
                                       <>
                                         <FaTrash onClick={() => handleDelete(activity._id)} />
-                                        <Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name} />
+                                        <Edit loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name} />
                                       </>
                                     </td>
                                   </tr>
@@ -199,7 +197,7 @@ const TabsPage = (props) => {
                                 :
                                 <>
                                   <tr>
-                                    <td><Edit handleEdit={handleEdit} handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name} /></td>
+                                    <td>{activity.name}</td>
                                   </tr>
                                 </>
                             }

@@ -682,24 +682,6 @@ img.modal-img {
 
 }
 
-/* Split the screen in half */
-/* .split-2 {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 0;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  padding-right:20px;
-  padding-bottom: 20px;
-  flex-wrap: wrap;
-}  */
-
-/* .split-2{
-  border: solid
-} */
-
 .smaller-text {
   font-size: 10px;
   padding-top: 20px;
@@ -764,31 +746,15 @@ img.modal-img {
 
 }
 
-@media only screen and (max-width: 600px) {
-  .shaker-form {
-    align-content: center;
-    padding-left: 40px;
-    height: 50%;
-
-  }
-}
-
 /* Div section around form element */
 .shaker-form {
-  /* width: 25%; */
-  /* position: absolute; */
-  /* transform: translate(0%, 50%); */
   text-align: center;
-  margin-top: 50%;
+  margin-top: 10px;
   background-color: rgb(241, 240, 240);
   margin-left: 20px;
   margin-right: 20px;
   padding: 20px;
-
-  
-
-  
-
+  word-spacing: unset
 }
 
 /* Header for customize */
