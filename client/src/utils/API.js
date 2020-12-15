@@ -20,8 +20,8 @@ export default {
     return axios.put("/api/shakeit/" + theme + "/" + activity)
   },
 
-  deleteActivity: function(theme, activity){
-    return axios.put("/api/shakeit/delete/" + theme + "/" + activity)
+  deleteActivity: function(theme, id){
+    return axios.put("/api/shakeit/delete/" + theme + "/" + id)
   },
 
   updateActivity: function(theme, activity, index){
