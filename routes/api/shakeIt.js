@@ -19,7 +19,7 @@ router
   .put(shakeItController.update)
 
 router
-.route("/delete/:theme/:activity")
+.route("/delete/:theme/:id")
   .put(shakeItController.remove);
 
 router

@@ -32,14 +32,14 @@ const TabsPage = (props) => {
     currentActivity: ""
   })
   const [currentTab, setCurrentTab] = useState({
-    theme: "",
+    theme: "Netflix & Chill",
     index: 0
   })
   const [editActivity, setEditActivity] = useState({})
   //loading all themes and storing them within setThemes
   useEffect(() => {
     loadThemes()
-  }, [])
+  }, [currentTab])
   //Loads a single theme and its activities based on a click
   //loading all themes and sets them to themes 
   function loadThemes() {
@@ -75,8 +75,8 @@ const TabsPage = (props) => {
   function handleTabChange(theme, index) {
     setCurrentTab({ theme: [theme] , index: parseInt(index)})
   }
-  function handleDelete(activity) {
-    API.deleteActivity(currentTab.theme, activity)
+  function handleDelete(id) {
+    API.deleteActivity(currentTab.theme, id)
       .then(res => loadThemes())
       .catch(err => console.log(err));
   }
@@ -193,7 +193,7 @@ const TabsPage = (props) => {
                                   <tr>
                                     <td value={editActivity.activity}>
                                       <>
-                                        <FaTrash onClick={() => handleDelete(activity.name)} />
+                                        <FaTrash onClick={() => handleDelete(activity._id)} />
                                         <Edit handleSave={handleSave} loadThemes={loadThemes} index={index} currentTheme={currentTab.theme} text={activity.name} />
                                       </>
                                     </td>
