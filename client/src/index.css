@@ -9,15 +9,18 @@
 /* Ham menu on right side */
 @media only screen and (max-width: 600px) {
   .navbar-toggler {
-    margin-left: 300px;
-    margin-top: -30px;
+    margin-right: 40%;
+    margin-top: 10px
+    /* float: left; */
+    /* margin-left: -300px;
+    margin-top: -30px; */
   }
 }
 
 @media only screen and (max-width: 600px) {
   .imgNav {
-    width: 30px;
-    height: 30px;
+    /* width: 80px; */
+    height: 90px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -571,6 +574,8 @@ input::-webkit-input-placeholder {
 }
 
 .newActivityBtn {
+  margin-top: 15px;
+  margin-bottom: 15px;
   text-align: center;
   cursor: pointer;
 }
@@ -822,9 +827,14 @@ img.modal-img {
   cursor: pointer
 }
 
+.add-new-btn{
+  margin: 20px;
+  margin-left: 45%
+}
 .create-shaker-btn{
   margin: 10px
 }
+
 .shaker-pg-btn-2 {
 
  
