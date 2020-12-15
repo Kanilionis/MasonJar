@@ -1,34 +1,50 @@
 import React from "react";
-import { useAuth0 } from "../react-auth0-spa";
+import { useAuth0 } from "@auth0/auth0-react";
 import Nav from "../components/Nav";
-import Footer from "../components/Footer/index.js";
 import "../index.css";
+
 //this destructures useAuth0 into useable variables
 const Profile = () => {
-  const { user } = useAuth0();
+
+  const { user,  isAuthenticated } = useAuth0();
   const { name, picture, email, nickname } = user;
+
   return (
-    <div>
-      <Nav/>
-      <div className="test">
-      <div className="profile-container">
-        <div className="profile-title col-md-2 mb-3">
-          <img
-            src={picture}
-            alt="Profile"
-            className="rounded-circle img-fluid profile-picture mb-3 mb-md-0"
-          />
+    <>
+   {isAuthenticated ? (
+     <>
+       <div>
+          <Nav/>
+          <div className="test">
+            <div className="profile-container">
+              <div className="profile-title col-md-2 mb-3">
+                <img
+                  src={picture}
+                  alt="Profile"
+                  className="rounded-circle img-fluid profile-picture mb-3 mb-md-0"
+                />
+              </div>
+              <div className="col-md text-center text-md-left">
+                <h2 className="user-name">{name}</h2>
+                  <br></br>
+                  <p className="user-info ">Email: {email}</p> 
+                  <p className="user-info">Username: {nickname}</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="col-md text-center text-md-left">
-          <h2 className="user-name">{name}</h2>
-            <br></br>
-            <p className="user-info ">Email: {email}</p> 
-            <p className="user-info">Username: {nickname}</p>
-        </div>
-      </div>
-      </div>
-      <Footer/>
-    </div>
-  );
+        </>
+    ) : (
+        
+      <>
+      <p>Not logged in...</p>
+      </>
+
+    )}
+     
+    </>
+    
+  )
 };
+
 export default Profile;
