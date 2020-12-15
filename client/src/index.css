@@ -6,6 +6,14 @@
 
 /* Main Shaker Page Sytling */
 
+/* Ham menu on right side */
+@media only screen and (max-width: 600px) {
+  .navbar-toggler {
+    margin-left: 300px;
+    margin-top: -30px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .imgNav {
     width: 30px;
@@ -882,6 +890,7 @@ img.modal-img {
     .form-container-backdrop {
       /* margin-top: 15; */
       background-color: transparent;
+      box-shadow: none;
     }
   }
   /* @media only screen and (max-width: 00px) {
