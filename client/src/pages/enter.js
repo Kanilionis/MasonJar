@@ -1,4 +1,6 @@
 import React from "react";
+import logo from "../images/NewFavicon.svg";
+import { Link, useLocation } from "react-router-dom";
 import "../index.css";
 import Typical from 'react-typical';
 import EnterButton from '../components/EnterButton';
@@ -8,18 +10,26 @@ import Logo from "../components/Logo"
 import Nav from "../components/Nav";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "../components/LogoutButton";
+import TextEnterPage from "../components/TextEnterPage"
+
+
 
 
 const Enter = () => {
   const { isAuthenticated } = useAuth0();
-
+  const location = useLocation();
+  // const { textArray, setTextArray} = useState([
+  //   "What should we do?", "How about a movie?", "Maybe a dinner date?"
+  // ])
+ 
   return (
     <>
       <div className="enter-container">
         <div className="split left">
 
-        {/* {isAuthenticated ? (
+        {isAuthenticated ? (
              <div>
+               
                <Nav/>
              </div>
              ): (
@@ -27,7 +37,7 @@ const Enter = () => {
                <>
                </>
  
-               )} */}
+               )}
         
           <div className="centered">
             <Logo />
@@ -36,25 +46,30 @@ const Enter = () => {
         </div>
         <div className="split right">
           <div className="centered-right">
-            <h2>SHAKE IT UP</h2>
-            <Typical className=""
-              steps={['What should we do?', 300,
-                'How about a movie?', 300,
-                'Maybe a dinner date?', 300]}
+            <h2 className="enterShakeText">SHAKE IT UP</h2>
+            {/* <p className="">new ideas...no decisions</p> */}
+              
+              <TextEnterPage />
+             
+        
+           
+            {/* <Typical 
+              steps={['What should we do?', 1000,
+                'How about a movie?', 500,
+                'Maybe a dinner date?', 500]}
               loop={Infinity}
               wrapper="p"
-            />
+            /> */}
 
             {/* {isAuthenticated ? (
              
             <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-12">
               <EnterButton />
             
             </div>
-            <div className="col-md-6">
-            </div>
-            <div className="col-md-3">
+            
+            <div className="col-md-12">
               <LogoutButton />
             </div>
             </div>
@@ -62,16 +77,15 @@ const Enter = () => {
             ): ( */}
               
               <div className="row">
-              <div className="col-md-3">
+              <div className="col-md-12">
                 <LoginButton />
                 
               </div>
-              <div className="col-md-6">
-              </div>
-              <div className="col-md-3">
+              
+              <div className="col-md-12">
                 <GuestButton />
               </div>
-              <div className="col-md-4"></div>
+              
             </div>
 
               {/* )} */}

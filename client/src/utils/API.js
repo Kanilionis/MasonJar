@@ -31,5 +31,6 @@ export default {
   deleteTheme: function(theme){
     return axios.delete("/api/shakeit/" + theme)
   }
+
 };
    

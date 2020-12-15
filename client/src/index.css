@@ -281,7 +281,7 @@ li {
 .form-container-backdrop:hover {
   transform: scale(1.02);
   transition: all 0.2s ease-in-out;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .h1-contact {
@@ -344,6 +344,12 @@ li {
   }
 }
 @media only screen and (max-width: 900px) {
+  .guest-btn {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media only screen and (max-width: 900px) {
   .enterBtn {
     display: inline-block;
     width: 54%;
@@ -387,7 +393,7 @@ h2 {
 }
 
 .infinityText {
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 25px;
   font-style: italic;
 }
@@ -397,7 +403,7 @@ h2 {
 }
 #login-jar {
   font-family: "Architects Daughter", cursive;
-  font-size: 40px;
+  
 }
 
 #themes-jar {
@@ -424,23 +430,30 @@ h2 {
   padding-bottom: 20px;
 }
 
-.login-btn {
+.enterBtn{
+  margin-top: 10px;
   cursor: pointer;
-  position: absolute;
-  margin-left: -60px;
-  /* margin-top: -80px; */
+}
+
+.login-btn {
+  margin-top: 10px;
+  cursor: pointer;
+  /* position: absolute; */
+ 
 }
 .guest-btn {
   cursor: pointer;
-  position: absolute;
-  margin-left: -60px;
-  /* margin-top: 20px */
+  /* position: absolute; */
+  margin-top: 10px
 }
 
 .logout-btn {
+  margin-top: 10px;
   cursor: pointer;
+  word-spacing: -1px;
+  /* cursor: pointer;
   position: absolute;
-  margin-left: -60px;
+  margin-left: -60px; */
   /* margin-top: 20px */
 }
 /* Control the left side */
@@ -462,6 +475,10 @@ h2 {
   right: 0;
   background-color: rgb(241, 240, 240);
 }
+.enterShakeText{
+  font-family: "Architects Daughter", cursive;
+  font-size: 50px
+}
 
 /* If you want the content centered horizontally and vertically */
 .centered {
@@ -480,7 +497,7 @@ h2 {
 
 .centered-right {
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -551,10 +568,6 @@ input::-webkit-input-placeholder {
 }
 
 /* Log in / Log Out Buttons */
-.enterBtn {
-  margin-bottom: 10px;
-}
-
 
 /* Modal Styling 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -815,7 +828,7 @@ img.modal-img {
 
 .shaker-pg-btn-1 {
   
-    
+    margin-top: 10px;
     cursor: pointer;
   
 
@@ -830,11 +843,19 @@ img.modal-img {
 #contact-us {
   font-size: 36px;
 }
+.submit-btn{
+  margin-top: 60px;
+  cursor: pointer
+}
+
+.create-shaker-btn{
+  margin: 10px
+}
 .shaker-pg-btn-2 {
 
  
   cursor: pointer;
-  margin-top: -33px;
+  margin-top: -20px;
   margin-bottom: -50px;
 }
 .extras {
@@ -928,3 +949,5 @@ img.modal-img {
 .confirmHeader {
   color: black;
 }
+
+
