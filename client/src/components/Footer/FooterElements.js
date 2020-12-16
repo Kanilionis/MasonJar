@@ -48,7 +48,7 @@ export const FooterLinkItems = styled.div`
 
     @media screen and (max-width: 420px){
         margin: 0; 
-        padding: 100px; 
+        padding: 10px; 
         width: 100%;
 
     }
@@ -104,8 +104,7 @@ export const WebsiteRights = styled.small`
   margin-bottom: 16px;
   
   @media screen and (max-width: 820px){
-        display:none;
-        
+    //   this is the damn copyright
     }
 `;
 

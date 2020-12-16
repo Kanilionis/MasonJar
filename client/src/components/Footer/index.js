@@ -40,7 +40,6 @@ const Footer = () => {
                       
                             <SocailMediaWrap>
                             <SocialLogo to='/' onClick={toggleHome}>
-                            {/* <NavLogoImg src={Logo} alt="bear-logo"/> */}
                             </SocialLogo>
                             <WebsiteRights>Shake It Up © 2020 </WebsiteRights>
                             <SocialIcons>

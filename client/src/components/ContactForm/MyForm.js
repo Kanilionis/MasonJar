@@ -14,33 +14,29 @@ export default class MyForm extends React.Component {
     const { status } = this.state;
     return (
       <>
-     
-      <h1 className="h1-contact">Contact Us</h1>
-      {/* <p className="p-contact">Didn't see something you like? Make a suggestion to the Shaker Team!</p> */}
-      <div className="App">
-      <form 
-        onSubmit={this.submitForm}
-        action="https://formspree.io/f/xwkwrzwq"
-        method="POST"
-      >
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input className="form-control" id="name" type="text" name="name" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Email:</label>
-          <input className="form-control" id="email" type="email" name="email" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Message:</label>
-          <textarea className="form-control" id="message" type="text" name="message" />
-        </div>
-        
-       
-        {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button> }
-        {status === "ERROR" && <p>Ooops! There was an error.</p>}
-      </form>
-      </div>
+        <h2 className="h2-text">Contact Us</h2>
+          <form
+            onSubmit={this.submitForm}
+            action="https://formspree.io/f/xwkwrzwq"
+            method="POST"
+          >
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <input className="form-control" id="name" type="text" name="name" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="exampleInputEmail1">Email:</label>
+              <input className="form-control" id="email" type="email" name="email" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message:</label>
+              <textarea className="form-control" id="message" type="text" name="message" />
+            </div>
+            <div className="form-group">
+              {status === "SUCCESS" ? <p>Thanks!</p> : <button className="contactBtn">Submit</button>}
+              {status === "ERROR" && <p>Ooops! There was an error.</p>}
+            </div>
+          </form>
       </>
     );
   }
