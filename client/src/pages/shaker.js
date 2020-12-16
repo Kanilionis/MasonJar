@@ -90,7 +90,7 @@ return(
     <center> 
       <ShakerTop />
       {shakers.length ? (
-        <Carousel className="center carousel col-md-3-col-sm-8" indicators={true} fade={true} >
+        <Carousel interval={1000} className="center carousel col-md-3-col-sm-8" indicators={true} >
         {shakers.map(shaker => (
           <Carousel.Item className="carousel-item" >
             <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>

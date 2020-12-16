@@ -7,7 +7,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 
 function Nav() {
-  const { logout, isAuthenticated } = useAuth0();
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
 
   return (
     <>
@@ -36,7 +36,7 @@ function Nav() {
             <RBS.Nav.Link as={Link} to="/contact">contact</RBS.Nav.Link>
             <RBS.Nav.Link as={Link} to="/viewthemes">themes</RBS.Nav.Link> 
             {/* <RBS.Nav.Link as={Link} to="/profile">profile</RBS.Nav.Link> */}
-            <RBS.Nav.Link as={Link} to="/">login</RBS.Nav.Link>  
+            <RBS.Nav.Link onClick={() => loginWithRedirect({returnTo: "http://localhost:3000/shaker"})}>login</RBS.Nav.Link>  
           </RBS.Nav>
       </RBS.Navbar.Collapse>
     </RBS.Navbar>

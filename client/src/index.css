@@ -781,6 +781,7 @@ img.modal-img {
 */
 
 .profile-container {
+  z-index: -1;
   background: linear-gradient(
     108deg,
     rgb(163, 133, 155) 0%,
