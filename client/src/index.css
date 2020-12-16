@@ -1,12 +1,4 @@
-/* Navbar styling*/
-/* .navStyle{
-  margin-top: 10px;
-  height: 30px;
-  font-family: 'Architects Daughter', cursive;} */
 
-/* Main Shaker Page Sytling */
-
-/* Ham menu on right side */
 @media only screen and (max-width: 600px) {
   .navbar-toggler {
     margin-right: 40%;
@@ -663,10 +655,6 @@ img.modal-img {
     width: 22rem !important;
   }
 
-  .wrapper-around {
-    width: 20px;
-  }
-
   .form-container-backdrop:hover {
     transform: scale(1);
   }
@@ -696,19 +684,8 @@ img.modal-img {
 
 
 .export-container {
-  /* position: absolute; */
-  width: 75%;
-  right: 0;
   height: 100%;
-  
 }
-
-.navStyle {
-  z-index: 10;
-  width: 50%;
-}
-
-
 
 
 /* THEMES PAGE */
@@ -726,43 +703,21 @@ img.modal-img {
   overflow-y: scroll;
 }
 
-
-@media only screen and (max-width: 600px) {
-  .tabs-container {
-    height: 100%;
-    /* width: 28%; */
-  }
-
-  .themesArrow {
-    transform: rotate(90deg);
-  }
-}
-
-
 /* This is the form for adding a new shaker */
 .input-area{
   font-family: 'Montserrat', sans-serif;
-  margin: 0 auto;
-  /* position: fixed; */
-  /* bottom: 0; 
-  /* left: 0;  */
-  /* right: 0;  */
+  margin: auto;
   align-content: center;
   z-index: 0; 
   overflow: none;  
-  /* background-color: rgb(241, 240, 240); */
-  /* height: 800px; */
-
 }
 
 /* Div section around form element */
 .shaker-form {
   text-align: center;
-  margin-top: 10px;
   background-color: rgb(241, 240, 240);
   margin-left: 20px;
-  margin-right: 20px;
-  padding: 20px;
+  padding: 100px 20px;
   word-spacing: unset
 }
 
@@ -867,24 +822,28 @@ img.modal-img {
     margin: 10px auto;
     height: auto;
   }
-  @media only screen and (max-width: 800px) {
+ 
     .form-container-backdrop {
       /* margin-top: 15; */
       background-color: transparent;
       box-shadow: none;
     }
-  }
-  /* @media only screen and (max-width: 00px) {
-    .form-container-backdrop {
-      padding-top: 20px;
-  
+
+    .themesArrow {
+      transform: rotate(90deg);
     }
-  } */
+  
+    .shaker-form{
+      margin: 10px;
+      padding: 10px;
+    }
 
   .form-container-backdrop:hover {
     transform: scale(1);
   }
 }
+
+
 /* Styling Profile Page
 ///////////////////////////////////////////////////////////////////////////////////////////////////  
 */
@@ -934,6 +893,8 @@ img.modal-img {
 .shake-it-up{
   font-weight: bold;
 }
+
+/* Styling for modal on Themes Page */
 
 .custom-ui{
   text-align: center;
