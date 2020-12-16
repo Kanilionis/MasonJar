@@ -120,9 +120,9 @@ const TabsPage = (props) => {
           <Col xs={12} md={6} lg={4} className="input-area split-2">
             <div className="shaker-form">
                 <form className="shaker-form-size">
-                  <h2 className="h2-text">Welcome to the customized shaker!</h2>
+                  <h2 className="h2-text">Create A New Shaker</h2>
                   <p>Please enter the title/theme of your shaker below</p>
-                  <h3 className="new-shaker-text">Create A New Shaker</h3>
+                  {/* <h3 className="new-shaker-text">Create A New Shaker</h3> */}
                   <Input
                     className="input-box-text"
                     onChange={handleInputChange}
@@ -149,7 +149,7 @@ const TabsPage = (props) => {
 
 
           <Col xs={12} md={6} lg={8} className="export-container split-2">
-            <h2 className="customizeShakerH2">customize your shaker</h2>
+            <h2 className="customizeShakerH2">Customize Your Shaker</h2>
             <div className="tableResults tabsRoot tabs-container">
               <Tabs selectedIndex={currentTab.index}  >
                 <TabList>
