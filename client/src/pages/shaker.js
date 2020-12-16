@@ -90,9 +90,9 @@ return(
     <center> 
       <ShakerTop />
       {shakers.length ? (
-        <Carousel interval={1000} className="center carousel col-md-3-col-sm-8" indicators={true} >
+        <Carousel interval={1000} controls={false} className="center carousel col-md-3-col-sm-8" fade={true}indicators={true} >
         {shakers.map(shaker => (
-          <Carousel.Item className="carousel-item" >
+          <Carousel.Item className="carousel-item" interval={1000}>
             <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
             <ModalShow pickAgain={pickAgain} isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
           </Carousel.Item>

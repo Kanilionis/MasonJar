@@ -7,7 +7,7 @@ import Nav from '../components/Nav'
 import Table from "react-bootstrap/Table"
 import Edit from '../components/EditableText/EditableText'
 import Container from 'react-bootstrap/Container'
-import {FaEdit, FaTrash, FaSave, FaArrowRight } from 'react-icons/fa'
+import {FaEdit, FaTrash, FaSave, FaArrowRight, FaArrowDown } from 'react-icons/fa'
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
 import "../index.css"
@@ -126,11 +126,14 @@ const viewthemes = (props) => {
         <Row as={Row} className="row input-container">
 
           {/* Left Side  //  Add New Shaker/Theme */}
-          <Col xs={12} md={6} lg={4} className="input-area">
+          {/* <Col xs={12} md={6} lg={4}  */}
+          <Col xs={12} md={6} lg={6} 
+          className="input-area">
+            <h2 className="customizeShakerH1">Create A New Shaker</h2>
             <div className="shaker-form">
                 <form className="shaker-form-size">
-                  <h2 className="h2-text">Create A New Shaker</h2>
-                  <p>Please enter the title/theme of your shaker below</p>
+                  <br></br>
+                  <p className="new-shaker-text">enter the title or theme of your new shaker below</p>
                   <Input
                     className="input-box-text"
                     onChange={handleInputChange}
@@ -139,7 +142,7 @@ const viewthemes = (props) => {
                     value={formObject.theme}
                   />
                   <div >
-                      <svg className="create-shaker-btn" disabled={!(formObject.theme)} onClick={handleNewShaker} cursor="pointer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" height="50"
+                      <svg className="create-shaker-btn" disabled={!(formObject.theme)} onClick={handleNewShaker} cursor="pointer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" height="80"
                       viewBox="0 0 53.608 30.729" enableBackground="new 0 0 53.608 30.729" space="preserve">
                       <path d="M3.931,7.915c1.799,0,3.569,0.051,5.336-0.032c0.545-0.041,1.055-0.286,1.427-0.686c7.908-9.602,23.725-9.594,31.657,0.016
                       c0.377,0.393,0.887,0.632,1.43,0.672c1.508,0.085,3.021,0.029,4.734,0.029V22.91c-1.459,0-3.09-0.051-4.713,0.031
@@ -148,17 +151,19 @@ const viewthemes = (props) => {
                       <rect y="7.636" width="53.608" height="15.276" /><text fontSize="7.5px" id="login-jar" x="50%" y="56%" textAnchor="middle" fill="white">create shaker</text>
                     </svg>
                   </div>
-                  <p>Now add some ideas over here</p>
-                  <FaArrowRight className="themesArrow"/>
+                  <p>now add some ideas</p>
+                  <FaArrowDown className="themesArrow"/>
                 </form>
             </div>
           </Col>
 
           {/* Right Side  //  Database Render */}
-          <Col xs={12} md={6} lg={8} className="export-container">
+          {/* <Col xs={12} md={6} lg={8}  */}
+           <Col xs={12} md={10} lg={10} 
+          className="export-container">
             <h2 className="customizeShakerH2">Customize Your Shaker</h2>
-            <div className="tableResults tabsRoot tabs-container">
-              <Tabs selectedIndex={currentTab.index}  >
+            <div className="row tableResults tabsRoot tabs-container">
+              <Tabs className="col-12" selectedIndex={currentTab.index}  >
                 <TabList>
                   {themes.map((theme, index) => (
                     <>
