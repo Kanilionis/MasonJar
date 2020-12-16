@@ -76,7 +76,7 @@ export const SocailMediaWrap = styled.div`
     justify-content: space-between;
     align-items: center;
     max-width: 1100px;
-    margin: 40px auto 0 auto;
+    margin-left: 40px ;
 
     @media screen and (max-width: 820px){
         flex-direction: column;
@@ -112,7 +112,7 @@ export const SocialIcons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 240px;
+  width: 140px;
   margin-left: 15px;
   margin-bottom: 25px;
 

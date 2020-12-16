@@ -1,10 +1,10 @@
 @media only screen and (max-width: 600px) {
   .navbar-toggler {
-    margin-right: 40%;
-    margin-top: 10px;
-    /* float: left; */
-    /* margin-left: -300px;
-    margin-top: -30px; */
+    margin-right: 68%;
+    margin-top: 5px;
+    float: left;
+    margin-left: -300px;
+    /* margin-top: -30px; */
   }
 }
 
@@ -510,10 +510,11 @@ h2 {
 .react-tabs__tab-list {
   font-family: "Montserrat", sans-serif;
   border-bottom: 1px solid #aaa;
-  margin: 0 0 10px;
-  padding: 0;
+  margin-top: 10px;
+  padding: 5;
 }
 .react-tabs__tab {
+  
   font-family: "Montserrat", sans-serif;
   display: inline-block;
   border: 1px solid transparent;
@@ -521,7 +522,8 @@ h2 {
   bottom: -1px;
   position: relative;
   list-style: none;
-  padding: 6px 12px;
+  margin-left: 65px;
+  padding: 6px 25px;
   cursor: pointer;
 }
 .react-tabs__tab--selected {
@@ -540,7 +542,7 @@ h2 {
 .themeTable {
   font-family: "Montserrat", sans-serif;
   width: 75%;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 input::-webkit-input-placeholder {
@@ -556,6 +558,11 @@ input::-webkit-input-placeholder {
   font-family: "Montserrat", sans-serif;
 }
 
+.themesArrow{
+  height: 50px;
+  width: 30px;
+  margin-bottom: 10px
+}
 .form-group {
   width: 60%;
   margin: 0 auto;
@@ -655,6 +662,10 @@ img.modal-img {
   );
   overflow: hidden;
 }
+.input-box-text{
+  margin-top: -50px;
+  margin-bottom: 10px
+}
 
 .h2-text {
   color: black;
@@ -678,12 +689,13 @@ img.modal-img {
 .tabs-container {
   font-family: "Montserrat", sans-serif;
   background-color: rgb(241, 240, 240);
-  padding: 24px 24px;
+  
+  margin-left: 11%;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 75%;
-  width: 50rem;
-  margin-top: 50px;
+  width: 100%;
+  margin-top: 20px;
   margin-bottom: 70px;
   overflow-y: scroll;
 }
@@ -692,33 +704,51 @@ img.modal-img {
 .input-area {
   font-family: "Montserrat", sans-serif;
   margin: auto;
+  margin-top: -40px;
   align-content: center;
   z-index: 0;
   overflow: none;
+  /* margin-top: 200px */
 }
 
 /* Div section around form element */
 .shaker-form {
   text-align: center;
   background-color: rgb(241, 240, 240);
-  margin-left: 20px;
-  padding: 100px 20px;
+  /* margin-left: 20px; */
+  /* padding: 10px 20px; */
   word-spacing: unset;
+  margin: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+ 
 }
 
+.customizeShakerH1{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-weight: lighter;
+  margin-left: 1%
+}
 /* Header for customize */
 .customizeShakerH2 {
   color: white;
   text-align: center;
-  font-size: 50px;
-  padding-top: 20px;
+  font-size: 54px;
+  padding-top: 50px;
+  padding-bottom: -20px;
   font-weight: lighter;
+  margin-left: 22%;
 }
 
 /* Create a new shaker text */
 .new-shaker-text {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
+  text-align: center;
 }
 
 .improve {
@@ -745,7 +775,7 @@ img.modal-img {
 .shaker-info {
   font-family: "Architects Daughter", cursive;
   color: rgba(0, 0, 0, 0.603);
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .shaker-pg-btn-1 {
@@ -885,14 +915,14 @@ img.modal-img {
     width: 17rem !important;
   }
 
-  .themesArrow {
+  /* .themesArrow {
     transform: rotate(90deg);
-  }
+  } */
 
-  .shaker-form {
+  /* .shaker-form {
     margin: 10px;
     padding: 10px;
-  }
+  } */
 
   .add-new-btn {
     margin-left: 35%;
@@ -904,9 +934,9 @@ img.modal-img {
     text-align: center;
   }
 
-  .shaker-form {
+  /* .shaker-form {
     margin: 40px;
-  }
+  } */
 
   .tabs-container {
     width: 22rem !important;

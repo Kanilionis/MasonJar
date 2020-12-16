@@ -28,17 +28,17 @@ const Footer = () => {
 
             <FooterContainer id="Footer">
                 <FooterWrap>
-                    <FooterLinksContainer>
-                        <FooterLinksWrapper>
-                            <FooterLinkItems>
-                                <FooterLinkTitle> Meet the Developers</FooterLinkTitle>
+                    <FooterLinksContainer className="container">
+                        <FooterLinksWrapper className="row">
+                            <FooterLinkItems className="col-2">
+                                {/* <FooterLinkTitle> Meet the Developers</FooterLinkTitle> */}
                                 <FooterLink to="/https://www.linkedin.com/in/katie-anilionis-4720258a/">Katie Anilionis</FooterLink>
                                 <FooterLink to="/https://www.linkedin.com/in/nora-curcio-578b21184/">Nora Curcio</FooterLink>
                                 <FooterLink to="/https://www.linkedin.com/in/danakuglin/">Dana Kuglin </FooterLink>
                                 
                             </FooterLinkItems>
                       
-                            <SocailMediaWrap>
+                            <SocailMediaWrap className="col-6">
                             <SocialLogo to='/' onClick={toggleHome}>
                             </SocialLogo>
                             <WebsiteRights>Shake It Up © 2020 </WebsiteRights>
@@ -53,8 +53,8 @@ const Footer = () => {
 
                             </SocailMediaWrap>
                     
-                            <FooterLinkItems>
-                                <FooterLinkTitle> Meet the Developers</FooterLinkTitle>
+                            <FooterLinkItems className="col-2">
+                                {/* <FooterLinkTitle> Meet the Developers</FooterLinkTitle> */}
                                 <FooterLink to="/">Tessa Pierce</FooterLink>
                                 <FooterLink to="/https://www.linkedin.com/in/tesssapierce/">Claire Bohlen</FooterLink>
                                 <FooterLink to="/https://www.linkedin.com/in/claire-bohlen-63a4b5119/"></FooterLink>
