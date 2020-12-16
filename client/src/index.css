@@ -240,9 +240,22 @@ li {
   padding-bottom: 20px;
 }
 
-.contactBtn {
-  margin-top: 20px;
+button:focus{
+  outline: 5px
 }
+
+.contactBtn {
+  background-color:rgb(241, 240, 240);
+  border: white;
+  color: white;
+  padding: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px;
+  cursor: pointer;
+}
+
 
 #message {
   margin-bottom: -30px;
@@ -750,10 +763,13 @@ img.modal-img {
   font-size: 36px;
 }
 .submit-btn {
-  margin-top: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
-
+.success{
+  margin-top:10px
+}
 .add-new-btn {
   margin: 20px;
   margin-left: 45%;

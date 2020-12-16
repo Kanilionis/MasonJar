@@ -232,11 +232,11 @@ let shakeItSeed = [
         submittedBy: "Admin"
       },
       {
-        name: "Cooking classes. Italian, French, Chilean! You can expeirence the world without stepping on a plane.",
+        name: "Cooking classes. Italian, French, Chilean! You can experience the world without stepping on a plane.",
         submittedBy: "Admin"
       },
       {
-        name: "Book a flight. The Friday to Sunday itenerary leaves plenty of time to experience a new place.",
+        name: "Book a flight. The Friday to Sunday itinerary leaves plenty of time to experience a new place.",
         submittedBy: "Admin"
       },
       {
@@ -244,7 +244,7 @@ let shakeItSeed = [
         submittedBy: "Admin"
       },
       {
-        name: "Hit the beach! Find you closest body of water and soak up the sun.",
+        name: "Hit the beach! Find your closest body of water and soak up the sun.",
         submittedBy: "Admin"
       },
       {
