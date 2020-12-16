@@ -21,7 +21,7 @@ function Nav() {
             <RBS.Nav.Link as={Link} to="/contact">contact</RBS.Nav.Link>
             <RBS.Nav.Link as={Link} to="/viewthemes">themes</RBS.Nav.Link> 
             <RBS.Nav.Link as={Link} to="/profile">profile</RBS.Nav.Link>  
-            <RBS.Nav.Link onClick={() => logout({ returnTo: "http://localhost:3000/" })}>logout</RBS.Nav.Link>           
+            <RBS.Nav.Link onClick={() => logout({  returnTo: window.location.origin })}>logout</RBS.Nav.Link>           
           </RBS.Nav>
       </RBS.Navbar.Collapse>
     </RBS.Navbar>
