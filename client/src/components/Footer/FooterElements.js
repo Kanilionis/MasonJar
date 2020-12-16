@@ -18,6 +18,10 @@ export const FooterWrap = styled.div`
     max-width: 1100px;
     margin: 0 auto;
 
+    @media only screen and (device-width: 768px) {
+        padding: 0px;
+      }
+
 `
 export const FooterLinksContainer = styled.div`
     display: flex;

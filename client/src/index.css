@@ -682,6 +682,7 @@ img.modal-img {
 
 .export-container {
   height: 100%;
+  text-align: center;
 }
 
 /* THEMES PAGE */
@@ -689,15 +690,18 @@ img.modal-img {
 .tabs-container {
   font-family: "Montserrat", sans-serif;
   background-color: rgb(241, 240, 240);
-  
-  margin-left: 11%;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 75%;
-  width: 100%;
+  width: 90%;
   margin-top: 20px;
   margin-bottom: 70px;
   overflow-y: scroll;
+}
+
+.react-tabs__tab-list{
+  padding-right: 40px;
+  padding-left: 0px;
 }
 
 /* This is the form for adding a new shaker */
@@ -718,7 +722,7 @@ img.modal-img {
   /* margin-left: 20px; */
   /* padding: 10px 20px; */
   word-spacing: unset;
-  margin: 10px;
+  margin: 20px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
  
@@ -741,7 +745,6 @@ img.modal-img {
   padding-top: 50px;
   padding-bottom: -20px;
   font-weight: lighter;
-  margin-left: 22%;
 }
 
 /* Create a new shaker text */
@@ -915,30 +918,33 @@ img.modal-img {
     width: 17rem !important;
   }
 
-  /* .themesArrow {
-    transform: rotate(90deg);
-  } */
-
-  /* .shaker-form {
-    margin: 10px;
-    padding: 10px;
-  } */
-
   .add-new-btn {
     margin-left: 35%;
   }
   .customizeShakerH2 {
     margin-bottom: -20px;
-    margin-right: 40px;
-    margin-left: 40px;
     text-align: center;
+    padding-bottom: 10px;
   }
-
-  /* .shaker-form {
-    margin: 40px;
-  } */
 
   .tabs-container {
     width: 22rem !important;
+  }
+  .contact-container{
+    min-height: 0px;
+  }
+}
+
+
+@media only screen and (device-width: 768px) {
+  .tabs-container {
+    width: 39rem !important;
+  }
+  .form-container-backdrop{
+    margin: 0px !important;
+  }
+
+  .contact-container{
+    min-height: 0px;
   }
 }

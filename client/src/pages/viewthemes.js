@@ -127,7 +127,7 @@ const viewthemes = (props) => {
 
           {/* Left Side  //  Add New Shaker/Theme */}
           {/* <Col xs={12} md={6} lg={4}  */}
-          <Col xs={12} md={6} lg={6} 
+          <Col xs={12} md={12} lg={12} 
           className="input-area">
             <h2 className="customizeShakerH1">Create A New Shaker</h2>
             <div className="shaker-form">
@@ -159,7 +159,7 @@ const viewthemes = (props) => {
 
           {/* Right Side  //  Database Render */}
           {/* <Col xs={12} md={6} lg={8}  */}
-           <Col xs={12} md={10} lg={10} 
+           <Col xs={12} md={12} lg={12} 
           className="export-container">
             <h2 className="customizeShakerH2">Customize Your Shaker</h2>
             <div className="row tableResults tabsRoot tabs-container">
