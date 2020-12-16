@@ -1,9 +1,6 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
-import logo from "../images/NewFavicon.svg"
 import {FaGithub} from 'react-icons/fa';
-
-
 
 function DeveloperCard(props) {
     

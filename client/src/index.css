@@ -1,8 +1,7 @@
-
 @media only screen and (max-width: 600px) {
   .navbar-toggler {
     margin-right: 40%;
-    margin-top: 10px
+    margin-top: 10px;
     /* float: left; */
     /* margin-left: -300px;
     margin-top: -30px; */
@@ -17,11 +16,10 @@
 }
 @media only screen and (max-width: 600px) {
   .customizeShaker {
-   align-content: center;
-   margin-right: 20px;
-   width: 80%;
-
-}
+    align-content: center;
+    margin-right: 20px;
+    width: 80%;
+  }
 }
 @media only screen and (max-width: 600px) {
   .contactShaker {
@@ -29,7 +27,6 @@
     width: 80%;
   }
 }
-
 
 p {
   font-family: "Montserrat", sans-serif;
@@ -58,10 +55,8 @@ li {
   padding-top: 50px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 30px
+  padding-bottom: 30px;
 }
-
-
 
 .cls-1-label {
   fill: #fff;
@@ -233,10 +228,6 @@ li {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 */
 
-.container.col-12.col-md-5.home-container.form-container-backdrop {
-  height: 960px;
-}
-
 .contact-container {
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(
@@ -246,18 +237,15 @@ li {
   );
   min-height: 1370px;
   overflow: hidden;
+  padding-bottom: 20px;
 }
 
-.contact-btn {
-  margin-left: 43%;
+.contactBtn {
+  margin-top: 20px;
 }
+
 #message {
   margin-bottom: -30px;
-}
-
-.suggestion-row {
-  font-family: "Montserrat", sans-serif;
-  padding: 70px 0px;
 }
 
 .form-container-backdrop {
@@ -265,7 +253,13 @@ li {
   padding: 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  height: 600px;
+  text-align: center;
+}
+
+.form-container-backdrop:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+  /* cursor: pointer; */
 }
 
 .aboout-form {
@@ -281,17 +275,12 @@ li {
   height: 850px;
 }
 
-.form-container-backdrop:hover {
-  transform: scale(1.02);
-  transition: all 0.2s ease-in-out;
-  /* cursor: pointer; */
-}
-
 .h1-contact {
   font-size: 50px;
   color: #2f0909;
   margin-top: 5px;
   text-align: center;
+  font-family: "Architects Daughter", cursive;
 }
 
 .p-contact {
@@ -368,11 +357,8 @@ li {
 @media only screen and (max-width: 600px) {
   .new-shaker-text {
     display: inline;
-
-    
   }
 }
-
 
 h1 {
   font-family: "Architects Daughter", cursive;
@@ -406,7 +392,6 @@ h2 {
 }
 #login-jar {
   font-family: "Architects Daughter", cursive;
-  
 }
 
 #themes-jar {
@@ -417,7 +402,7 @@ h2 {
 #newshaker-jar {
   font-family: "Architects Daughter", cursive;
   font-size: 20px;
-} 
+}
 
 /* Split the screen in half */
 .split {
@@ -433,7 +418,7 @@ h2 {
   padding-bottom: 20px;
 }
 
-.enterBtn{
+.enterBtn {
   margin-top: 10px;
   cursor: pointer;
 }
@@ -442,12 +427,11 @@ h2 {
   margin-top: 10px;
   cursor: pointer;
   /* position: absolute; */
- 
 }
 .guest-btn {
   cursor: pointer;
   /* position: absolute; */
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 .logout-btn {
@@ -478,9 +462,9 @@ h2 {
   right: 0;
   background-color: rgb(241, 240, 240);
 }
-.enterShakeText{
+.enterShakeText {
   font-family: "Architects Daughter", cursive;
-  font-size: 50px
+  font-size: 50px;
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -579,7 +563,6 @@ input::-webkit-input-placeholder {
 */
 
 div.modal-content {
-  
   background: linear-gradient(
     108deg,
     rgb(163, 133, 155) 0%,
@@ -587,11 +570,12 @@ div.modal-content {
   );
 }
 .modal-title.h4 {
-  color: white; text-shadow: 5px black; 
+  color: white;
+  text-shadow: 5px black;
   margin-left: 10%;
   text-align: center;
-  font-family: 'Architects Daughter', cursive ;
-  text-shadow: 2px 2px 8px rgba( 176, 175, 215);
+  font-family: "Architects Daughter", cursive;
+  text-shadow: 2px 2px 8px rgba(176, 175, 215);
   font-size: 60px;
 }
 
@@ -602,7 +586,7 @@ img.modal-img {
 }
 
 .img-card {
- /* border: groove rgba(163, 133, 155, 0.89) 20px; 
+  /* border: groove rgba(163, 133, 155, 0.89) 20px; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   display: block;
   margin: 0 auto;
@@ -614,10 +598,10 @@ img.modal-img {
 }
 
 .modal-activity.modal-body {
-  color: white; 
+  color: white;
   text-shadow: 10px black;
-  font-family: 'Montserrat', sans-serif; ;
-  text-shadow: 2px 2px 8px rgba( 176, 175, 215);
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 2px 2px 8px rgba(176, 175, 215);
   font-size: 35px;
   text-align: center;
 }
@@ -650,17 +634,7 @@ img.modal-img {
 ///////////////////////////////////////////////////////////////////////////////////////////////////  
 */
 
-@media only screen and (max-width: 800px) {
-  .tabs-container {
-    width: 22rem !important;
-  }
-
-  .form-container-backdrop:hover {
-    transform: scale(1);
-  }
-}
-
-.themes-page{
+.themes-page {
   background: linear-gradient(
     108deg,
     rgb(163, 133, 155) 0%,
@@ -669,11 +643,10 @@ img.modal-img {
   overflow: hidden;
 }
 
-.h2-text{
+.h2-text {
   color: black;
   padding-top: 15px;
-  padding-bottom: 5px
-
+  padding-bottom: 5px;
 }
 
 .smaller-text {
@@ -683,11 +656,9 @@ img.modal-img {
 
 /* Control the right side */
 
-
 .export-container {
   height: 100%;
 }
-
 
 /* THEMES PAGE */
 
@@ -698,19 +669,19 @@ img.modal-img {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   height: 75%;
-  width: 50rem; 
+  width: 50rem;
   margin-top: 50px;
   margin-bottom: 70px;
   overflow-y: scroll;
 }
 
 /* This is the form for adding a new shaker */
-.input-area{
-  font-family: 'Montserrat', sans-serif;
+.input-area {
+  font-family: "Montserrat", sans-serif;
   margin: auto;
   align-content: center;
-  z-index: 0; 
-  overflow: none;  
+  z-index: 0;
+  overflow: none;
 }
 
 /* Div section around form element */
@@ -719,14 +690,8 @@ img.modal-img {
   background-color: rgb(241, 240, 240);
   margin-left: 20px;
   padding: 100px 20px;
-  word-spacing: unset
+  word-spacing: unset;
 }
-@media only screen and (max-width: 800px) {
-  .shaker-form  {
-   margin: 40px
-  }
-}
-
 
 /* Header for customize */
 .customizeShakerH2 {
@@ -735,17 +700,7 @@ img.modal-img {
   font-size: 50px;
   padding-top: 20px;
   font-weight: lighter;
-  
 }
-@media only screen and (max-width: 800px) {
-  .customizeShakerH2  {
-    margin-bottom: -20px;
-    margin-right: 40px;
-    margin-left: 40px;
-    text-align: center
-  }
-}
-
 
 /* Create a new shaker text */
 .new-shaker-text {
@@ -753,20 +708,18 @@ img.modal-img {
   font-size: 20px;
 }
 
-.improve{
+.improve {
   font-family: "Architects Daughter", cursive;
 }
 
 .customizeShaker,
 .contactShaker {
-
   background-color: rgb(241, 240, 240);
   padding: 20px;
   margin: 10px;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
   font-family: "Montserrat", sans-serif;
   width: 40%;
-
 }
 .customizeShaker:hover {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
@@ -783,14 +736,11 @@ img.modal-img {
 }
 
 .shaker-pg-btn-1 {
-  
-    margin-top: 10px;
-    cursor: pointer;
-  
-
+  margin-top: 10px;
+  cursor: pointer;
 }
-.theme-btn{
-  margin: -10px
+.theme-btn {
+  margin: -10px;
 }
 
 #try-it {
@@ -799,22 +749,20 @@ img.modal-img {
 #contact-us {
   font-size: 36px;
 }
-.submit-btn{
+.submit-btn {
   margin-top: 60px;
-  cursor: pointer
+  cursor: pointer;
 }
 
-.add-new-btn{
+.add-new-btn {
   margin: 20px;
-  margin-left: 45%
+  margin-left: 45%;
 }
-.create-shaker-btn{
-  margin: 10px
+.create-shaker-btn {
+  margin: 10px;
 }
 
 .shaker-pg-btn-2 {
-
- 
   cursor: pointer;
   margin-top: -20px;
   margin-bottom: -50px;
@@ -827,43 +775,6 @@ img.modal-img {
   padding-left: 11%;
 }
 
-@media only screen and (max-width: 800px) {
-  .developer-card {
-    font-family: "Montserrat", sans-serif;
-    width: 17rem !important;
-  }
-  
-
-  .form-container-backdrop {
-    max-width: auto;
-    margin: 10px auto;
-    height: auto;
-  }
- 
-    .form-container-backdrop {
-      /* margin-top: 15; */
-      background-color: transparent;
-      box-shadow: none;
-    }
-
-    .themesArrow {
-      transform: rotate(90deg);
-    }
-  
-    .shaker-form{
-      margin: 10px;
-      padding: 10px;
-    }
-
-  .form-container-backdrop:hover {
-    transform: scale(1);
-  }
-
-  .add-new-btn{
-    margin-left: 35%;
-  }
-}
-
 
 /* Styling Profile Page
 ///////////////////////////////////////////////////////////////////////////////////////////////////  
@@ -874,10 +785,10 @@ img.modal-img {
     108deg,
     rgb(163, 133, 155) 0%,
     rgb(241, 211, 211) 100%
-  );
-  position: fixed;
-  top: 0;
-  left: 0;
+    );
+    position: fixed;
+    top: 0;
+    left: 0;
   right: 0;
   bottom: 0;
 }
@@ -906,23 +817,22 @@ img.modal-img {
 }
 
 .profile-container {
- padding-top: 300px;
- padding-left: 100px;
- 
+  padding-top: 300px;
+  padding-left: 100px;
 }
 
-.shake-it-up{
+.shake-it-up {
   font-weight: bold;
 }
 
 /* Styling for modal on Themes Page */
 
-.custom-ui{
+.custom-ui {
   text-align: center;
   width: 500px;
   padding: 40px;
   box-shadow: 0 20px 75px rgba(0, 0, 0, 0.23);
-  background-color:  rgb(241, 240, 240)
+  background-color: rgb(241, 240, 240);
 }
 .custom-ui > h1 {
   margin-top: 0;
@@ -939,7 +849,7 @@ img.modal-img {
   font-size: 14px;
 }
 
-.react-confirm-alert-overlay{
+.react-confirm-alert-overlay {
   background: transparent !important;
 }
 
@@ -947,4 +857,41 @@ img.modal-img {
   color: black !important;
 }
 
+/* MOBILE STYLING */
+@media only screen and (max-width: 800px) {
+  .form-container-backdrop{
+    margin: 40px;
+  }
+  
+  .developer-card {
+    font-family: "Montserrat", sans-serif;
+    width: 17rem !important;
+  }
 
+  .themesArrow {
+    transform: rotate(90deg);
+  }
+
+  .shaker-form {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .add-new-btn {
+    margin-left: 35%;
+  }
+  .customizeShakerH2 {
+    margin-bottom: -20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    text-align: center;
+  }
+
+  .shaker-form {
+    margin: 40px;
+  }
+
+  .tabs-container {
+    width: 22rem !important;
+  }
+}
