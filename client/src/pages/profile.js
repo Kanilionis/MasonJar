@@ -11,10 +11,11 @@ const Profile = () => {
 
   return (
     <>
+    <Nav/>
    {isAuthenticated ? (
      <>
        <div>
-          <Nav/>
+          
           <div className="test">
             <div className="profile-container">
               <div className="profile-title col-md-2 mb-3">
