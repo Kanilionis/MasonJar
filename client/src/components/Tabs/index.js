@@ -22,20 +22,24 @@ import Col from 'react-bootstrap/Col'
 const TabsPage = (props) => {
   //Setting comps initail state
   const [themes, setThemes] = useState([])
+
   const [formObject, setFormObject] = useState({
     theme: "",
     activity: ""
   })
+
   const [currentTab, setCurrentTab] = useState({
-    theme: "",
+    theme: "Netflix & Chill",
     index: 0
   })
+
   const [editActivity, setEditActivity] = useState({})
 
   //loading all themes on page load
   useEffect(() => {
     loadThemes()
   }, [])
+
   //loading all themes and sets them to themes 
   function loadThemes() {
     API.getThemes()
@@ -58,12 +62,19 @@ const TabsPage = (props) => {
         .then(res => loadThemes())
         .catch(err => console.log(err));
     }
+    setCurrentTab({ theme: [formObject.theme], index: (themes.length) })
+    setFormObject({
+      theme: "",
+      activity: ""
+    })
   };
 
   function handleNewActivity() {
     API.saveActivity(currentTab.theme, formObject.activity)
       .then(res => loadThemes())
       .catch(err => console.log(err));
+      setFormObject({    theme: "",
+      activity: ""})
   }
 
   function handleTabChange(theme, index) {
@@ -75,21 +86,19 @@ const TabsPage = (props) => {
       .then(res => loadThemes())
       .catch(err => console.log(err));
   }
-  function handleEdit(activity, index) {
-    console.log(activity)
-    setEditActivity({ activity: [activity] })
-    handleSave(index)
-  }
+
   function handleSave(index) {
     API.updateActivity(currentTab.theme, editActivity.activity, index)
       .then(res => loadThemes())
       .catch(err => console.log(err));
   }
+
   function handleDeleteTheme(theme) {
     API.deleteTheme(theme)
       .then(res => loadThemes())
       .catch(err => console.log(err));
   }
+
   function confirmDelete(theme) {
     const options = {
       childrenElement: () => <div />,
@@ -128,7 +137,7 @@ const TabsPage = (props) => {
                     onChange={handleInputChange}
                     name="theme"
                     placeholder="ex. 'What's for Dinner'"
-                    value={formObject.name}
+                    value={formObject.theme}
                   />
                   <div >
                       {/* <svg className="" disabled={!(formObject.theme)} onClick={handleNewShaker} height="250px" width="100%" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231.08 373.45"><defs></defs><path d="M214.68,385.93c6.72,0,13.33.19,19.93-.12a8.13,8.13,0,0,0,5.33-2.56c29.53-35.86,88.6-35.83,118.22.06a8.24,8.24,0,0,0,5.34,2.51c5.63.32,11.28.11,17.68.11v56c-5.45,0-11.54-.19-17.6.12a8.25,8.25,0,0,0-5.44,2.46c-16.5,20-38.23,27.61-63.35,26.52-22.14-1-41-9.23-55.19-26.89-1-1.28-3.34-2-5.09-2.11-6.47-.25-13-.1-19.83-.1Z" transform="translate(-181.79 -224.01)" /><rect className="cls-2" x="16" y="160.88" width="200.2" height="57.05" /><text id="newshaker-jar" x="50%" y="53%" textAnchor="middle" fill="white">create new shaker</text></svg> */}
@@ -178,6 +187,10 @@ const TabsPage = (props) => {
                     <Table
                       className="themeTable" striped bordered hover>
                       <tbody>
+                        {
+                        (theme.activities.length)
+                        ?
+                        <>
                         {theme.activities.map((activity, index) => (
                           <>
                             { //Check if seed data or custom
@@ -202,11 +215,19 @@ const TabsPage = (props) => {
                             }
                           </>
                         ))}
+                        
+                        </>
+                        :
+                        <>
+                        Add some items to your shaker!
+                        </>
+                        }
+
                       </tbody>
                     </Table>
                     <Input
-                      placeholder="activity name"
-                      value={formObject.name}
+                      placeholder="item name"
+                      value={formObject.activity}
                       name="activity"
                       onChange={handleInputChange}>
                     </Input>

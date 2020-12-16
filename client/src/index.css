@@ -858,6 +858,10 @@ img.modal-img {
   .form-container-backdrop:hover {
     transform: scale(1);
   }
+
+  .add-new-btn{
+    margin-left: 35%;
+  }
 }
 
 
