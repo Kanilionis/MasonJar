@@ -1,3 +1,4 @@
+// Import Things
 import React, { useState, useEffect } from "react"
 import API from "../utils/API"
 import "../index.css"
@@ -11,6 +12,7 @@ import Footer from "../components/Footer"
 
 const Shaker = () => {
 
+  // Set State
 
   //Loads a single theme and its activities based on a click
   const [currentShaker, setCurrentShaker] = useState({
@@ -30,11 +32,13 @@ const Shaker = () => {
     isOpen: false
   })
 
-
+// Loads all shaker themes available on page load
   useEffect(() => {
     loadThemes()
   }, [])
 
+
+// Opens the shaker modal
   useEffect(() => {
 
     if (currentShaker.theme) {
@@ -45,6 +49,8 @@ const Shaker = () => {
     }
   }, [currentShaker.theme])
 
+
+  // Grabs all shakers
   const loadThemes = () => {
     API.getThemes().then(res => {
       setShakers(res.data)
@@ -61,6 +67,7 @@ const Shaker = () => {
     }).catch(err => console.log(err))
   }
 
+  // Allows user to pick a new random item
   function pickAgain() {
     var theme = currentShaker.theme;
     API.getActivitiesByTheme(theme).then(res => {
@@ -70,47 +77,36 @@ const Shaker = () => {
     }).catch(err => console.log(err))
   }
 
+  // Closes the modal
   function closeModal() {
     setModalOpen({ isOpen: false })
   }
   
-
-
+// Shaker Return
 return(
   <>
-
   <div className="contact-container">
     <Nav />
     <center> 
-      
       <ShakerTop />
-     
       {shakers.length ? (
-     
         <Carousel className="center carousel col-md-3-col-sm-8" indicators={true} fade={true} >
         {shakers.map(shaker => (
-          
-          
           <Carousel.Item className="carousel-item" >
-          <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
-          
-          <ModalShow pickAgain={pickAgain} isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
+            <ShakerAnim chooseTheme={chooseTheme} theme={shaker.theme}/>
+            <ModalShow pickAgain={pickAgain} isOpen={modalOpen.isOpen} closeModal={closeModal} currentShaker={currentShaker}/>
           </Carousel.Item>
-        
         ))}
         </Carousel>
-       
       ) : (
-        <h3>nothing to see here</h3>
+        <h3>loading..</h3>
       )}
       <ShakerBottom />
     </center>
   </div>
   <Footer />
-
   </>
 )
 }
 
 export default Shaker
-
