@@ -713,7 +713,7 @@ img.modal-img {
 
 
 
-/* THEMES PAGE DONT TOUCH ME DAMMIT */
+/* THEMES PAGE */
 
 .tabs-container {
   font-family: "Montserrat", sans-serif;
@@ -733,6 +733,10 @@ img.modal-img {
   .tabs-container {
     height: 100%;
     /* width: 28%; */
+  }
+
+  .themesArrow {
+    transform: rotate(90deg);
   }
 }
 
@@ -768,6 +772,7 @@ img.modal-img {
    margin: 40px
   }
 }
+
 
 /* Header for customize */
 .customizeShakerH2 {
@@ -948,9 +953,34 @@ img.modal-img {
   font-weight: bold;
 }
 
+.custom-ui{
+  text-align: center;
+  width: 500px;
+  padding: 40px;
+  box-shadow: 0 20px 75px rgba(0, 0, 0, 0.23);
+  background-color:  rgb(241, 240, 240)
+}
+.custom-ui > h1 {
+  margin-top: 0;
+}
+
+.custom-ui > button {
+  width: 160px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 10px;
+  cursor: pointer;
+  background: none;
+  color: black;
+  font-size: 14px;
+}
+
+.react-confirm-alert-overlay{
+  background: transparent !important;
+}
 
 .confirmHeader {
-  color: black;
+  color: black !important;
 }
 
 
